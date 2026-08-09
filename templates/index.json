@@ -39,6 +39,7 @@
       "settings": {
         "full_width": true,
         "allow_transparent_header": false,
+        "show_initial_transition": false,
         "image_size": "large",
         "controls_type": "none",
         "transition_type": "fade_with_text",
@@ -53,7 +54,7 @@
       "settings": {
         "full_width": true,
         "text": "✅ +30.000 clientas satisfechas · 🧪 Fabricado en laboratorio certificado · 🇪🇺 Fabricado en la Unión Europea · 🌿 Fórmulas 100% naturales",
-        "text_size": "medium",
+        "text_size": "xsmall",
         "text_style": "fill",
         "scrolling_mode": "auto",
         "scrolling_speed": 5,
@@ -77,7 +78,8 @@
           "settings": {
             "text": "Tu aliada femenina",
             "heading_tag": "h2",
-            "text_color": "#5c1730"
+            "text_color": "#5c1730",
+            "gradient": ""
           }
         },
         "richtext-1": {
@@ -137,6 +139,8 @@
         "description": {
           "type": "description",
           "settings": {
+            "icon": "none",
+            "icon_width": 20,
             "collapse_content": false
           }
         },
@@ -147,6 +151,7 @@
             "stack_blocks": true,
             "selector_style": "block",
             "swatch_selector_style": "color",
+            "variant_image_options": "",
             "size_chart_page": ""
           }
         },
@@ -158,6 +163,7 @@
           "type": "buy_buttons",
           "settings": {
             "show_payment_button": true,
+            "show_gift_card_recipient": true,
             "atc_button_background": "#7a1f3d",
             "atc_button_text_color": "#ffffff",
             "payment_button_background": "",
@@ -399,6 +405,8 @@
             "mobile_icon_width": 32,
             "icon_width": 32,
             "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
             "title": "Fabricado en la UE",
             "content": "<p>Producción controlada, garantía de calidad y trazabilidad.</p>"
           }
@@ -410,6 +418,8 @@
             "mobile_icon_width": 32,
             "icon_width": 32,
             "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
             "title": "Eficacia real",
             "content": "<p>Resultados sencillos y transparentes sobre tu bienestar diario.</p>"
           }
@@ -421,6 +431,8 @@
             "mobile_icon_width": 32,
             "icon_width": 32,
             "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
             "title": "Adaptado a tus necesidades",
             "content": "<p>De la premenopausia a la menopausia, soluciones para cada etapa.</p>"
           }
@@ -432,6 +444,8 @@
             "mobile_icon_width": 32,
             "icon_width": 32,
             "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
             "title": "Transparencia e integridad",
             "content": "<p>Cada ingrediente es seleccionado por su eficacia y respeto a tu cuerpo.</p>"
           }
@@ -445,9 +459,14 @@
       ],
       "settings": {
         "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
         "heading_tag": "h6",
         "text_alignment": "center",
-        "icon_spacing": "small"
+        "icon_spacing": "small",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "multiple-images-with-text": {
