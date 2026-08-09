@@ -9,14 +9,562 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "wld-equilibra-landing",
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-1": {
+          "type": "image",
+          "settings": {
+            "content_max_width": 640,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-start sm:text-start",
+            "subheading": "Cura menopausia y premenopausia",
+            "title": "Deja de sufrirlo. Vuelve a vivir.",
+            "heading_tag": "h0",
+            "button_text": "EMPEZAR MI CURA",
+            "button_link": "/products/equilibrameno",
+            "text_color": "#5c1730",
+            "button_background": "#7a1f3d",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "#f6d9e4",
+            "background_gradient": "linear-gradient(135deg, #fdf1f5, #f6d9e4)"
+          }
+        }
+      },
+      "block_order": [
+        "slide-1"
+      ],
       "settings": {
-        "product": "gid://shopify/product/15966815256908"
+        "full_width": true,
+        "allow_transparent_header": false,
+        "image_size": "large",
+        "controls_type": "none",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#fdf1f5",
+        "background_gradient": ""
+      }
+    },
+    "scrolling-text": {
+      "type": "scrolling-text",
+      "settings": {
+        "full_width": true,
+        "text": "✅ +30.000 clientas satisfechas · 🧪 Fabricado en laboratorio certificado · 🇪🇺 Fabricado en la Unión Europea · 🌿 Fórmulas 100% naturales",
+        "text_size": "medium",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 5,
+        "background": "#f7f1e3",
+        "background_gradient": "",
+        "text_color": "#5c1730",
+        "text_gradient": ""
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading-1": {
+          "type": "subheading",
+          "settings": {
+            "text": "Pensado por mujeres, para mujeres"
+          }
+        },
+        "heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Tu aliada femenina",
+            "heading_tag": "h2",
+            "text_color": "#5c1730"
+          }
+        },
+        "richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Porque cada mujer merece cuidar su salud, creamos soluciones naturales y expertas para acompañarte en cada etapa de tu equilibrio hormonal, con benevolencia y eficacia.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading-1",
+        "heading-1",
+        "richtext-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "content_width": "medium",
+        "text_position": "center",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "#2b1620"
+      }
+    },
+    "featured-product": {
+      "type": "featured-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": true
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false
+          }
+        },
+        "variant-picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_style": "block",
+            "swatch_selector_style": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity-selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy-buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "atc_button_background": "#7a1f3d",
+            "atc_button_text_color": "#ffffff",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "badges",
+        "price",
+        "rating",
+        "separator",
+        "description",
+        "variant-picker",
+        "quantity-selector",
+        "buy-buttons"
+      ],
+      "settings": {
+        "full_width": false,
+        "product": "gid://shopify/product/15966815256908",
+        "desktop_media_width": 50,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "#fdf1f5",
+        "background_gradient": "",
+        "text_color": "#2b1620",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "image-link-blocks": {
+      "type": "image-link-blocks",
+      "blocks": {
+        "cat-1": {
+          "type": "item",
+          "settings": {
+            "stretch_image": false,
+            "link_text": "Libido",
+            "link_url": "#",
+            "background": "#f6d9e4",
+            "text_color": "#5c1730",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "cat-2": {
+          "type": "item",
+          "settings": {
+            "stretch_image": false,
+            "link_text": "Sequedad íntima",
+            "link_url": "#",
+            "background": "#f7d7e0",
+            "text_color": "#5c1730",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "cat-3": {
+          "type": "item",
+          "settings": {
+            "stretch_image": false,
+            "link_text": "Menopausia",
+            "link_url": "/products/equilibrameno",
+            "background": "#f0c3d3",
+            "text_color": "#5c1730",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "cat-4": {
+          "type": "item",
+          "settings": {
+            "stretch_image": false,
+            "link_text": "Pérdida de peso",
+            "link_url": "#",
+            "background": "#f6d9e4",
+            "text_color": "#5c1730",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "cat-5": {
+          "type": "item",
+          "settings": {
+            "stretch_image": false,
+            "link_text": "Estrés",
+            "link_url": "#",
+            "background": "#f7d7e0",
+            "text_color": "#5c1730",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "cat-6": {
+          "type": "item",
+          "settings": {
+            "stretch_image": false,
+            "link_text": "Articulaciones",
+            "link_url": "#",
+            "background": "#f0c3d3",
+            "text_color": "#5c1730",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "cat-1",
+        "cat-2",
+        "cat-3",
+        "cat-4",
+        "cat-5",
+        "cat-6"
+      ],
+      "settings": {
+        "full_width": true,
+        "block_size": "medium",
+        "subheading": "",
+        "title": "Nuestras soluciones para todas tus necesidades",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "#5c1730",
+        "heading_gradient": ""
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Carmen · 52 años",
+            "title": "Por fin duermo bien",
+            "content": "<p>A los 3 años de tener sofocos, por fin he encontrado algo que funciona. Desde hace 2 meses ya no sufro.</p>"
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Rosario · 49 años",
+            "title": "Mucho más estable",
+            "content": "<p>Notaba cambios de humor constantes. Después de 6 semanas, me siento mucho más estable y con más energía.</p>"
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Sara · 55 años",
+            "title": "Duermo del tirón",
+            "content": "<p>Dormía fatal por los sudores nocturnos. Ahora duermo del tirón, no me lo esperaba.</p>"
+          }
+        },
+        "t4": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Aurelia · 51 años",
+            "title": "Muchísima mejoría",
+            "content": "<p>Los dolores articulares habían cambiado mi día a día. Con la cura de 3 meses, noto muchísima mejoría.</p>"
+          }
+        },
+        "t5": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Isabel · 54 años",
+            "title": "Se lo recomiendo a todo el mundo",
+            "content": "<p>Me han hablado de EquilibraMeno mis amigas del club de lectura. Ahora se lo recomiendo yo a todo el mundo.</p>"
+          }
+        },
+        "t6": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Pilar · 50 años",
+            "title": "100% natural y eficaz",
+            "content": "<p>No pensaba que un complemento pudiera cambiar tanto mi día a día.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_testimonials": false,
+        "subheading": "",
+        "title": "Más de 30.000 mujeres confían en nosotras",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "#fdf1f5",
+        "background_gradient": "",
+        "text_color": "#2b1620",
+        "heading_color": "#5c1730",
+        "heading_gradient": "",
+        "testimonial_card_background": "#ffffff",
+        "testimonial_card_text_color": "#2b1620"
+      }
+    },
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "f1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-earth",
+            "mobile_icon_width": 32,
+            "icon_width": 32,
+            "icon_background_type": "none",
+            "title": "Fabricado en la UE",
+            "content": "<p>Producción controlada, garantía de calidad y trazabilidad.</p>"
+          }
+        },
+        "f2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-validation",
+            "mobile_icon_width": 32,
+            "icon_width": 32,
+            "icon_background_type": "none",
+            "title": "Eficacia real",
+            "content": "<p>Resultados sencillos y transparentes sobre tu bienestar diario.</p>"
+          }
+        },
+        "f3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-target",
+            "mobile_icon_width": 32,
+            "icon_width": 32,
+            "icon_background_type": "none",
+            "title": "Adaptado a tus necesidades",
+            "content": "<p>De la premenopausia a la menopausia, soluciones para cada etapa.</p>"
+          }
+        },
+        "f4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-shield",
+            "mobile_icon_width": 32,
+            "icon_width": 32,
+            "icon_background_type": "none",
+            "title": "Transparencia e integridad",
+            "content": "<p>Cada ingrediente es seleccionado por su eficacia y respeto a tu cuerpo.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "settings": {
+        "full_width": true,
+        "heading_tag": "h6",
+        "text_alignment": "center",
+        "icon_spacing": "small"
+      }
+    },
+    "multiple-images-with-text": {
+      "type": "multiple-images-with-text",
+      "blocks": {
+        "article-1": {
+          "type": "item",
+          "settings": {
+            "image_rotation_degrees": 0,
+            "subheading": "Consejos de salud",
+            "title": "La cimicífuga: la planta que ha cambiado la menopausia de millones de mujeres",
+            "content": "<p>Descubre cómo esta planta actúa sobre el equilibrio hormonal y por qué está detrás de la fórmula de EquilibraMeno.</p>",
+            "button_url": "#",
+            "button_text": "Leer más"
+          }
+        }
+      },
+      "block_order": [
+        "article-1"
+      ],
+      "settings": {
+        "full_width": true,
+        "images_layout": "scattered",
+        "collage_images_alignment": "middle",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "#2b1620",
+        "button_background": "#7a1f3d",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "item",
+          "settings": {
+            "title": "¿Cuánto tiempo tarda en hacer efecto EquilibraMeno?",
+            "content": "<p>La mayoría de nuestras clientas nota una mejora a partir de las 2-3 semanas de uso continuo. Para resultados óptimos, recomendamos una cura mínima de 3 meses.</p>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "title": "¿Es un producto 100% natural?",
+            "content": "<p>Sí, EquilibraMeno está formulado únicamente con ingredientes de origen natural, sin hormonas añadidas.</p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "title": "¿Puedo tomarlo si sigo un tratamiento médico?",
+            "content": "<p>Te recomendamos consultar con tu médico o farmacéutico antes de empezar cualquier complemento alimenticio si sigues un tratamiento en curso.</p>"
+          }
+        },
+        "q4": {
+          "type": "item",
+          "settings": {
+            "title": "¿Cuál es la dosis diaria recomendada?",
+            "content": "<p>Se recomienda tomar 2 cápsulas al día, preferiblemente durante una comida, con un vaso de agua.</p>"
+          }
+        },
+        "q5": {
+          "type": "item",
+          "settings": {
+            "title": "¿Puedo devolver el producto si no me convence?",
+            "content": "<p>Dispones de 14 días naturales para ejercer tu derecho de desistimiento si el bote no ha sido abierto ni el precinto retirado, conforme a la normativa española de protección al consumidor.</p>"
+          }
+        },
+        "q6": {
+          "type": "item",
+          "settings": {
+            "title": "¿Cuánto tarda el envío?",
+            "content": "<p>Los pedidos se preparan en 24-48h y se entregan según los plazos indicados en nuestra Política de Envíos.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "settings": {
+        "full_width": false,
+        "subheading": "",
+        "title": "Preguntas frecuentes",
+        "content": "<p>Todo lo que necesitas saber antes de empezar tu cura.</p>",
+        "team_avatar_width": 160,
+        "support_hours": "Nuestro equipo de atención al cliente está disponible de lunes a viernes.",
+        "answer_time": "Tiempo medio de respuesta: 24h",
+        "button_text": "Contactar",
+        "button_url": "/pages/contact",
+        "text_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "#5c1730",
+        "heading_gradient": "",
+        "button_background": "#7a1f3d",
+        "button_text_color": "#ffffff",
+        "accordion_background": "",
+        "accordion_text_color": ""
       }
     }
   },
   "order": [
-    "main"
+    "slideshow",
+    "scrolling-text",
+    "rich-text",
+    "featured-product",
+    "image-link-blocks",
+    "testimonials",
+    "text-with-icons",
+    "multiple-images-with-text",
+    "faq"
   ]
 }
