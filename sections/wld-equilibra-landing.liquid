@@ -1,0 +1,768 @@
+{% comment %}
+  WLD — Equilibra Landing
+  Section clonada de la estructura/persuasión de wearebloomy.com, adaptada a EquilibraMeno.
+  100% autónoma, sin dependencia de tema. Prefijo CSS: wld-equilibra
+{% endcomment %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+{% liquid
+  assign wld_product = section.settings.product
+  assign wld_id = 'wld-equilibra-' | append: section.id
+%}
+
+<section id="{{ wld_id }}" class="wld-equilibra">
+
+  {% if wld_product == blank and request.design_mode %}
+    <div class="wld-no-product-notice">
+      ⚠️ Selecciona un producto en la configuración de esta sección para activar el botón de compra.
+    </div>
+  {% endif %}
+
+  {% if section.settings.announcement_text != blank %}
+  <div class="wld-e-announce">
+    <p>{{ section.settings.announcement_text }}</p>
+  </div>
+  {% endif %}
+
+  <!-- HERO -->
+  <div class="wld-e-hero">
+    <div class="wld-e-hero__text">
+      {% if section.settings.eyebrow_text != blank %}
+        <span class="wld-e-eyebrow">{{ section.settings.eyebrow_text }}</span>
+      {% endif %}
+      <h1 class="wld-e-hero__title">{{ section.settings.hero_heading }}</h1>
+      <p class="wld-e-hero__subtitle">{{ section.settings.hero_subheading }}</p>
+
+      {% if section.blocks.size > 0 %}
+        <div class="wld-e-hero__bundles" data-wld-hero-bundles>
+          {% for block in section.blocks %}
+            {% if block.type == 'bundle_option' %}
+              <button type="button" class="wld-e-hero__bundle-pill{% if block.settings.default_selected %} is-active{% endif %}" data-wld-bundle-index="{{ forloop.index0 }}">
+                {{ block.settings.label }}
+                {% if block.settings.badge_text != blank %}<span>{{ block.settings.badge_text }}</span>{% endif %}
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <a href="#{{ wld_id }}-buybox" class="wld-e-btn wld-e-btn--primary wld-e-hero__cta">{{ section.settings.hero_cta_text }}</a>
+    </div>
+
+    <div class="wld-e-hero__media">
+      {% if section.settings.hero_image != blank %}
+        <img src="{{ section.settings.hero_image | image_url: width: 900 }}" alt="{{ section.settings.hero_heading | escape }}" loading="eager" width="900" height="900">
+      {% else %}
+        <div class="wld-e-placeholder">{{ 'product-1' | placeholder_svg_tag: 'wld-e-placeholder__svg' }}</div>
+      {% endif %}
+      {% if section.settings.hero_badge_text != blank %}
+        <div class="wld-e-hero__badge">
+          <span class="wld-e-hero__badge-line1">{{ section.settings.hero_badge_line1 }}</span>
+          <span class="wld-e-hero__badge-line2">{{ section.settings.hero_badge_text }}</span>
+          <span class="wld-e-hero__badge-year">{{ section.settings.hero_badge_year }}</span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- TRUST STRIP -->
+  {% assign wld_trust_count = 0 %}
+  {% for block in section.blocks %}{% if block.type == 'trust_item' %}{% assign wld_trust_count = wld_trust_count | plus: 1 %}{% endif %}{% endfor %}
+  {% if wld_trust_count > 0 %}
+  <div class="wld-e-trust">
+    <div class="wld-e-trust__track">
+      {% for i in (1..2) %}
+        {% for block in section.blocks %}
+          {% if block.type == 'trust_item' %}
+            <span class="wld-e-trust__item">{{ block.settings.icon }} {{ block.settings.text }}</span>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- INTRO -->
+  <div class="wld-e-intro">
+    <h2>{{ section.settings.intro_heading }}</h2>
+    <p>{{ section.settings.intro_text }}</p>
+    {% if section.settings.intro_tagline != blank %}<p class="wld-e-intro__tagline">{{ section.settings.intro_tagline }}</p>{% endif %}
+  </div>
+
+  <!-- BUY BOX -->
+  <div class="wld-e-buybox" id="{{ wld_id }}-buybox">
+    <div class="wld-e-buybox__gallery">
+      <div class="wld-e-buybox__thumbs">
+        {% for block in section.blocks %}
+          {% if block.type == 'gallery_image' and block.settings.image != blank %}
+            <button type="button" class="wld-e-thumb{% if forloop.index0 == 0 %} is-active{% endif %}" data-wld-thumb data-index="{{ forloop.index0 }}">
+              <img src="{{ block.settings.image | image_url: width: 150 }}" alt="{{ section.settings.product_title | default: 'EquilibraMeno' | escape }}" loading="lazy" width="150" height="150">
+            </button>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="wld-e-buybox__main-image">
+        {% assign wld_main_set = false %}
+        {% for block in section.blocks %}
+          {% if block.type == 'gallery_image' and block.settings.image != blank %}
+            <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ section.settings.product_title | default: 'EquilibraMeno' | escape }}" data-wld-main-image data-index="{{ forloop.index0 }}" class="{% unless wld_main_set %}is-active{% endunless %}" loading="lazy" width="800" height="800">
+            {% assign wld_main_set = true %}
+          {% endif %}
+        {% endfor %}
+        {% if wld_main_set == false %}
+          {{ 'product-1' | placeholder_svg_tag: 'wld-e-placeholder__svg' }}
+        {% endif %}
+        {% if section.settings.hero_badge_text != blank %}
+          <div class="wld-e-buybox__ribbon">
+            <span>{{ section.settings.hero_badge_line1 }}</span>
+            <strong>{{ section.settings.hero_badge_text }}</strong>
+            <span>{{ section.settings.hero_badge_year }}</span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="wld-e-buybox__info">
+      <p class="wld-e-buybox__title">{{ section.settings.product_title | default: 'EquilibraMeno®' }}</p>
+      <p class="wld-e-buybox__subtitle">{{ section.settings.product_subtitle }}</p>
+
+      {% if section.settings.rating_count != blank %}
+      <div class="wld-e-stars" aria-label="{{ section.settings.rating_count }} opiniones verificadas">
+        ★★★★★ <span>{{ section.settings.rating_count }} opiniones verificadas</span>
+      </div>
+      {% endif %}
+
+      <ul class="wld-e-benefits">
+        {% for block in section.blocks %}
+          {% if block.type == 'benefit' %}
+            <li>✔ {{ block.settings.text }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      <form method="post" action="/cart/add" id="{{ wld_id }}-form" class="wld-e-buybox__form" accept-charset="UTF-8">
+        <input type="hidden" name="id" id="{{ wld_id }}-variant-input" value="{% if wld_product %}{{ wld_product.selected_or_first_available_variant.id }}{% endif %}">
+
+        <div class="wld-e-bundles" data-wld-bundles>
+          {% for block in section.blocks %}
+            {% if block.type == 'bundle_option' %}
+              {% liquid
+                assign wld_variant = blank
+                if wld_product
+                  assign wld_v_index = block.settings.variant_index | minus: 1
+                  assign wld_variant = wld_product.variants[wld_v_index]
+                  if wld_variant == blank
+                    assign wld_variant = wld_product.selected_or_first_available_variant
+                  endif
+                endif
+              %}
+              <label class="wld-e-bundle-card{% if block.settings.default_selected %} is-selected{% endif %}" data-wld-bundle-index="{{ forloop.index0 }}">
+                <input type="radio" name="wld-bundle-radio" value="{{ forloop.index0 }}" data-variant-id="{% if wld_variant %}{{ wld_variant.id }}{% endif %}" {% if block.settings.default_selected %}checked{% endif %}>
+                {% if block.settings.badge_text != blank %}<span class="wld-e-bundle-card__badge">{{ block.settings.badge_text }}</span>{% endif %}
+                <span class="wld-e-bundle-card__label">{{ block.settings.label }}</span>
+                {% if block.settings.sublabel != blank %}<span class="wld-e-bundle-card__sublabel">{{ block.settings.sublabel }}</span>{% endif %}
+                <span class="wld-e-bundle-card__price">
+                  {{ block.settings.price }}
+                  {% if block.settings.compare_price != blank %}<s>{{ block.settings.compare_price }}</s>{% endif %}
+                </span>
+              </label>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if section.settings.payment_note != blank %}<p class="wld-e-payment-note">{{ section.settings.payment_note }}</p>{% endif %}
+
+        <button type="submit" class="wld-e-btn wld-e-btn--primary wld-e-buybox__submit" {% if wld_product == blank %}disabled{% endif %}>
+          {{ section.settings.add_to_cart_text | default: 'AÑADIR AL CARRITO' }}
+        </button>
+
+        {% if section.settings.delivery_text != blank %}
+          <p class="wld-e-delivery">🚚 {{ section.settings.delivery_text }}</p>
+        {% endif %}
+      </form>
+    </div>
+  </div>
+
+  <!-- CATEGORY GRID -->
+  {% assign wld_cat_count = 0 %}
+  {% for block in section.blocks %}{% if block.type == 'category' %}{% assign wld_cat_count = wld_cat_count | plus: 1 %}{% endif %}{% endfor %}
+  {% if wld_cat_count > 0 %}
+  <div class="wld-e-categories">
+    <h2>{{ section.settings.categories_heading }}</h2>
+    <div class="wld-e-categories__grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'category' %}
+          <a href="{{ block.settings.link | default: '#' }}" class="wld-e-category">
+            {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | image_url: width: 300 }}" alt="{{ block.settings.label | escape }}" loading="lazy" width="300" height="300">
+            {% else %}
+              {{ 'lifestyle-1' | placeholder_svg_tag: 'wld-e-placeholder__svg' }}
+            {% endif %}
+            <span>{{ block.settings.label }} ›</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- TESTIMONIALS / REVIEWS -->
+  {% assign wld_review_count = 0 %}
+  {% for block in section.blocks %}{% if block.type == 'testimonial' %}{% assign wld_review_count = wld_review_count | plus: 1 %}{% endif %}{% endfor %}
+  {% if wld_review_count > 0 %}
+  <div class="wld-e-reviews">
+    <h2>{{ section.settings.reviews_heading }}</h2>
+    <div class="wld-e-reviews__grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'testimonial' %}
+          <div class="wld-e-review-card">
+            {% if block.settings.photo != blank %}
+              <img src="{{ block.settings.photo | image_url: width: 200 }}" alt="{{ block.settings.name_age | escape }}" loading="lazy" width="200" height="150">
+            {% else %}
+              {{ 'lifestyle-2' | placeholder_svg_tag: 'wld-e-placeholder__svg' }}
+            {% endif %}
+            <div class="wld-e-review-card__body">
+              <span class="wld-e-review-card__stars">★★★★★</span>
+              <p class="wld-e-review-card__quote">{{ block.settings.quote }}</p>
+              <p class="wld-e-review-card__name">{{ block.settings.name_age }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- FEATURES ROW -->
+  {% assign wld_feat_count = 0 %}
+  {% for block in section.blocks %}{% if block.type == 'feature' %}{% assign wld_feat_count = wld_feat_count | plus: 1 %}{% endif %}{% endfor %}
+  {% if wld_feat_count > 0 %}
+  <div class="wld-e-features">
+    <div class="wld-e-features__grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'feature' %}
+          <div class="wld-e-feature">
+            <span class="wld-e-feature__icon">{{ block.settings.icon }}</span>
+            <p class="wld-e-feature__title">{{ block.settings.title }}</p>
+            <p class="wld-e-feature__text">{{ block.settings.text }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% if section.settings.feature_cta_text != blank %}
+      <a href="{{ section.settings.feature_cta_link | default: '#' }}" class="wld-e-btn wld-e-btn--outline">{{ section.settings.feature_cta_text }}</a>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <!-- HEALTH ARTICLES -->
+  {% assign wld_article_count = 0 %}
+  {% for block in section.blocks %}{% if block.type == 'article' %}{% assign wld_article_count = wld_article_count | plus: 1 %}{% endif %}{% endfor %}
+  {% if wld_article_count > 0 %}
+  <div class="wld-e-articles">
+    <h2>{{ section.settings.articles_heading }}</h2>
+    {% for block in section.blocks %}
+      {% if block.type == 'article' %}
+        <div class="wld-e-article">
+          <div class="wld-e-article__text">
+            <span class="wld-e-article__number">{{ block.settings.number }}</span>
+            <h3>{{ block.settings.title }}</h3>
+            <a href="{{ block.settings.link | default: '#' }}">{{ block.settings.link_text | default: 'Leer el artículo' }} →</a>
+          </div>
+          <div class="wld-e-article__media">
+            {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | image_url: width: 700 }}" alt="{{ block.settings.title | escape }}" loading="lazy" width="700" height="500">
+            {% else %}
+              {{ 'lifestyle-3' | placeholder_svg_tag: 'wld-e-placeholder__svg' }}
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- FAQ -->
+  {% assign wld_faq_count = 0 %}
+  {% for block in section.blocks %}{% if block.type == 'faq' %}{% assign wld_faq_count = wld_faq_count | plus: 1 %}{% endif %}{% endfor %}
+  {% if wld_faq_count > 0 %}
+  <div class="wld-e-faq">
+    <h2>{{ section.settings.faq_heading }}</h2>
+    <div class="wld-e-faq__list">
+      {% for block in section.blocks %}
+        {% if block.type == 'faq' %}
+          <details class="wld-e-faq__item">
+            <summary>{{ block.settings.question }}<span class="wld-e-faq__plus">+</span></summary>
+            <p>{{ block.settings.answer }}</p>
+          </details>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- NEWSLETTER + FOOTER LINKS -->
+  <div class="wld-e-footer">
+    <div class="wld-e-footer__newsletter">
+      <h3>{{ section.settings.newsletter_heading }}</h3>
+      <p>{{ section.settings.newsletter_text }}</p>
+      <form action="/contact#{{ wld_id }}-newsletter" method="post" class="wld-e-footer__form">
+        <input type="hidden" name="form_type" value="customer">
+        <input type="hidden" name="utf8" value="✓">
+        <input type="email" name="contact[email]" placeholder="{{ section.settings.newsletter_placeholder | default: 'tu@email.com' }}" required>
+        <button type="submit">{{ section.settings.newsletter_button | default: 'Suscribirme' }}</button>
+      </form>
+    </div>
+    <div class="wld-e-footer__links">
+      <div>
+        <p class="wld-e-footer__col-title">Ayuda</p>
+        <a href="/pages/contact">Contacto</a>
+        <a href="/pages/aviso-legal">Aviso legal</a>
+        <a href="/pages/politica-de-privacidad">Privacidad</a>
+        <a href="/pages/condiciones-generales-de-venta">Condiciones de venta</a>
+        <a href="/pages/politica-de-reembolso-y-devoluciones">Política de devolución</a>
+        <a href="/pages/politica-de-envios">Política de envíos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #{{ wld_id }} {
+    --wld-e-wine: #7a1f3d;
+    --wld-e-wine-dark: #5c1730;
+    --wld-e-pink: #f6d9e4;
+    --wld-e-pink-light: #fdf1f5;
+    --wld-e-cream: #f7f1e3;
+    --wld-e-gold: #e0a13c;
+    --wld-e-ink: #2b1620;
+    --wld-e-text: #5a4a50;
+    --wld-e-radius: 18px;
+    font-family: 'Inter', sans-serif;
+    color: var(--wld-e-ink);
+    background: #fff;
+    overflow-x: hidden;
+  }
+  #{{ wld_id }} * { box-sizing: border-box; }
+  #{{ wld_id }} h1, #{{ wld_id }} h2, #{{ wld_id }} h3 { font-family: 'DM Serif Display', serif; font-weight: 400; margin: 0 0 16px; color: var(--wld-e-wine-dark); }
+  #{{ wld_id }} p { margin: 0 0 12px; line-height: 1.6; }
+  #{{ wld_id }} img { display: block; max-width: 100%; height: auto; }
+
+  .wld-no-product-notice {
+    background: #fff3cd; color: #7a5c00; padding: 10px 16px; text-align: center; font-size: 14px;
+  }
+
+  .wld-e-announce { background: var(--wld-e-wine-dark); color: #fff; text-align: center; padding: 10px; font-size: 13px; letter-spacing: .04em; }
+  .wld-e-announce p { margin: 0; }
+
+  .wld-e-btn { display: inline-block; padding: 14px 32px; border-radius: 999px; font-weight: 700; text-decoration: none; text-transform: uppercase; font-size: 14px; letter-spacing: .03em; cursor: pointer; border: 2px solid transparent; text-align: center; }
+  .wld-e-btn--primary { background: var(--wld-e-wine); color: #fff; }
+  .wld-e-btn--primary:hover { background: var(--wld-e-wine-dark); }
+  .wld-e-btn--outline { background: transparent; border-color: var(--wld-e-wine); color: var(--wld-e-wine); margin: 24px auto 0; }
+
+  .wld-e-hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; padding: 56px 6%; background: linear-gradient(135deg, var(--wld-e-pink-light), var(--wld-e-pink)); position: relative; }
+  .wld-e-eyebrow { display: inline-block; background: #fff; color: var(--wld-e-wine); border-radius: 999px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: .06em; margin-bottom: 14px; }
+  .wld-e-hero__title { font-size: 44px; line-height: 1.1; }
+  .wld-e-hero__subtitle { font-size: 17px; color: var(--wld-e-text); max-width: 460px; }
+  .wld-e-hero__bundles { display: flex; gap: 10px; margin: 18px 0; flex-wrap: wrap; }
+  .wld-e-hero__bundle-pill { background: #fff; border: 2px solid var(--wld-e-pink); border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; }
+  .wld-e-hero__bundle-pill span { background: var(--wld-e-gold); color: #fff; border-radius: 999px; padding: 2px 8px; font-size: 10px; }
+  .wld-e-hero__bundle-pill.is-active { border-color: var(--wld-e-wine); background: var(--wld-e-pink); }
+  .wld-e-hero__cta { margin-top: 10px; }
+  .wld-e-hero__media { position: relative; text-align: center; }
+  .wld-e-hero__media img { margin: 0 auto; border-radius: var(--wld-e-radius); width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+  .wld-e-hero__badge { position: absolute; top: 10px; right: 10px; background: #fff; border-radius: 50%; width: 92px; height: 92px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0,0,0,.12); text-align: center; }
+  .wld-e-hero__badge-line1 { font-size: 9px; font-weight: 700; color: var(--wld-e-wine); }
+  .wld-e-hero__badge-line2 { font-size: 11px; font-weight: 700; color: var(--wld-e-wine); }
+  .wld-e-hero__badge-year { font-size: 9px; color: var(--wld-e-text); }
+
+  .wld-e-trust { background: var(--wld-e-cream); overflow: hidden; padding: 12px 0; }
+  .wld-e-trust__track { display: flex; gap: 40px; white-space: nowrap; animation: wld-e-scroll 22s linear infinite; width: max-content; }
+  .wld-e-trust__item { font-size: 13px; font-weight: 600; color: var(--wld-e-wine-dark); }
+  @keyframes wld-e-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  .wld-e-intro { text-align: center; max-width: 680px; margin: 64px auto; padding: 0 6%; }
+  .wld-e-intro h2 { font-size: 32px; }
+  .wld-e-intro p { color: var(--wld-e-text); }
+  .wld-e-intro__tagline { font-style: italic; color: var(--wld-e-wine); font-weight: 600; }
+
+  .wld-e-buybox { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 0 6% 64px; align-items: start; }
+  .wld-e-buybox__gallery { display: grid; grid-template-columns: 70px 1fr; gap: 12px; }
+  .wld-e-buybox__thumbs { display: flex; flex-direction: column; gap: 10px; }
+  .wld-e-thumb { border: 2px solid transparent; border-radius: 10px; padding: 0; overflow: hidden; cursor: pointer; background: none; width: 100%; aspect-ratio: 1/1; }
+  .wld-e-thumb img { width: 100%; height: 100%; aspect-ratio: 1/1; object-fit: cover; }
+  .wld-e-thumb.is-active { border-color: var(--wld-e-wine); }
+  .wld-e-buybox__main-image { position: relative; background: var(--wld-e-pink-light); border-radius: var(--wld-e-radius); overflow: hidden; }
+  .wld-e-buybox__main-image img { display: none; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+  .wld-e-buybox__main-image img.is-active { display: block; }
+  .wld-e-buybox__ribbon { position: absolute; top: 14px; left: 14px; background: #fff; border-radius: 12px; padding: 8px 12px; display: flex; flex-direction: column; font-size: 10px; font-weight: 700; color: var(--wld-e-wine); box-shadow: 0 4px 12px rgba(0,0,0,.1); }
+  .wld-e-buybox__title { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 26px; color: var(--wld-e-wine-dark); margin-bottom: 2px; }
+  .wld-e-buybox__subtitle { color: var(--wld-e-text); }
+  .wld-e-stars { color: var(--wld-e-gold); font-size: 16px; margin-bottom: 14px; }
+  .wld-e-stars span { color: var(--wld-e-text); font-size: 13px; margin-left: 6px; }
+  .wld-e-benefits { list-style: none; padding: 0; margin: 0 0 20px; background: var(--wld-e-pink-light); border-radius: 14px; padding: 16px 18px; }
+  .wld-e-benefits li { font-size: 14px; margin-bottom: 8px; color: var(--wld-e-wine-dark); font-weight: 500; }
+  .wld-e-benefits li:last-child { margin-bottom: 0; }
+
+  .wld-e-bundles { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+  .wld-e-bundle-card { position: relative; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; border: 2px solid #e8dfe2; border-radius: 14px; padding: 12px 16px; cursor: pointer; }
+  .wld-e-bundle-card.is-selected, .wld-e-bundle-card.is-active { border-color: var(--wld-e-wine); background: var(--wld-e-pink-light); }
+  .wld-e-bundle-card input { position: absolute; opacity: 0; }
+  .wld-e-bundle-card__badge { background: var(--wld-e-gold); color: #fff; font-size: 10px; font-weight: 700; border-radius: 999px; padding: 3px 9px; }
+  .wld-e-bundle-card__label { font-weight: 700; }
+  .wld-e-bundle-card__sublabel { font-size: 12px; color: var(--wld-e-text); }
+  .wld-e-bundle-card__price { margin-left: auto; font-weight: 700; color: var(--wld-e-wine); }
+  .wld-e-bundle-card__price s { color: var(--wld-e-text); font-weight: 400; margin-right: 6px; }
+
+  .wld-e-payment-note { font-size: 12px; color: var(--wld-e-text); }
+  .wld-e-buybox__submit { width: 100%; }
+  .wld-e-delivery { font-size: 12px; text-align: center; color: var(--wld-e-text); margin-top: 10px; }
+
+  .wld-e-categories { text-align: center; padding: 40px 6% 64px; }
+  .wld-e-categories__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
+  .wld-e-category { text-decoration: none; color: var(--wld-e-wine-dark); }
+  .wld-e-category img { border-radius: 14px; margin-bottom: 8px; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+  .wld-e-category span { display: inline-block; background: var(--wld-e-pink); border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 700; }
+
+  .wld-e-reviews { text-align: center; padding: 40px 6% 64px; background: var(--wld-e-pink-light); }
+  .wld-e-reviews__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; max-width: 1100px; margin: 0 auto; }
+  .wld-e-review-card { background: #fff; border-radius: 14px; overflow: hidden; text-align: left; box-shadow: 0 4px 14px rgba(0,0,0,.05); }
+  .wld-e-review-card img { width: 100%; height: 120px; object-fit: cover; }
+  .wld-e-review-card__body { padding: 14px; }
+  .wld-e-review-card__stars { color: var(--wld-e-gold); font-size: 13px; }
+  .wld-e-review-card__quote { font-size: 13px; color: var(--wld-e-text); min-height: 60px; }
+  .wld-e-review-card__name { font-size: 12px; font-weight: 700; color: var(--wld-e-wine-dark); margin: 0; }
+
+  .wld-e-features { text-align: center; padding: 56px 6%; }
+  .wld-e-features__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+  .wld-e-feature__icon { font-size: 26px; }
+  .wld-e-feature__title { font-weight: 700; color: var(--wld-e-wine-dark); }
+  .wld-e-feature__text { font-size: 13px; color: var(--wld-e-text); }
+
+  .wld-e-articles { padding: 40px 6% 64px; }
+  .wld-e-articles h2 { text-align: center; font-size: 30px; margin-bottom: 32px; }
+  .wld-e-article { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; margin-bottom: 32px; }
+  .wld-e-article__number { color: var(--wld-e-gold); font-weight: 700; font-size: 13px; }
+  .wld-e-article__media img { border-radius: var(--wld-e-radius); }
+  .wld-e-article a { color: var(--wld-e-wine); font-weight: 700; text-decoration: none; font-size: 14px; }
+
+  .wld-e-faq { padding: 40px 6% 64px; max-width: 760px; margin: 0 auto; }
+  .wld-e-faq h2 { text-align: center; font-size: 30px; }
+  .wld-e-faq__item { border-bottom: 1px solid #e8dfe2; padding: 16px 0; }
+  .wld-e-faq__item summary { cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; list-style: none; }
+  .wld-e-faq__item summary::-webkit-details-marker { display: none; }
+  .wld-e-faq__item p { color: var(--wld-e-text); margin-top: 10px; font-size: 14px; }
+  .wld-e-faq__plus { color: var(--wld-e-wine); font-size: 20px; }
+
+  .wld-e-footer { background: var(--wld-e-pink); padding: 48px 6%; display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; }
+  .wld-e-footer__form { display: flex; gap: 8px; max-width: 360px; }
+  .wld-e-footer__form input { flex: 1; border: none; border-radius: 999px; padding: 10px 16px; }
+  .wld-e-footer__form button { background: var(--wld-e-wine); color: #fff; border: none; border-radius: 999px; padding: 10px 20px; font-weight: 700; cursor: pointer; }
+  .wld-e-footer__col-title { font-weight: 700; color: var(--wld-e-wine-dark); }
+  .wld-e-footer__links a { display: block; color: var(--wld-e-wine-dark); text-decoration: none; font-size: 13px; margin-bottom: 8px; }
+
+  .wld-e-placeholder__svg { width: 100%; height: 100%; }
+
+  @media (max-width: 900px) {
+    .wld-e-hero, .wld-e-buybox, .wld-e-article, .wld-e-footer { grid-template-columns: 1fr; }
+    .wld-e-hero__title { font-size: 34px; }
+    .wld-e-categories__grid { grid-template-columns: repeat(3, 1fr); }
+    .wld-e-reviews__grid { grid-template-columns: repeat(2, 1fr); }
+    .wld-e-features__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .wld-e-hero { padding: 32px 5% 40px; gap: 24px; }
+    .wld-e-hero__title { font-size: 26px; }
+    .wld-e-hero__subtitle { font-size: 15px; }
+    .wld-e-hero__cta, .wld-e-btn--outline { width: 100%; }
+    .wld-e-buybox, .wld-e-categories, .wld-e-reviews, .wld-e-features, .wld-e-articles, .wld-e-faq, .wld-e-footer { padding-left: 5%; padding-right: 5%; }
+    .wld-e-buybox { gap: 28px; padding-bottom: 48px; }
+    .wld-e-intro { margin: 40px auto; }
+    .wld-e-categories__grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .wld-e-reviews__grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .wld-e-features__grid { grid-template-columns: 1fr; gap: 20px; }
+    .wld-e-buybox__gallery { grid-template-columns: 50px 1fr; }
+    .wld-e-buybox__thumbs { flex-direction: row; overflow-x: auto; }
+    .wld-e-thumb { min-width: 50px; }
+    .wld-e-buybox__title { font-size: 22px; }
+    .wld-e-footer { padding: 36px 5%; gap: 28px; }
+    .wld-e-footer__form { max-width: 100%; flex-direction: column; }
+    .wld-e-footer__form button { width: 100%; }
+  }
+</style>
+
+<script>
+(function () {
+  function wldInitEquilibra(root) {
+    if (!root || root.__wldInit) return;
+    root.__wldInit = true;
+
+    var mainImages = root.querySelectorAll('[data-wld-main-image]');
+    var thumbs = root.querySelectorAll('[data-wld-thumb]');
+    thumbs.forEach(function (thumb) {
+      thumb.addEventListener('click', function () {
+        var idx = thumb.getAttribute('data-index');
+        thumbs.forEach(function (t) { t.classList.remove('is-active'); });
+        thumb.classList.add('is-active');
+        mainImages.forEach(function (img) {
+          img.classList.toggle('is-active', img.getAttribute('data-index') === idx);
+        });
+      });
+    });
+
+    var variantInput = root.querySelector('[id$="-variant-input"]');
+    var bundleRadios = root.querySelectorAll('.wld-e-bundle-card input[type="radio"]');
+    var bundleCards = root.querySelectorAll('.wld-e-bundle-card');
+    var heroPills = root.querySelectorAll('.wld-e-hero__bundle-pill');
+
+    function selectBundle(index) {
+      bundleCards.forEach(function (card, i) {
+        var isMatch = i === index;
+        card.classList.toggle('is-selected', isMatch);
+        var radio = card.querySelector('input[type="radio"]');
+        if (radio) {
+          radio.checked = isMatch;
+          if (isMatch && variantInput && radio.getAttribute('data-variant-id')) {
+            variantInput.value = radio.getAttribute('data-variant-id');
+          }
+        }
+      });
+      heroPills.forEach(function (pill, i) {
+        pill.classList.toggle('is-active', i === index);
+      });
+    }
+
+    bundleRadios.forEach(function (radio, i) {
+      radio.addEventListener('change', function () { selectBundle(i); });
+    });
+
+    heroPills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        var idx = parseInt(pill.getAttribute('data-wld-bundle-index'), 10);
+        selectBundle(idx);
+        var buybox = root.querySelector('.wld-e-buybox');
+        if (buybox) buybox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    var preselected = root.querySelector('.wld-e-bundle-card.is-selected') || bundleCards[0];
+    if (preselected) {
+      var allCards = Array.prototype.slice.call(bundleCards);
+      selectBundle(allCards.indexOf(preselected));
+    }
+  }
+
+  function wldInitAll() {
+    document.querySelectorAll('.wld-equilibra').forEach(function (root) {
+      wldInitEquilibra(root);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wldInitAll);
+  } else {
+    wldInitAll();
+  }
+
+  document.addEventListener('shopify:section:load', function (event) {
+    var root = event.target.querySelector ? event.target.querySelector('.wld-equilibra') : null;
+    if (root) {
+      root.__wldInit = false;
+      wldInitEquilibra(root);
+    }
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "WLD — Equilibra Landing",
+  "tag": "section",
+  "class": "wld-equilibra-section",
+  "settings": [
+    { "type": "header", "content": "🛒 Producto" },
+    { "type": "product", "id": "product", "label": "Producto vinculado" },
+    { "type": "text", "id": "product_title", "label": "Nombre mostrado del producto", "default": "EquilibraMeno®" },
+    { "type": "text", "id": "product_subtitle", "label": "Subtítulo del producto", "default": "Cura menopausia y premenopausia" },
+    { "type": "text", "id": "rating_count", "label": "Número de opiniones", "default": "412" },
+    { "type": "text", "id": "add_to_cart_text", "label": "Texto botón añadir al carrito", "default": "AÑADIR AL CARRITO" },
+    { "type": "text", "id": "payment_note", "label": "Nota de pago", "default": "Pago en 3 o 4 plazos sin intereses con Klarna a partir de 30€" },
+    { "type": "text", "id": "delivery_text", "label": "Texto de entrega estimada", "default": "Entrega estimada el 14 de agosto" },
+
+    { "type": "header", "content": "📢 Barra de anuncio" },
+    { "type": "text", "id": "announcement_text", "label": "Texto de la barra superior", "default": "3x2 EN EQUILIBRAMENO — OFERTA DISPONIBLE" },
+
+    { "type": "header", "content": "🦸 Hero" },
+    { "type": "text", "id": "eyebrow_text", "label": "Etiqueta superior (eyebrow)" },
+    { "type": "text", "id": "hero_heading", "label": "Título principal", "default": "Deja de sufrirlo. Vuelve a vivir." },
+    { "type": "textarea", "id": "hero_subheading", "label": "Subtítulo", "default": "Cápsulas 100% naturales para reducir los síntomas de la menopausia." },
+    { "type": "text", "id": "hero_cta_text", "label": "Texto del botón hero", "default": "EMPEZAR MI CURA" },
+    { "type": "image_picker", "id": "hero_image", "label": "Imagen hero" },
+    { "type": "text", "id": "hero_badge_line1", "label": "Insignia — línea 1", "default": "PRODUCTO ELEGIDO" },
+    { "type": "text", "id": "hero_badge_text", "label": "Insignia — línea 2", "default": "MENOPAUSIA" },
+    { "type": "text", "id": "hero_badge_year", "label": "Insignia — año", "default": "2026" },
+
+    { "type": "header", "content": "💬 Sección introducción" },
+    { "type": "text", "id": "intro_heading", "label": "Título", "default": "Tu aliada femenina" },
+    { "type": "textarea", "id": "intro_text", "label": "Texto", "default": "Porque cada mujer merece cuidar su salud, creamos soluciones naturales y expertas para acompañarte en cada etapa de tu equilibrio hormonal, con benevolencia y eficacia." },
+    { "type": "text", "id": "intro_tagline", "label": "Eslogan en cursiva", "default": "Pensado por mujeres, para mujeres." },
+
+    { "type": "header", "content": "🗂️ Categorías" },
+    { "type": "text", "id": "categories_heading", "label": "Título de la sección", "default": "Nuestras soluciones para todas tus necesidades" },
+
+    { "type": "header", "content": "⭐ Opiniones" },
+    { "type": "text", "id": "reviews_heading", "label": "Título de la sección", "default": "Más de 30.000 mujeres confían en nosotras" },
+
+    { "type": "header", "content": "🏅 Fila de confianza" },
+    { "type": "text", "id": "feature_cta_text", "label": "Texto del botón", "default": "SABER MÁS" },
+    { "type": "url", "id": "feature_cta_link", "label": "Enlace del botón" },
+
+    { "type": "header", "content": "📰 Consejos de salud" },
+    { "type": "text", "id": "articles_heading", "label": "Título de la sección", "default": "Nuestros consejos de salud" },
+
+    { "type": "header", "content": "❓ FAQ" },
+    { "type": "text", "id": "faq_heading", "label": "Título de la sección", "default": "Preguntas frecuentes" },
+
+    { "type": "header", "content": "📩 Newsletter" },
+    { "type": "text", "id": "newsletter_heading", "label": "Título", "default": "Descubre nuestras novedades 🌸" },
+    { "type": "textarea", "id": "newsletter_text", "label": "Texto", "default": "Suscríbete a nuestra newsletter para recibir promociones exclusivas y consejos de bienestar. ¡De regalo, recibe un e-book gratuito!" },
+    { "type": "text", "id": "newsletter_placeholder", "label": "Placeholder del email", "default": "tu@email.com" },
+    { "type": "text", "id": "newsletter_button", "label": "Texto del botón", "default": "Suscribirme" }
+  ],
+  "blocks": [
+    {
+      "type": "trust_item",
+      "name": "Ítem barra de confianza",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Icono/emoji", "default": "✅" },
+        { "type": "text", "id": "text", "label": "Texto", "default": "+30.000 clientas satisfechas" }
+      ]
+    },
+    {
+      "type": "gallery_image",
+      "name": "Imagen de galería",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Imagen" }
+      ]
+    },
+    {
+      "type": "benefit",
+      "name": "Beneficio (buy box)",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Texto del beneficio", "default": "Reduce +40 síntomas de la menopausia" }
+      ]
+    },
+    {
+      "type": "bundle_option",
+      "name": "Opción de pack",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Nombre del pack", "default": "1 bote — 30 días" },
+        { "type": "text", "id": "sublabel", "label": "Subtítulo", "default": "Cura de descubrimiento" },
+        { "type": "text", "id": "price", "label": "Precio", "default": "29,90€" },
+        { "type": "text", "id": "compare_price", "label": "Precio tachado (opcional)" },
+        { "type": "text", "id": "badge_text", "label": "Insignia (ej. -20%)" },
+        { "type": "number", "id": "variant_index", "label": "N.º de variante del producto (1, 2, 3…)", "default": 1 },
+        { "type": "checkbox", "id": "default_selected", "label": "Seleccionado por defecto", "default": false }
+      ]
+    },
+    {
+      "type": "category",
+      "name": "Categoría",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Imagen" },
+        { "type": "text", "id": "label", "label": "Etiqueta", "default": "Menopausia" },
+        { "type": "url", "id": "link", "label": "Enlace" }
+      ]
+    },
+    {
+      "type": "testimonial",
+      "name": "Opinión / testimonio",
+      "settings": [
+        { "type": "image_picker", "id": "photo", "label": "Foto" },
+        { "type": "text", "id": "name_age", "label": "Nombre y edad", "default": "Marisa · 51 años" },
+        { "type": "textarea", "id": "quote", "label": "Cita", "default": "Desde que tomo EquilibraMeno mis sofocos han bajado muchísimo. ¡Por fin duermo bien!" }
+      ]
+    },
+    {
+      "type": "feature",
+      "name": "Punto de confianza",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Icono/emoji", "default": "🇪🇺" },
+        { "type": "text", "id": "title", "label": "Título", "default": "Fabricado en la UE" },
+        { "type": "textarea", "id": "text", "label": "Texto", "default": "Producción controlada, garantía de calidad y trazabilidad." }
+      ]
+    },
+    {
+      "type": "article",
+      "name": "Artículo de salud",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Imagen" },
+        { "type": "text", "id": "number", "label": "Número", "default": "01" },
+        { "type": "text", "id": "title", "label": "Título", "default": "La cimicífuga: la planta que ha cambiado la menopausia de millones de mujeres" },
+        { "type": "text", "id": "link_text", "label": "Texto del enlace", "default": "Leer el artículo" },
+        { "type": "url", "id": "link", "label": "Enlace" }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "Pregunta frecuente",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Pregunta", "default": "¿Cuánto tiempo tarda en hacer efecto EquilibraMeno?" },
+        { "type": "textarea", "id": "answer", "label": "Respuesta", "default": "La mayoría de nuestras clientas nota una mejora a partir de las 2-3 semanas de uso continuo. Para resultados óptimos, recomendamos una cura mínima de 3 meses." }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "trust_item", "settings": { "icon": "✅", "text": "+30.000 clientas satisfechas" } },
+      { "type": "trust_item", "settings": { "icon": "🧪", "text": "Fabricado en laboratorio certificado" } },
+      { "type": "trust_item", "settings": { "icon": "🇪🇺", "text": "Fabricado en la Unión Europea" } },
+      { "type": "trust_item", "settings": { "icon": "🌿", "text": "Fórmulas 100% naturales" } },
+
+      { "type": "bundle_option", "settings": { "label": "1 bote — 30 días", "sublabel": "Cura de descubrimiento", "price": "29,90€", "compare_price": "", "badge_text": "", "variant_index": 1, "default_selected": true } },
+      { "type": "bundle_option", "settings": { "label": "3 botes — 90 días", "sublabel": "Cura completa recomendada", "price": "74,90€", "compare_price": "89,70€", "badge_text": "-16%", "variant_index": 2, "default_selected": false } },
+
+      { "type": "benefit", "settings": { "text": "Reduce +40 síntomas de la menopausia" } },
+      { "type": "benefit", "settings": { "text": "Disminuye los sofocos y sudores nocturnos" } },
+      { "type": "benefit", "settings": { "text": "Mejora la calidad del sueño" } },
+      { "type": "benefit", "settings": { "text": "Composición 100% natural, sin riesgos" } },
+
+      { "type": "category", "settings": { "label": "Libido" } },
+      { "type": "category", "settings": { "label": "Sequedad íntima" } },
+      { "type": "category", "settings": { "label": "Menopausia" } },
+      { "type": "category", "settings": { "label": "Pérdida de peso" } },
+      { "type": "category", "settings": { "label": "Estrés" } },
+      { "type": "category", "settings": { "label": "Articulaciones" } },
+
+      { "type": "testimonial", "settings": { "name_age": "Carmen · 52 años", "quote": "A los 3 años de tener sofocos, por fin he encontrado algo que funciona. Desde hace 2 meses ya no sufro." } },
+      { "type": "testimonial", "settings": { "name_age": "Rosario · 49 años", "quote": "Notaba cambios de humor constantes. Después de 6 semanas, me siento mucho más estable y con más energía." } },
+      { "type": "testimonial", "settings": { "name_age": "Sara · 55 años", "quote": "Dormía fatal por los sudores nocturnos. Ahora duermo del tirón, no me lo esperaba." } },
+      { "type": "testimonial", "settings": { "name_age": "Aurelia · 51 años", "quote": "Los dolores articulares habían cambiado mi día a día. Con la cura de 3 meses, noto muchísima mejoría." } },
+      { "type": "testimonial", "settings": { "name_age": "Isabel · 54 años", "quote": "Me han hablado de EquilibraMeno mis amigas del club de lectura. Ahora se lo recomiendo yo a todo el mundo." } },
+      { "type": "testimonial", "settings": { "name_age": "Pilar · 50 años", "quote": "100% natural y realmente eficaz. No pensaba que un complemento pudiera cambiar tanto mi día a día." } },
+
+      { "type": "feature", "settings": { "icon": "🇪🇺", "title": "Fabricado en la UE", "text": "Producción controlada, garantía de calidad y trazabilidad." } },
+      { "type": "feature", "settings": { "icon": "🔬", "title": "Eficacia real", "text": "Resultados sencillos y transparentes sobre tu bienestar diario." } },
+      { "type": "feature", "settings": { "icon": "🎯", "title": "Adaptado a tus necesidades", "text": "De la premenopausia a la menopausia, soluciones para cada etapa." } },
+      { "type": "feature", "settings": { "icon": "🤝", "title": "Transparencia e integridad", "text": "Cada ingrediente es seleccionado por su eficacia y respeto a tu cuerpo." } },
+
+      { "type": "article", "settings": { "number": "01", "title": "La cimicífuga: la planta que ha cambiado la menopausia de millones de mujeres", "link_text": "Leer el artículo" } },
+
+      { "type": "faq", "settings": { "question": "¿Cuánto tiempo tarda en hacer efecto EquilibraMeno?", "answer": "La mayoría de nuestras clientas nota una mejora a partir de las 2-3 semanas de uso continuo. Para resultados óptimos, recomendamos una cura mínima de 3 meses." } },
+      { "type": "faq", "settings": { "question": "¿Es un producto 100% natural?", "answer": "Sí, EquilibraMeno está formulado únicamente con ingredientes de origen natural, sin hormonas añadidas." } },
+      { "type": "faq", "settings": { "question": "¿Puedo tomarlo si sigo un tratamiento médico?", "answer": "Te recomendamos consultar con tu médico o farmacéutico antes de empezar cualquier complemento alimenticio si sigues un tratamiento en curso." } },
+      { "type": "faq", "settings": { "question": "¿Cuál es la dosis diaria recomendada?", "answer": "Se recomienda tomar 2 cápsulas al día, preferiblemente durante una comida, con un vaso de agua." } },
+      { "type": "faq", "settings": { "question": "¿Dónde se fabrica el producto?", "answer": "EquilibraMeno se fabrica en laboratorios certificados dentro de la Unión Europea, bajo estrictos controles de calidad." } },
+      { "type": "faq", "settings": { "question": "¿Puedo devolver el producto si no me convence?", "answer": "Dispones de 14 días naturales para ejercer tu derecho de desistimiento si el bote no ha sido abierto ni el precinto retirado, conforme a la normativa española de protección al consumidor." } },
+      { "type": "faq", "settings": { "question": "¿Cuánto tarda el envío?", "answer": "Los pedidos se preparan en 24-48h y se entregan en los plazos indicados en nuestra Política de Envíos." } },
+      { "type": "faq", "settings": { "question": "¿Hay efectos secundarios conocidos?", "answer": "EquilibraMeno es generalmente bien tolerado. Como con cualquier complemento, si notas una reacción inusual, interrumpe el uso y consulta a un profesional sanitario." } }
+    ]
+  },
+  "enabled_on": {
+    "templates": ["index", "product", "page"]
+  }
+}
+{% endschema %}
