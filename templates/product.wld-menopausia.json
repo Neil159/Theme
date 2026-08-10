@@ -10,265 +10,101 @@
 {
   "sections": {
     "main": {
-      "type": "wld-equilibrameno-landing-menopausia",
+      "type": "main-product",
       "blocks": {
-        "b000": {
-          "type": "benefit_card",
+        "liquid_ppnNMD": {
+          "type": "liquid",
           "settings": {
-            "icon": "🔥",
-            "title": "Sofocos",
-            "text": "Ayuda a reducir la frecuencia e intensidad de los sofocos."
+            "liquid": "<!-- EquilibraMeno — Bloc avis (custom liquid) -->\n<div class=\"eqm-reviews\">\n  <span class=\"eqm-reviews__stars\" aria-hidden=\"true\">★★★★★</span>\n  <a href=\"#eqm-reviews-section\" class=\"eqm-reviews__count\">412 opiniones verificadas <span class=\"eqm-reviews__caret\">▾</span></a>\n</div>\n\n<style>\n  .eqm-reviews {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    margin: 0 0 10px 0;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif;\n  }\n  .eqm-reviews__stars {\n    color: #e0a13c;\n    font-size: 18px;\n    letter-spacing: 2px;\n  }\n  .eqm-reviews__count {\n    color: #5c1730;\n    font-size: 14px;\n    font-weight: 500;\n    text-decoration: none;\n    display: inline-flex;\n    align-items: center;\n    gap: 4px;\n  }\n  .eqm-reviews__count:hover {\n    text-decoration: underline;\n  }\n  .eqm-reviews__caret {\n    font-size: 11px;\n    opacity: 0.7;\n  }\n</style>"
           }
         },
-        "b001": {
-          "type": "benefit_card",
+        "liquid_J4x9wp": {
+          "type": "liquid",
           "settings": {
-            "icon": "😴",
-            "title": "Sueño",
-            "text": "Favorece un sueño más reparador durante la menopausia."
+            "liquid": "<!-- EquilibraMeno — Bloc titre (custom liquid) -->\n<h2 class=\"eqm-title\">EquilibraMeno<span class=\"eqm-title__reg\">&reg;</span></h2>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap\" rel=\"stylesheet\">\n<style>\n  .eqm-title {\n    font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif;\n    font-style: italic;\n    font-weight: 400;\n    color: #2b1620;\n    font-size: 34px;\n    line-height: 1.15;\n    margin: 0 0 4px 0;\n  }\n  .eqm-title__reg {\n    font-style: normal;\n    font-size: 16px;\n    vertical-align: super;\n    margin-left: 2px;\n  }\n  @media (max-width: 749px) {\n    .eqm-title {\n      font-size: 28px;\n    }\n  }\n</style>"
           }
         },
-        "b002": {
-          "type": "benefit_card",
+        "liquid_JbTUD4": {
+          "type": "liquid",
           "settings": {
-            "icon": "🧘‍♀️",
-            "title": "Equilibrio emocional",
-            "text": "Contribuye a una mejor gestión del estrés y la irritabilidad."
+            "liquid": "<!-- EquilibraMeno — Bloc sous-titre (custom liquid) -->\n<p class=\"eqm-subtitle\">Cura menopausia &amp; premenopausia</p>\n\n<style>\n  .eqm-subtitle {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif;\n    font-weight: 700;\n    color: #7a1f3d;\n    font-size: 17px;\n    margin: 0 0 10px 0;\n  }\n</style>"
           }
         },
-        "b003": {
-          "type": "benefit_card",
+        "liquid_UaRCdz": {
+          "type": "liquid",
           "settings": {
-            "icon": "⚖️",
-            "title": "Metabolismo",
-            "text": "Apoya un metabolismo estable pese a la caída de estrógenos."
+            "liquid": "<div class=\"eqm-frame\">\n  <ul class=\"eqm-frame__list\">\n    <li>\n      <span class=\"eqm-frame__check\">\n        <svg viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"#7a1f3d\">\n            <circle cx=\"14\" cy=\"14\" r=\"8\"/>\n            <circle cx=\"22\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"6\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"6\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"19.66\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"22\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"19.66\" r=\"5\"/>\n          </g>\n          <path d=\"M8.2 14.3L11.7 17.8L19.8 9.7\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </span>\n      <span>Alivia +48 s&iacute;ntomas de la menopausia</span>\n    </li>\n    <li>\n      <span class=\"eqm-frame__check\">\n        <svg viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"#7a1f3d\">\n            <circle cx=\"14\" cy=\"14\" r=\"8\"/>\n            <circle cx=\"22\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"6\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"6\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"19.66\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"22\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"19.66\" r=\"5\"/>\n          </g>\n          <path d=\"M8.2 14.3L11.7 17.8L19.8 9.7\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </span>\n      <span>Elimina los sofocos</span>\n    </li>\n    <li>\n      <span class=\"eqm-frame__check\">\n        <svg viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"#7a1f3d\">\n            <circle cx=\"14\" cy=\"14\" r=\"8\"/>\n            <circle cx=\"22\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"6\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"6\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"19.66\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"22\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"19.66\" r=\"5\"/>\n          </g>\n          <path d=\"M8.2 14.3L11.7 17.8L19.8 9.7\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </span>\n      <span>Mejora la calidad del sue&ntilde;o</span>\n    </li>\n    <li>\n      <span class=\"eqm-frame__check\">\n        <svg viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"#7a1f3d\">\n            <circle cx=\"14\" cy=\"14\" r=\"8\"/>\n            <circle cx=\"22\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"6\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"6\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"19.66\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"22\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"19.66\" r=\"5\"/>\n          </g>\n          <path d=\"M8.2 14.3L11.7 17.8L19.8 9.7\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </span>\n      <span>Una composici&oacute;n natural sin riesgos</span>\n    </li>\n  </ul>\n</div>\n\n<style>\n  .eqm-frame {\n    background: #fdf1f5;\n    border: none;\n    border-radius: 20px;\n    padding: 26px 24px;\n    margin: 4px 0 16px 0;\n    box-sizing: border-box;\n  }\n  .eqm-frame__list {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 18px;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif;\n  }\n  .eqm-frame__list li {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    color: #5c1730;\n    font-size: 16px;\n    font-weight: 700;\n    line-height: 1.35;\n  }\n  .eqm-frame__check {\n    box-sizing: border-box;\n    flex: 0 0 26px;\n    width: 26px !important;\n    height: 26px !important;\n    min-width: 26px;\n    min-height: 26px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n  .eqm-frame__check svg {\n    width: 26px !important;\n    height: 26px !important;\n    display: block !important;\n    flex-shrink: 0;\n  }\n</style>"
           }
         },
-        "b004": {
-          "type": "ingredient",
+        "liquid_4QKCPj": {
+          "type": "liquid",
           "settings": {
-            "icon": "💊",
-            "title": "Magnesio liposomal premium",
-            "text": "Una forma de magnesio de alta absorción para ayudar a mantener un metabolismo estable y reducir el cansancio."
+            "liquid": "<!-- EquilibraMeno — Bloc urgence stock (custom liquid) -->\n<div class=\"eqm-urgency\">\n  <span class=\"eqm-urgency__dot\" aria-hidden=\"true\"></span>\n  <span class=\"eqm-urgency__text\"><strong class=\"eqm-urgency__label\">Atenci&oacute;n:</strong> Stock limitado en la oferta <strong class=\"eqm-urgency__bold\">2+1</strong> &mdash; v&aacute;lido hasta fin de existencias.</span>\n</div>\n\n<style>\n  .eqm-urgency {\n    display: flex !important;\n    align-items: center !important;\n    gap: 8px !important;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif !important;\n    font-size: 14px !important;\n    color: #374151 !important;\n    margin: 10px 0 !important;\n  }\n  .eqm-urgency__dot {\n    box-sizing: border-box;\n    width: 8px !important;\n    height: 8px !important;\n    min-width: 8px;\n    min-height: 8px;\n    border-radius: 50% !important;\n    flex-shrink: 0;\n    background-color: #dc2626 !important;\n    animation: eqm-urgency-pulse 1.8s ease-in-out infinite;\n  }\n  .eqm-urgency__label {\n    font-weight: 700 !important;\n    color: #dc2626 !important;\n  }\n  .eqm-urgency__bold {\n    font-weight: 700 !important;\n    color: #1f2937 !important;\n  }\n\n  @keyframes eqm-urgency-pulse {\n    0% {\n      background-color: #fca5a5;\n      box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.35);\n    }\n    50% {\n      background-color: #b91c1c;\n      box-shadow: 0 0 0 5px rgba(220, 38, 38, 0);\n    }\n    100% {\n      background-color: #fca5a5;\n      box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);\n    }\n  }\n</style>"
           }
         },
-        "b005": {
-          "type": "ingredient",
+        "buy_buttons": {
+          "type": "buy_buttons",
           "settings": {
-            "icon": "🌿",
-            "title": "Actea de racimo negro (cimicifuga)",
-            "text": "Planta tradicionalmente usada para acompañar los cambios hormonales de la menopausia."
-          }
-        },
-        "b006": {
-          "type": "ingredient",
-          "settings": {
-            "icon": "🍋",
-            "title": "Vitamina B6",
-            "text": "Contribuye a la regulación de la actividad hormonal y del sistema nervioso."
-          }
-        },
-        "b007": {
-          "type": "stat",
-          "settings": {
-            "number": "91%",
-            "label": "notan menos sofocos en 6 semanas"
-          }
-        },
-        "b008": {
-          "type": "stat",
-          "settings": {
-            "number": "93%",
-            "label": "satisfechas con los resultados"
-          }
-        },
-        "b009": {
-          "type": "stat",
-          "settings": {
-            "number": "94%",
-            "label": "lo recomiendan a otras mujeres"
-          }
-        },
-        "b010": {
-          "type": "comparison_row",
-          "settings": {
-            "criteria": "Sin hormonas de síntesis ni aditivos"
-          }
-        },
-        "b011": {
-          "type": "comparison_row",
-          "settings": {
-            "criteria": "Ingredientes naturales"
-          }
-        },
-        "b012": {
-          "type": "comparison_row",
-          "settings": {
-            "criteria": "Fabricado en laboratorio certificado"
-          }
-        },
-        "b013": {
-          "type": "comparison_row",
-          "settings": {
-            "criteria": "Garantía satisfecha o reembolsada"
-          }
-        },
-        "b014": {
-          "type": "review",
-          "settings": {
-            "name": "Noemí, 51 años",
-            "rating": 5,
-            "text": "A los 51 años pensaba que los sofocos serían parte de mi vida para siempre. Desde que tomo EquilibraMeno, he recuperado mis noches."
-          }
-        },
-        "b015": {
-          "type": "review",
-          "settings": {
-            "name": "Marie-Claire, 54 años",
-            "rating": 5,
-            "text": "Aliviada por fin. Sufría de las caderas desde hace 2 años. Desde hace 3 semanas me levanto sin quejarme."
-          }
-        },
-        "b016": {
-          "type": "review",
-          "settings": {
-            "name": "Sandra, 49 años",
-            "rating": 5,
-            "text": "Escéptica al principio, convencida después. Desde la segunda semana noté un cambio real."
-          }
-        },
-        "b017": {
-          "type": "review",
-          "settings": {
-            "name": "Isabel, 56 años",
-            "rating": 4,
-            "text": "Mis noches han cambiado. Menos sudores, más energía durante el día."
-          }
-        },
-        "b018": {
-          "type": "review",
-          "settings": {
-            "name": "Cristina, 58 años",
-            "rating": 5,
-            "text": "Tres meses y otra mujer. Es lo primero que realmente ha funcionado para mí."
-          }
-        },
-        "b019": {
-          "type": "review",
-          "settings": {
-            "name": "Silvia, 52 años",
-            "rating": 5,
-            "text": "Mis mañanas han cambiado. Es una pequeña victoria diaria, pero para mí es enorme."
-          }
-        },
-        "b020": {
-          "type": "faq",
-          "settings": {
-            "question": "¿Cuánto tiempo antes de notar los primeros efectos?",
-            "answer": "La mayoría de usuarias notan los primeros cambios entre 2 y 4 semanas. Se recomienda una cura de 3 meses para resultados óptimos."
-          }
-        },
-        "b021": {
-          "type": "faq",
-          "settings": {
-            "question": "¿Hay contraindicaciones?",
-            "answer": "EquilibraMeno no contiene hormonas. Si estás en tratamiento médico o embarazada, consulta a tu médico antes de tomarlo."
-          }
-        },
-        "b022": {
-          "type": "faq",
-          "settings": {
-            "question": "¿La fórmula es realmente natural y sin hormonas?",
-            "answer": "Sí, la fórmula se basa en magnesio liposomal, actea de racimo negro y vitamina B6, sin hormonas de síntesis."
-          }
-        },
-        "b023": {
-          "type": "faq",
-          "settings": {
-            "question": "¿A partir de qué edad se puede tomar?",
-            "answer": "Está pensado para mujeres en premenopausia y menopausia, generalmente a partir de los 40 años."
-          }
-        },
-        "b024": {
-          "type": "faq",
-          "settings": {
-            "question": "¿Puedo tomarlo todo el año?",
-            "answer": "Sí, puede tomarse de forma continuada mientras persistan los síntomas."
-          }
-        },
-        "b025": {
-          "type": "faq",
-          "settings": {
-            "question": "¿Cómo se toma?",
-            "answer": "2 cápsulas al día con un vaso de agua, preferiblemente por la mañana."
-          }
-        },
-        "b026": {
-          "type": "faq",
-          "settings": {
-            "question": "¿Es compatible con otros tratamientos?",
-            "answer": "En general sí, pero recomendamos consultar con tu médico si sigues otro tratamiento hormonal."
-          }
-        },
-        "b027": {
-          "type": "faq",
-          "settings": {
-            "question": "¿Qué garantías ofrecéis?",
-            "answer": "30 días satisfecha o reembolsada: si no notas resultados, te devolvemos tu dinero."
+            "show_payment_button": false,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
           }
         }
       },
       "block_order": [
-        "b000",
-        "b001",
-        "b002",
-        "b003",
-        "b004",
-        "b005",
-        "b006",
-        "b007",
-        "b008",
-        "b009",
-        "b010",
-        "b011",
-        "b012",
-        "b013",
-        "b014",
-        "b015",
-        "b016",
-        "b017",
-        "b018",
-        "b019",
-        "b020",
-        "b021",
-        "b022",
-        "b023",
-        "b024",
-        "b025",
-        "b026",
-        "b027"
+        "liquid_ppnNMD",
+        "liquid_J4x9wp",
+        "liquid_JbTUD4",
+        "liquid_UaRCdz",
+        "liquid_4QKCPj",
+        "buy_buttons"
       ],
       "settings": {
-        "product": "equilibrameno",
-        "stock_warning": "2+1 EQUILIBRAMENO disponible por tiempo limitado",
-        "ribbon_text": "ELEGIDO PRODUCTO MENOPAUSIA 2026",
-        "eyebrow_text": "⭐⭐⭐⭐⭐ Opiniones verificadas",
-        "hero_title": "Vuelve a sentirte como antes de la menopausia",
-        "hero_subtitle": "Un complemento 100% natural pensado para acompañar los síntomas de la menopausia, sin hormonas.",
-        "bullet_1": "Ayuda a calmar los sofocos y sudores nocturnos",
-        "bullet_2": "Favorece un sueño más estable",
-        "bullet_3": "100% natural y sin hormonas",
-        "stock_alert": "Atención: stock limitado en la oferta 2+1, hasta agotar existencias.",
-        "benefits_title": "Beneficios interiores y exteriores",
-        "ingredients_intro": "Una composición pensada específicamente para acompañar el desequilibrio hormonal de la menopausia.",
-        "usage_text": "2 cápsulas al día, preferiblemente por la mañana con un vaso de agua. Cura recomendada: 3 meses mínimo.",
-        "compare_title": "¿Por qué elegir EquilibraMeno?",
-        "cta_title": "Vuelve a sentirte tú misma",
-        "cta_text": "Miles de mujeres ya acompañan su menopausia con EquilibraMeno."
+        "full_width": true,
+        "show_fixed_add_to_cart": true,
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "recommendations_count": 6,
+        "products": [],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "You may also like",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "related-products"
   ]
 }
