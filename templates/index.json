@@ -15,13 +15,14 @@
         "slide-1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/banniere.png",
             "content_max_width": 640,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-start sm:text-start",
-            "subheading": "Cura menopausia y premenopausia",
-            "title": "Deja de sufrirlo. Vuelve a vivir.",
+            "subheading": "",
+            "title": "",
             "heading_tag": "h0",
-            "button_text": "EMPEZAR MI CURA",
+            "button_text": "",
             "button_link": "/products/equilibrameno",
             "text_color": "#5c1730",
             "button_background": "#7a1f3d",
@@ -29,7 +30,7 @@
             "overlay_color": "#000000",
             "overlay_opacity": 0,
             "background": "#f6d9e4",
-            "background_gradient": "linear-gradient(135deg, #fdf1f5, #f6d9e4)"
+            "background_gradient": "linear-gradient(135deg, rgba(253, 241, 245, 1), rgba(246, 217, 228, 1) 100%)"
           }
         }
       },
@@ -53,7 +54,7 @@
       "type": "scrolling-text",
       "settings": {
         "full_width": true,
-        "text": "✅ +30.000 clientas satisfechas · 🧪 Fabricado en laboratorio certificado · 🇪🇺 Fabricado en la Unión Europea · 🌿 Fórmulas 100% naturales",
+        "text": "+30.000 clientas satisfechas             Fabricado en laboratorio certificado   Fórmulas 100% naturales",
         "text_size": "xsmall",
         "text_style": "fill",
         "scrolling_mode": "auto",
@@ -207,10 +208,11 @@
         "cat-1": {
           "type": "item",
           "settings": {
-            "stretch_image": false,
-            "link_text": "Libido",
+            "image": "shopify://shop_images/carousel-02.png",
+            "stretch_image": true,
+            "link_text": "",
             "link_url": "#",
-            "background": "#f6d9e4",
+            "background": "",
             "text_color": "#5c1730",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -219,10 +221,11 @@
         "cat-2": {
           "type": "item",
           "settings": {
-            "stretch_image": false,
-            "link_text": "Sequedad íntima",
+            "image": "shopify://shop_images/carousel-06.png",
+            "stretch_image": true,
+            "link_text": "",
             "link_url": "#",
-            "background": "#f7d7e0",
+            "background": "",
             "text_color": "#5c1730",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -231,22 +234,24 @@
         "cat-3": {
           "type": "item",
           "settings": {
-            "stretch_image": false,
-            "link_text": "Menopausia",
+            "image": "shopify://shop_images/carousel_Plan_de_travail_1.png",
+            "stretch_image": true,
+            "link_text": "",
             "link_url": "/products/equilibrameno",
-            "background": "#f0c3d3",
+            "background": "",
             "text_color": "#5c1730",
-            "overlay_color": "#000000",
+            "overlay_color": "#FFFFFF",
             "overlay_opacity": 0
           }
         },
         "cat-4": {
           "type": "item",
           "settings": {
-            "stretch_image": false,
-            "link_text": "Pérdida de peso",
+            "image": "shopify://shop_images/carousel-03.png",
+            "stretch_image": true,
+            "link_text": "",
             "link_url": "#",
-            "background": "#f6d9e4",
+            "background": "",
             "text_color": "#5c1730",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -255,10 +260,11 @@
         "cat-5": {
           "type": "item",
           "settings": {
-            "stretch_image": false,
-            "link_text": "Estrés",
+            "image": "shopify://shop_images/carousel-04.png",
+            "stretch_image": true,
+            "link_text": "",
             "link_url": "#",
-            "background": "#f7d7e0",
+            "background": "",
             "text_color": "#5c1730",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -267,10 +273,11 @@
         "cat-6": {
           "type": "item",
           "settings": {
-            "stretch_image": false,
-            "link_text": "Articulaciones",
+            "image": "shopify://shop_images/carousel-05.png",
+            "stretch_image": true,
+            "link_text": "",
             "link_url": "#",
-            "background": "#f0c3d3",
+            "background": "",
             "text_color": "#5c1730",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -287,7 +294,7 @@
       ],
       "settings": {
         "full_width": true,
-        "block_size": "medium",
+        "block_size": "small",
         "subheading": "",
         "title": "Nuestras soluciones para todas tus necesidades",
         "content": "",
