@@ -107,24 +107,28 @@
     "featured-product": {
       "type": "featured-product",
       "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "settings": {}
-        },
-        "title": {
-          "type": "title",
+        "liquid_MLKyj6": {
+          "type": "liquid",
           "settings": {
-            "heading_tag": "h2"
+            "liquid": "<!-- EquilibraMeno — Bloc avis (custom liquid) -->\n<div class=\"eqm-reviews\">\n  <span class=\"eqm-reviews__stars\" aria-hidden=\"true\">★★★★★</span>\n  <a href=\"#eqm-reviews-section\" class=\"eqm-reviews__count\">412 opiniones verificadas <span class=\"eqm-reviews__caret\">▾</span></a>\n</div>\n\n<style>\n  .eqm-reviews {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    margin: 0 0 10px 0;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif;\n  }\n  .eqm-reviews__stars {\n    color: #e0a13c;\n    font-size: 18px;\n    letter-spacing: 2px;\n  }\n  .eqm-reviews__count {\n    color: #5c1730;\n    font-size: 14px;\n    font-weight: 500;\n    text-decoration: none;\n    display: inline-flex;\n    align-items: center;\n    gap: 4px;\n  }\n  .eqm-reviews__count:hover {\n    text-decoration: underline;\n  }\n  .eqm-reviews__caret {\n    font-size: 11px;\n    opacity: 0.7;\n  }\n</style>"
           }
         },
-        "badges": {
-          "type": "badges",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
+        "liquid_PAcxTy": {
+          "type": "liquid",
           "settings": {
-            "show_taxes_notice": true
+            "liquid": "<!-- EquilibraMeno — Bloc titre (custom liquid) -->\n<h2 class=\"eqm-title\">EquilibraMeno<span class=\"eqm-title__reg\">&reg;</span></h2>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap\" rel=\"stylesheet\">\n<style>\n  .eqm-title {\n    font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif;\n    font-style: italic;\n    font-weight: 400;\n    color: #2b1620;\n    font-size: 34px;\n    line-height: 1.15;\n    margin: 0 0 4px 0;\n  }\n  .eqm-title__reg {\n    font-style: normal;\n    font-size: 16px;\n    vertical-align: super;\n    margin-left: 2px;\n  }\n  @media (max-width: 749px) {\n    .eqm-title {\n      font-size: 28px;\n    }\n  }\n</style>"
+          }
+        },
+        "liquid_MwxqtK": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<!-- EquilibraMeno — Bloc sous-titre (custom liquid) -->\n<p class=\"eqm-subtitle\">Cura menopausia &amp; premenopausia</p>\n\n<style>\n  .eqm-subtitle {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif;\n    font-weight: 700;\n    color: #7a1f3d;\n    font-size: 17px;\n    margin: 0 0 10px 0;\n  }\n</style>"
+          }
+        },
+        "liquid_UPW4Bg": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"eqm-frame\">\n  <ul class=\"eqm-frame__list\">\n    <li>\n      <span class=\"eqm-frame__check\">\n        <svg viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"#7a1f3d\">\n            <circle cx=\"14\" cy=\"14\" r=\"8\"/>\n            <circle cx=\"22\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"6\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"6\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"19.66\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"22\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"19.66\" r=\"5\"/>\n          </g>\n          <path d=\"M8.2 14.3L11.7 17.8L19.8 9.7\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </span>\n      <span>Alivia +48 s&iacute;ntomas de la menopausia</span>\n    </li>\n    <li>\n      <span class=\"eqm-frame__check\">\n        <svg viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"#7a1f3d\">\n            <circle cx=\"14\" cy=\"14\" r=\"8\"/>\n            <circle cx=\"22\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"6\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"6\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"19.66\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"22\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"19.66\" r=\"5\"/>\n          </g>\n          <path d=\"M8.2 14.3L11.7 17.8L19.8 9.7\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </span>\n      <span>Elimina los sofocos</span>\n    </li>\n    <li>\n      <span class=\"eqm-frame__check\">\n        <svg viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"#7a1f3d\">\n            <circle cx=\"14\" cy=\"14\" r=\"8\"/>\n            <circle cx=\"22\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"6\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"6\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"19.66\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"22\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"19.66\" r=\"5\"/>\n          </g>\n          <path d=\"M8.2 14.3L11.7 17.8L19.8 9.7\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </span>\n      <span>Mejora la calidad del sue&ntilde;o</span>\n    </li>\n    <li>\n      <span class=\"eqm-frame__check\">\n        <svg viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"#7a1f3d\">\n            <circle cx=\"14\" cy=\"14\" r=\"8\"/>\n            <circle cx=\"22\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"6\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"8.34\" r=\"5\"/>\n            <circle cx=\"6\" cy=\"14\" r=\"5\"/>\n            <circle cx=\"8.34\" cy=\"19.66\" r=\"5\"/>\n            <circle cx=\"14\" cy=\"22\" r=\"5\"/>\n            <circle cx=\"19.66\" cy=\"19.66\" r=\"5\"/>\n          </g>\n          <path d=\"M8.2 14.3L11.7 17.8L19.8 9.7\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </span>\n      <span>Una composici&oacute;n natural sin riesgos</span>\n    </li>\n  </ul>\n</div>\n\n<style>\n  .eqm-frame {\n    background: #fdf1f5;\n    border: none;\n    border-radius: 20px;\n    padding: 26px 24px;\n    margin: 4px 0 16px 0;\n    box-sizing: border-box;\n  }\n  .eqm-frame__list {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 18px;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif;\n  }\n  .eqm-frame__list li {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    color: #5c1730;\n    font-size: 16px;\n    font-weight: 700;\n    line-height: 1.35;\n  }\n  .eqm-frame__check {\n    box-sizing: border-box;\n    flex: 0 0 26px;\n    width: 26px !important;\n    height: 26px !important;\n    min-width: 26px;\n    min-height: 26px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n  .eqm-frame__check svg {\n    width: 26px !important;\n    height: 26px !important;\n    display: block !important;\n    flex-shrink: 0;\n  }\n</style>"
           }
         },
         "rating": {
@@ -133,39 +137,33 @@
             "show_empty": false
           }
         },
-        "separator": {
-          "type": "separator",
-          "settings": {}
-        },
-        "description": {
-          "type": "description",
+        "kaching_bundles_app_block_CV66qy": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
           "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "collapse_content": false
+            "product": "{{section.settings.product}}",
+            "manual_deal_block_id": ""
           }
         },
-        "buy-buttons": {
+        "buy_buttons_3mgAmq": {
           "type": "buy_buttons",
           "settings": {
-            "show_payment_button": true,
+            "show_payment_button": false,
             "show_gift_card_recipient": true,
-            "atc_button_background": "#7a1f3d",
-            "atc_button_text_color": "#ffffff",
+            "atc_button_background": "",
+            "atc_button_text_color": "",
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
         }
       },
       "block_order": [
-        "vendor",
-        "title",
-        "badges",
-        "price",
+        "liquid_MLKyj6",
+        "liquid_PAcxTy",
+        "liquid_MwxqtK",
+        "liquid_UPW4Bg",
         "rating",
-        "separator",
-        "description",
-        "buy-buttons"
+        "kaching_bundles_app_block_CV66qy",
+        "buy_buttons_3mgAmq"
       ],
       "settings": {
         "full_width": false,
@@ -178,7 +176,7 @@
         "enable_video_looping": false,
         "enable_image_zoom": true,
         "max_image_zoom_level": 3,
-        "background": "#fdf1f5",
+        "background": "#FFFFFF",
         "background_gradient": "",
         "text_color": "#2b1620",
         "input_background": "rgba(0,0,0,0)",
@@ -296,10 +294,11 @@
         "t1": {
           "type": "testimonial",
           "settings": {
+            "image": "shopify://shop_images/Mujer1.png",
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
-            "author": "Carmen · 52 años",
+            "author": "Sylvie D · 52 años",
             "title": "Por fin duermo bien",
             "content": "<p>A los 3 años de tener sofocos, por fin he encontrado algo que funciona. Desde hace 2 meses ya no sufro.</p>"
           }
@@ -461,22 +460,6 @@
     },
     "multiple-images-with-text": {
       "type": "multiple-images-with-text",
-      "blocks": {
-        "article-1": {
-          "type": "item",
-          "settings": {
-            "image_rotation_degrees": 0,
-            "subheading": "Consejos de salud",
-            "title": "La cimicífuga: la planta que ha cambiado la menopausia de millones de mujeres",
-            "content": "<p>Descubre cómo esta planta actúa sobre el equilibrio hormonal y por qué está detrás de la fórmula de EquilibraMeno.</p>",
-            "button_url": "#",
-            "button_text": "Leer más"
-          }
-        }
-      },
-      "block_order": [
-        "article-1"
-      ],
       "settings": {
         "full_width": true,
         "images_layout": "scattered",
