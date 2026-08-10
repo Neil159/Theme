@@ -73,6 +73,17 @@
         "input_text_color": ""
       }
     },
+    "178638403516a0fe6c": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -98,6 +109,7 @@
   },
   "order": [
     "main",
+    "178638403516a0fe6c",
     "related-products"
   ]
 }
