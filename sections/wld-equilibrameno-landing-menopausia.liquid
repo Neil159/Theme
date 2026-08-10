@@ -1,0 +1,1196 @@
+{%- comment -%}
+  Section: WLD — Equilibra Landing – Menopausia
+  Genere pour EquilibraMeno (marque Equilibra) - clone structurel de wearebloomy.com
+  Prefixe CSS/JS: wld-equilibrameno-menopausia
+  A ajouter via Admin Shopify > Boutique en ligne > Themes > Modifier le code > Sections > Ajouter une nouvelle section.
+  Les temoignages et le nombre d'avis sont des EXEMPLES PLACEHOLDER a remplacer par vos vrais avis avant publication.
+{%- endcomment -%}
+
+{%- assign wld_product = section.settings.product | default: product -%}
+
+<div id="wld-equilibrameno-menopausia-{{ section.id }}" class="wld-eqm-menopausia">
+
+{%- unless wld_product -%}
+  <div class="wld-eqm-menopausia__notice">
+    ⚠️ Aucun produit sélectionné. Ouvrez les réglages de cette section et choisissez le produit EquilibraMeno pour activer le bandeau d'achat.
+  </div>
+{%- endunless -%}
+
+<style>
+  #wld-equilibrameno-menopausia-{{ section.id }} {
+    --wld-wine: #7a1f3d;
+    --wld-wine-dark: #5c1730;
+    --wld-pink: #fdf1f5;
+    --wld-pink-soft: #f7e3ea;
+    --wld-ink: #241016;
+    --wld-muted: #7a6a70;
+    --wld-green: #4c7a4f;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--wld-ink);
+    background: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} * { box-sizing: border-box; }
+  #wld-equilibrameno-menopausia-{{ section.id }} h1,
+  #wld-equilibrameno-menopausia-{{ section.id }} h2,
+  #wld-equilibrameno-menopausia-{{ section.id }} h3 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    color: var(--wld-wine-dark);
+    line-height: 1.15;
+    margin: 0 0 12px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__notice {
+    background: #fff3cd;
+    border: 1px solid #f0c34a;
+    color: #6b5300;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__stockbar {
+    background: var(--wld-wine-dark);
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__hero-media {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--wld-pink);
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__hero-media img {
+    width: 100%;
+    display: block;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__ribbon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--wld-wine);
+    color: #fff;
+    border-radius: 50%;
+    width: 92px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 6px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__eyebrow {
+    font-size: 13px;
+    color: var(--wld-muted);
+    margin-bottom: 6px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__hero-title {
+    font-size: 34px;
+    margin-bottom: 8px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__hero-subtitle {
+    font-size: 16px;
+    color: var(--wld-muted);
+    margin-bottom: 18px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bullets li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bullets li::before {
+    content: "✔";
+    color: var(--wld-wine);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__stock-alert {
+    background: var(--wld-pink);
+    color: var(--wld-wine-dark);
+    font-size: 13px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bars {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 2px solid #e6dde1;
+    border-radius: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar:hover { border-color: var(--wld-wine); }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar.is-selected {
+    border-color: var(--wld-wine);
+    background: var(--wld-pink);
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar-radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #c9b8c0;
+    flex-shrink: 0;
+    position: relative;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar.is-selected .wld-eqm-menopausia__bar-radio {
+    border-color: var(--wld-wine);
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar.is-selected .wld-eqm-menopausia__bar-radio::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background: var(--wld-wine);
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar-body { flex: 1; }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar-title {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar-sub {
+    font-size: 13px;
+    color: var(--wld-muted);
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar-badge {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    background: var(--wld-wine);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar-price {
+    text-align: right;
+    font-weight: 700;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__bar-compare {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--wld-muted);
+    text-decoration: line-through;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__atc {
+    width: 100%;
+    background: var(--wld-wine);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 12px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__atc:hover { background: var(--wld-wine-dark); }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__trust {
+    font-size: 13px;
+    color: var(--wld-muted);
+    margin-bottom: 6px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__guarantee {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: #f2f6ea;
+    border: 1px solid #d9e5c2;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__section { margin-top: 72px; }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__section-title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__card {
+    background: var(--wld-pink);
+    border-radius: 14px;
+    padding: 22px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__card-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__card h3 { font-size: 17px; margin-bottom: 6px; }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__card p { font-size: 14px; color: var(--wld-muted); margin: 0; }
+
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: var(--wld-wine);
+    border-radius: 16px;
+    padding: 32px 20px;
+    color: #fff;
+    text-align: center;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__stat-num { font-family: 'DM Serif Display', serif; font-size: 34px; display: block; }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__stat-label { font-size: 13px; opacity: .9; }
+
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__review {
+    border: 1px solid #eee1e6;
+    border-radius: 14px;
+    padding: 20px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__review-stars { color: #e0a53c; font-size: 14px; margin-bottom: 8px; }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__review h4 { font-size: 15px; margin: 0 0 8px; color: var(--wld-ink); font-family: 'Inter', sans-serif; font-weight: 700; }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__review p { font-size: 14px; color: var(--wld-muted); margin: 0; }
+
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__compare {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__compare th, 
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__compare td {
+    padding: 14px 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee1e6;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__compare td:first-child,
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__compare th:first-child { text-align: left; }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__compare th:nth-child(2) { background: var(--wld-pink); color: var(--wld-wine-dark); border-radius: 10px 10px 0 0; }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__compare td:nth-child(2) { background: var(--wld-pink); font-weight: 700; }
+
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__faq-item {
+    border-bottom: 1px solid #eee1e6;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__faq-q {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--wld-ink);
+    padding: 16px 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s ease;
+    font-size: 14px;
+    color: var(--wld-muted);
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__faq-item.is-open .wld-eqm-menopausia__faq-a {
+    max-height: 400px;
+    padding-bottom: 16px;
+  }
+
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__cta {
+    text-align: center;
+    background: var(--wld-pink);
+    border-radius: 18px;
+    padding: 48px 24px;
+  }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__cta p { color: var(--wld-muted); margin-bottom: 20px; }
+  #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__cta-btn {
+    display: inline-block;
+    background: var(--wld-wine);
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 900px) {
+    #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__hero { grid-template-columns: 1fr; gap: 28px; }
+    #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__stats { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 540px) {
+    #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__hero-title { font-size: 26px; }
+    #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__section { margin-top: 48px; }
+    #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__section-title { font-size: 22px; }
+    #wld-equilibrameno-menopausia-{{ section.id }} .wld-eqm-menopausia__compare { font-size: 12px; }
+  }
+</style>
+
+{%- if section.settings.stock_warning != blank -%}
+  <div class="wld-eqm-menopausia__stockbar">⚠️ {{ section.settings.stock_warning }}</div>
+{%- endif -%}
+
+<div class="wld-eqm-menopausia__hero">
+  <div class="wld-eqm-menopausia__hero-media">
+    {%- if section.settings.hero_image -%}
+      {{ section.settings.hero_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+    {%- elsif wld_product.featured_image -%}
+      {{ wld_product.featured_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+    {%- endif -%}
+    {%- if section.settings.ribbon_text != blank -%}
+      <div class="wld-eqm-menopausia__ribbon">{{ section.settings.ribbon_text }}</div>
+    {%- endif -%}
+  </div>
+
+  <div class="wld-eqm-menopausia__hero-content">
+    {%- if section.settings.eyebrow_text != blank -%}
+      <div class="wld-eqm-menopausia__eyebrow">{{ section.settings.eyebrow_text }}</div>
+    {%- endif -%}
+    <h1 class="wld-eqm-menopausia__hero-title">{{ section.settings.hero_title | default: "Vuelve a sentirte como antes de la menopausia" }}</h1>
+    <p class="wld-eqm-menopausia__hero-subtitle">{{ section.settings.hero_subtitle | default: "Un complemento 100% natural pensado para acompañar los síntomas de la menopausia, sin hormonas." }}</p>
+
+    <ul class="wld-eqm-menopausia__bullets">
+      {%- if section.settings.bullet_1 != blank -%}<li>{{ section.settings.bullet_1 }}</li>{%- endif -%}
+      {%- if section.settings.bullet_2 != blank -%}<li>{{ section.settings.bullet_2 }}</li>{%- endif -%}
+      {%- if section.settings.bullet_3 != blank -%}<li>{{ section.settings.bullet_3 }}</li>{%- endif -%}
+    </ul>
+
+    {%- if section.settings.stock_alert != blank -%}
+      <div class="wld-eqm-menopausia__stock-alert">🔴 {{ section.settings.stock_alert }}</div>
+    {%- endif -%}
+
+    {%- if wld_product -%}
+      {%- assign variant_single = wld_product.variants[0] -%}
+      {%- assign variant_bundle = wld_product.variants[1] | default: wld_product.variants[0] -%}
+      {%- form 'product', wld_product, class: 'wld-eqm-menopausia__form' -%}
+        <input type="hidden" name="id" value="{{ variant_bundle.id }}" class="wld-eqm-menopausia__variant-input">
+
+        <div class="wld-eqm-menopausia__bars" role="radiogroup">
+          <div class="wld-eqm-menopausia__bar" data-variant-id="{{ variant_single.id }}" data-price="{{ section.settings.bar1_price | default: '35,00€' }}">
+            <span class="wld-eqm-menopausia__bar-radio"></span>
+            <span class="wld-eqm-menopausia__bar-body">
+              <span class="wld-eqm-menopausia__bar-title">{{ section.settings.bar1_title | default: '1 bote' }}</span>
+              <span class="wld-eqm-menopausia__bar-sub">{{ section.settings.bar1_subtitle | default: '1 mes: siente los primeros beneficios' }}</span>
+            </span>
+            <span class="wld-eqm-menopausia__bar-price">{{ section.settings.bar1_price | default: '35,00€' }}</span>
+          </div>
+
+          <div class="wld-eqm-menopausia__bar is-selected" data-variant-id="{{ variant_bundle.id }}" data-price="{{ section.settings.bar2_price | default: '69,99€' }}">
+            {%- if section.settings.bar2_badge != blank -%}
+              <span class="wld-eqm-menopausia__bar-badge">{{ section.settings.bar2_badge }}</span>
+            {%- endif -%}
+            <span class="wld-eqm-menopausia__bar-radio"></span>
+            <span class="wld-eqm-menopausia__bar-body">
+              <span class="wld-eqm-menopausia__bar-title">{{ section.settings.bar2_title | default: '2 compradas + 1 GRATIS' }}</span>
+              <span class="wld-eqm-menopausia__bar-sub">{{ section.settings.bar2_subtitle | default: '3 meses: duración recomendada' }}</span>
+            </span>
+            <span class="wld-eqm-menopausia__bar-price">
+              {{ section.settings.bar2_price | default: '69,99€' }}
+              {%- if section.settings.bar2_compare_price != blank -%}
+                <span class="wld-eqm-menopausia__bar-compare">{{ section.settings.bar2_compare_price }}</span>
+              {%- endif -%}
+            </span>
+          </div>
+        </div>
+
+        <button type="submit" class="wld-eqm-menopausia__atc">{{ section.settings.atc_label | default: 'Añadir al carrito' }}</button>
+
+        <div class="wld-eqm-menopausia__trust">{{ section.settings.klarna_text | default: 'Pago en 3 o 4 veces con Klarna' }}</div>
+        <div class="wld-eqm-menopausia__trust">🚚 {{ section.settings.delivery_text | default: 'Envío estimado en 3-5 días' }}</div>
+
+        {%- if section.settings.guarantee_text != blank -%}
+          <div class="wld-eqm-menopausia__guarantee">
+            <span>🛡️</span>
+            <span>{{ section.settings.guarantee_text }}</span>
+          </div>
+        {%- endif -%}
+      {%- endform -%}
+    {%- endif -%}
+  </div>
+</div>
+
+{%- comment -%} ===== BIENFAITS ===== {%- endcomment -%}
+{%- assign benefit_blocks = section.blocks | where: 'type', 'benefit_card' -%}
+{%- if benefit_blocks.size > 0 -%}
+<div class="wld-eqm-menopausia__section">
+  <h2 class="wld-eqm-menopausia__section-title">{{ section.settings.benefits_title | default: 'Los beneficios' }}</h2>
+  <div class="wld-eqm-menopausia__grid">
+    {%- for block in benefit_blocks -%}
+      <div class="wld-eqm-menopausia__card" {{ block.shopify_attributes }}>
+        <span class="wld-eqm-menopausia__card-icon">{{ block.settings.icon | default: '✨' }}</span>
+        <h3>{{ block.settings.title }}</h3>
+        <p>{{ block.settings.text }}</p>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}
+
+{%- comment -%} ===== INGREDIENTES ===== {%- endcomment -%}
+{%- assign ingredient_blocks = section.blocks | where: 'type', 'ingredient' -%}
+{%- if ingredient_blocks.size > 0 -%}
+<div class="wld-eqm-menopausia__section">
+  <h2 class="wld-eqm-menopausia__section-title">{{ section.settings.ingredients_title | default: 'Una fórmula natural' }}</h2>
+  <p style="text-align:center; max-width:640px; margin:-16px auto 32px; color:var(--wld-muted); font-size:15px;">{{ section.settings.ingredients_intro }}</p>
+  <div class="wld-eqm-menopausia__grid">
+    {%- for block in ingredient_blocks -%}
+      <div class="wld-eqm-menopausia__card" {{ block.shopify_attributes }}>
+        <span class="wld-eqm-menopausia__card-icon">{{ block.settings.icon | default: '🌿' }}</span>
+        <h3>{{ block.settings.title }}</h3>
+        <p>{{ block.settings.text }}</p>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}
+
+{%- comment -%} ===== USAGE ===== {%- endcomment -%}
+{%- if section.settings.usage_text != blank -%}
+<div class="wld-eqm-menopausia__section">
+  <h2 class="wld-eqm-menopausia__section-title">{{ section.settings.usage_title | default: 'Consejo de uso' }}</h2>
+  <p style="text-align:center; max-width:640px; margin:0 auto; color:var(--wld-muted); font-size:15px;">{{ section.settings.usage_text }}</p>
+</div>
+{%- endif -%}
+
+{%- comment -%} ===== STATS ===== {%- endcomment -%}
+{%- assign stat_blocks = section.blocks | where: 'type', 'stat' -%}
+{%- if stat_blocks.size > 0 -%}
+<div class="wld-eqm-menopausia__section">
+  <div class="wld-eqm-menopausia__stats">
+    {%- for block in stat_blocks -%}
+      <div {{ block.shopify_attributes }}>
+        <span class="wld-eqm-menopausia__stat-num">{{ block.settings.number }}</span>
+        <span class="wld-eqm-menopausia__stat-label">{{ block.settings.label }}</span>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}
+
+{%- comment -%} ===== COMPARATIVA ===== {%- endcomment -%}
+{%- assign compare_blocks = section.blocks | where: 'type', 'comparison_row' -%}
+{%- if compare_blocks.size > 0 -%}
+<div class="wld-eqm-menopausia__section">
+  <h2 class="wld-eqm-menopausia__section-title">{{ section.settings.compare_title | default: '¿Por qué EquilibraMeno?' }}</h2>
+  <table class="wld-eqm-menopausia__compare">
+    <thead>
+      <tr>
+        <th></th>
+        <th>EquilibraMeno</th>
+        <th>{{ section.settings.compare_competitor_label | default: 'Otras marcas' }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for block in compare_blocks -%}
+        <tr {{ block.shopify_attributes }}>
+          <td>{{ block.settings.criteria }}</td>
+          <td>✅</td>
+          <td>❌</td>
+        </tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
+</div>
+{%- endif -%}
+
+{%- comment -%} ===== REVIEWS ===== {%- endcomment -%}
+{%- assign review_blocks = section.blocks | where: 'type', 'review' -%}
+{%- if review_blocks.size > 0 -%}
+<div class="wld-eqm-menopausia__section">
+  <h2 class="wld-eqm-menopausia__section-title">{{ section.settings.reviews_title | default: 'Ellas ya lo probaron' }}</h2>
+  <div class="wld-eqm-menopausia__reviews">
+    {%- for block in review_blocks -%}
+      <div class="wld-eqm-menopausia__review" {{ block.shopify_attributes }}>
+        <div class="wld-eqm-menopausia__review-stars">
+          {%- for i in (1..5) -%}{%- if i <= block.settings.rating -%}★{%- else -%}☆{%- endif -%}{%- endfor -%}
+        </div>
+        <h4>{{ block.settings.name }}</h4>
+        <p>{{ block.settings.text }}</p>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}
+
+{%- comment -%} ===== FAQ ===== {%- endcomment -%}
+{%- assign faq_blocks = section.blocks | where: 'type', 'faq' -%}
+{%- if faq_blocks.size > 0 -%}
+<div class="wld-eqm-menopausia__section">
+  <h2 class="wld-eqm-menopausia__section-title">{{ section.settings.faq_title | default: '¿Alguna pregunta?' }}</h2>
+  <div class="wld-eqm-menopausia__faq" style="max-width:720px;margin:0 auto;">
+    {%- for block in faq_blocks -%}
+      <div class="wld-eqm-menopausia__faq-item" {{ block.shopify_attributes }}>
+        <button type="button" class="wld-eqm-menopausia__faq-q">
+          <span>{{ block.settings.question }}</span>
+          <span aria-hidden="true">+</span>
+        </button>
+        <div class="wld-eqm-menopausia__faq-a"><p style="padding:0 4px 4px;">{{ block.settings.answer }}</p></div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}
+
+{%- comment -%} ===== CTA FINAL ===== {%- endcomment -%}
+<div class="wld-eqm-menopausia__section">
+  <div class="wld-eqm-menopausia__cta">
+    <h2 class="wld-eqm-menopausia__section-title">{{ section.settings.cta_title | default: 'Vuelve a sentirte tú misma' }}</h2>
+    <p>{{ section.settings.cta_text | default: 'Miles de mujeres ya acompañan su menopausia con EquilibraMeno.' }}</p>
+    <button type="button" class="wld-eqm-menopausia__cta-btn" data-wld-scroll-atc>{{ section.settings.cta_button_label | default: 'Lo quiero' }}</button>
+  </div>
+</div>
+
+</div>
+
+<script>
+(function() {
+  function wldInitMenopausia(root) {
+    if (!root || root.dataset.wldInit === '1') return;
+    root.dataset.wldInit = '1';
+
+    var bars = root.querySelectorAll('.wld-eqm-menopausia__bar');
+    var input = root.querySelector('.wld-eqm-menopausia__variant-input');
+
+    bars.forEach(function(bar) {
+      bar.addEventListener('click', function() {
+        bars.forEach(function(b) { b.classList.remove('is-selected'); });
+        bar.classList.add('is-selected');
+        if (input) { input.value = bar.getAttribute('data-variant-id'); }
+      });
+    });
+
+    var faqItems = root.querySelectorAll('.wld-eqm-menopausia__faq-item');
+    faqItems.forEach(function(item) {
+      var q = item.querySelector('.wld-eqm-menopausia__faq-q');
+      if (!q) return;
+      q.addEventListener('click', function() {
+        var wasOpen = item.classList.contains('is-open');
+        faqItems.forEach(function(i) { i.classList.remove('is-open'); });
+        if (!wasOpen) { item.classList.add('is-open'); }
+      });
+    });
+
+    var ctaBtn = root.querySelector('[data-wld-scroll-atc]');
+    if (ctaBtn) {
+      ctaBtn.addEventListener('click', function() {
+        var atc = root.querySelector('.wld-eqm-menopausia__atc');
+        if (atc) {
+          atc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    }
+  }
+
+  function wldInitAllMenopausia() {
+    document.querySelectorAll('[id^="wld-equilibrameno-menopausia-"]').forEach(wldInitMenopausia);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wldInitAllMenopausia);
+  } else {
+    wldInitAllMenopausia();
+  }
+
+  document.addEventListener('shopify:section:load', function(evt) {
+    var root = evt.target.querySelector('[id^="wld-equilibrameno-menopausia-"]');
+    if (root) {
+      root.dataset.wldInit = '0';
+      wldInitMenopausia(root);
+    }
+  });
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+{% schema %}
+{
+  "name": "WLD Menopausia",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Producto EquilibraMeno (variante 1 = 1 bote, variante 2 = 3 botes 2+1)"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Imagen hero (si vacío, usa la imagen destacada del producto)"
+    },
+    {
+      "type": "text",
+      "id": "stock_warning",
+      "label": "Aviso de stock (barra superior)",
+      "default": "2+1 EQUILIBRAMENO disponible por tiempo limitado"
+    },
+    {
+      "type": "text",
+      "id": "ribbon_text",
+      "label": "Texto insignia circular",
+      "default": "ELEGIDO PRODUCTO MENOPAUSIA 2026"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_text",
+      "label": "Texto sobre el título (ej. num. de opiniones)",
+      "info": "⚠️ Sustituye por tu cifra real de opiniones verificadas antes de publicar.",
+      "default": "⭐⭐⭐⭐⭐ Opiniones verificadas"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Título principal",
+      "default": "Vuelve a sentirte como antes de la menopausia"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_subtitle",
+      "label": "Subtítulo",
+      "default": "Un complemento 100% natural pensado para acompañar los síntomas de la menopausia, sin hormonas."
+    },
+    {
+      "type": "text",
+      "id": "bullet_1",
+      "label": "Beneficio 1",
+      "default": "Ayuda a calmar los sofocos y sudores nocturnos"
+    },
+    {
+      "type": "text",
+      "id": "bullet_2",
+      "label": "Beneficio 2",
+      "default": "Favorece un sueño más estable"
+    },
+    {
+      "type": "text",
+      "id": "bullet_3",
+      "label": "Beneficio 3",
+      "default": "100% natural y sin hormonas"
+    },
+    {
+      "type": "text",
+      "id": "stock_alert",
+      "label": "Alerta de stock bajo la oferta",
+      "default": "Atención: stock limitado en la oferta 2+1, hasta agotar existencias."
+    },
+    {
+      "type": "text",
+      "id": "bar1_title",
+      "label": "Barra 1 - título",
+      "default": "1 bote"
+    },
+    {
+      "type": "text",
+      "id": "bar1_subtitle",
+      "label": "Barra 1 - subtítulo",
+      "default": "1 mes: siente los primeros beneficios"
+    },
+    {
+      "type": "text",
+      "id": "bar1_price",
+      "label": "Barra 1 - precio (texto libre)",
+      "default": "35,00€"
+    },
+    {
+      "type": "text",
+      "id": "bar2_title",
+      "label": "Barra 2 - título",
+      "default": "2 compradas + 1 GRATIS"
+    },
+    {
+      "type": "text",
+      "id": "bar2_subtitle",
+      "label": "Barra 2 - subtítulo",
+      "default": "3 meses: duración recomendada para una transformación duradera"
+    },
+    {
+      "type": "text",
+      "id": "bar2_price",
+      "label": "Barra 2 - precio (texto libre)",
+      "default": "69,99€"
+    },
+    {
+      "type": "text",
+      "id": "bar2_compare_price",
+      "label": "Barra 2 - precio tachado (texto libre)",
+      "default": "105,00€"
+    },
+    {
+      "type": "text",
+      "id": "bar2_badge",
+      "label": "Barra 2 - insignia",
+      "default": "El más económico · 23,33€/bote"
+    },
+    {
+      "type": "text",
+      "id": "atc_label",
+      "label": "Texto botón añadir al carrito",
+      "default": "Añadir al carrito"
+    },
+    {
+      "type": "text",
+      "id": "klarna_text",
+      "label": "Texto pago fraccionado",
+      "default": "Pago en 3 o 4 veces desde 50€ con Klarna"
+    },
+    {
+      "type": "text",
+      "id": "delivery_text",
+      "label": "Texto de envío",
+      "default": "Envío estimado en 3-5 días"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_text",
+      "label": "Texto de garantía",
+      "default": "Garantía de 30 días satisfecha o reembolsada"
+    },
+    {
+      "type": "text",
+      "id": "benefits_title",
+      "label": "Título sección beneficios",
+      "default": "Beneficios interiores y exteriores"
+    },
+    {
+      "type": "text",
+      "id": "ingredients_title",
+      "label": "Título sección ingredientes",
+      "default": "Una fórmula 100% natural"
+    },
+    {
+      "type": "textarea",
+      "id": "ingredients_intro",
+      "label": "Introducción ingredientes",
+      "default": "Una composición pensada específicamente para acompañar el desequilibrio hormonal de la menopausia."
+    },
+    {
+      "type": "text",
+      "id": "usage_title",
+      "label": "Título modo de uso",
+      "default": "Consejo de uso"
+    },
+    {
+      "type": "textarea",
+      "id": "usage_text",
+      "label": "Texto modo de uso",
+      "default": "2 cápsulas al día, preferiblemente por la mañana con un vaso de agua. Cura recomendada: 3 meses mínimo."
+    },
+    {
+      "type": "text",
+      "id": "compare_title",
+      "label": "Título comparativa",
+      "default": "¿Por qué elegir EquilibraMeno?"
+    },
+    {
+      "type": "text",
+      "id": "compare_competitor_label",
+      "label": "Etiqueta columna competencia",
+      "default": "Otras marcas"
+    },
+    {
+      "type": "text",
+      "id": "reviews_title",
+      "label": "Título opiniones",
+      "default": "Ellas ya lo probaron"
+    },
+    {
+      "type": "text",
+      "id": "faq_title",
+      "label": "Título FAQ",
+      "default": "¿Alguna pregunta?"
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "Título CTA final",
+      "default": "Vuelve a sentirte tú misma"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_text",
+      "label": "Texto CTA final",
+      "default": "Miles de mujeres ya acompañan su menopausia con EquilibraMeno."
+    },
+    {
+      "type": "text",
+      "id": "cta_button_label",
+      "label": "Botón CTA final",
+      "default": "Lo quiero"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit_card",
+      "name": "Beneficio",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Emoji/icono",
+          "default": "✨"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Texto"
+        }
+      ]
+    },
+    {
+      "type": "ingredient",
+      "name": "Ingrediente",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Emoji/icono",
+          "default": "🌿"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Nombre"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Descripción"
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "name": "Estadística",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Cifra",
+          "default": "0%"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Descripción"
+        }
+      ]
+    },
+    {
+      "type": "comparison_row",
+      "name": "Fila comparativa",
+      "settings": [
+        {
+          "type": "text",
+          "id": "criteria",
+          "label": "Criterio"
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Opinión",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nombre"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Estrellas",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Texto de la opinión"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "Pregunta frecuente",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Pregunta"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Respuesta"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "WLD Menopausia",
+      "blocks": [
+        {
+          "type": "benefit_card",
+          "settings": {
+            "icon": "🔥",
+            "title": "Sofocos",
+            "text": "Ayuda a reducir la frecuencia e intensidad de los sofocos."
+          }
+        },
+        {
+          "type": "benefit_card",
+          "settings": {
+            "icon": "😴",
+            "title": "Sueño",
+            "text": "Favorece un sueño más reparador durante la menopausia."
+          }
+        },
+        {
+          "type": "benefit_card",
+          "settings": {
+            "icon": "🧘‍♀️",
+            "title": "Equilibrio emocional",
+            "text": "Contribuye a una mejor gestión del estrés y la irritabilidad."
+          }
+        },
+        {
+          "type": "benefit_card",
+          "settings": {
+            "icon": "⚖️",
+            "title": "Metabolismo",
+            "text": "Apoya un metabolismo estable pese a la caída de estrógenos."
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "icon": "💊",
+            "title": "Magnesio liposomal premium",
+            "text": "Una forma de magnesio de alta absorción para ayudar a mantener un metabolismo estable y reducir el cansancio."
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "icon": "🌿",
+            "title": "Actea de racimo negro (cimicifuga)",
+            "text": "Planta tradicionalmente usada para acompañar los cambios hormonales de la menopausia."
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "icon": "🍋",
+            "title": "Vitamina B6",
+            "text": "Contribuye a la regulación de la actividad hormonal y del sistema nervioso."
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "91%",
+            "label": "notan menos sofocos en 6 semanas"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "93%",
+            "label": "satisfechas con los resultados"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "94%",
+            "label": "lo recomiendan a otras mujeres"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "criteria": "Sin hormonas de síntesis ni aditivos"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "criteria": "Ingredientes naturales"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "criteria": "Fabricado en laboratorio certificado"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "criteria": "Garantía satisfecha o reembolsada"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Noemí, 51 años",
+            "rating": 5,
+            "text": "A los 51 años pensaba que los sofocos serían parte de mi vida para siempre. Desde que tomo EquilibraMeno, he recuperado mis noches."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Marie-Claire, 54 años",
+            "rating": 5,
+            "text": "Aliviada por fin. Sufría de las caderas desde hace 2 años. Desde hace 3 semanas me levanto sin quejarme."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Sandra, 49 años",
+            "rating": 5,
+            "text": "Escéptica al principio, convencida después. Desde la segunda semana noté un cambio real."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Isabel, 56 años",
+            "rating": 4,
+            "text": "Mis noches han cambiado. Menos sudores, más energía durante el día."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Cristina, 58 años",
+            "rating": 5,
+            "text": "Tres meses y otra mujer. Es lo primero que realmente ha funcionado para mí."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Silvia, 52 años",
+            "rating": 5,
+            "text": "Mis mañanas han cambiado. Es una pequeña victoria diaria, pero para mí es enorme."
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cuánto tiempo antes de notar los primeros efectos?",
+            "answer": "La mayoría de usuarias notan los primeros cambios entre 2 y 4 semanas. Se recomienda una cura de 3 meses para resultados óptimos."
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "¿Hay contraindicaciones?",
+            "answer": "EquilibraMeno no contiene hormonas. Si estás en tratamiento médico o embarazada, consulta a tu médico antes de tomarlo."
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "¿La fórmula es realmente natural y sin hormonas?",
+            "answer": "Sí, la fórmula se basa en magnesio liposomal, actea de racimo negro y vitamina B6, sin hormonas de síntesis."
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "¿A partir de qué edad se puede tomar?",
+            "answer": "Está pensado para mujeres en premenopausia y menopausia, generalmente a partir de los 40 años."
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "¿Puedo tomarlo todo el año?",
+            "answer": "Sí, puede tomarse de forma continuada mientras persistan los síntomas."
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo se toma?",
+            "answer": "2 cápsulas al día con un vaso de agua, preferiblemente por la mañana."
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "¿Es compatible con otros tratamientos?",
+            "answer": "En general sí, pero recomendamos consultar con tu médico si sigues otro tratamiento hormonal."
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "¿Qué garantías ofrecéis?",
+            "answer": "30 días satisfecha o reembolsada: si no notas resultados, te devolvemos tu dinero."
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "product",
+      "index",
+      "page"
+    ]
+  }
+}
+{% endschema %}
