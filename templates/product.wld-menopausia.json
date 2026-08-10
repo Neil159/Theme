@@ -1,0 +1,274 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "wld-equilibrameno-landing-menopausia",
+      "blocks": {
+        "b000": {
+          "type": "benefit_card",
+          "settings": {
+            "icon": "🔥",
+            "title": "Sofocos",
+            "text": "Ayuda a reducir la frecuencia e intensidad de los sofocos."
+          }
+        },
+        "b001": {
+          "type": "benefit_card",
+          "settings": {
+            "icon": "😴",
+            "title": "Sueño",
+            "text": "Favorece un sueño más reparador durante la menopausia."
+          }
+        },
+        "b002": {
+          "type": "benefit_card",
+          "settings": {
+            "icon": "🧘‍♀️",
+            "title": "Equilibrio emocional",
+            "text": "Contribuye a una mejor gestión del estrés y la irritabilidad."
+          }
+        },
+        "b003": {
+          "type": "benefit_card",
+          "settings": {
+            "icon": "⚖️",
+            "title": "Metabolismo",
+            "text": "Apoya un metabolismo estable pese a la caída de estrógenos."
+          }
+        },
+        "b004": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "💊",
+            "title": "Magnesio liposomal premium",
+            "text": "Una forma de magnesio de alta absorción para ayudar a mantener un metabolismo estable y reducir el cansancio."
+          }
+        },
+        "b005": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "🌿",
+            "title": "Actea de racimo negro (cimicifuga)",
+            "text": "Planta tradicionalmente usada para acompañar los cambios hormonales de la menopausia."
+          }
+        },
+        "b006": {
+          "type": "ingredient",
+          "settings": {
+            "icon": "🍋",
+            "title": "Vitamina B6",
+            "text": "Contribuye a la regulación de la actividad hormonal y del sistema nervioso."
+          }
+        },
+        "b007": {
+          "type": "stat",
+          "settings": {
+            "number": "91%",
+            "label": "notan menos sofocos en 6 semanas"
+          }
+        },
+        "b008": {
+          "type": "stat",
+          "settings": {
+            "number": "93%",
+            "label": "satisfechas con los resultados"
+          }
+        },
+        "b009": {
+          "type": "stat",
+          "settings": {
+            "number": "94%",
+            "label": "lo recomiendan a otras mujeres"
+          }
+        },
+        "b010": {
+          "type": "comparison_row",
+          "settings": {
+            "criteria": "Sin hormonas de síntesis ni aditivos"
+          }
+        },
+        "b011": {
+          "type": "comparison_row",
+          "settings": {
+            "criteria": "Ingredientes naturales"
+          }
+        },
+        "b012": {
+          "type": "comparison_row",
+          "settings": {
+            "criteria": "Fabricado en laboratorio certificado"
+          }
+        },
+        "b013": {
+          "type": "comparison_row",
+          "settings": {
+            "criteria": "Garantía satisfecha o reembolsada"
+          }
+        },
+        "b014": {
+          "type": "review",
+          "settings": {
+            "name": "Noemí, 51 años",
+            "rating": 5,
+            "text": "A los 51 años pensaba que los sofocos serían parte de mi vida para siempre. Desde que tomo EquilibraMeno, he recuperado mis noches."
+          }
+        },
+        "b015": {
+          "type": "review",
+          "settings": {
+            "name": "Marie-Claire, 54 años",
+            "rating": 5,
+            "text": "Aliviada por fin. Sufría de las caderas desde hace 2 años. Desde hace 3 semanas me levanto sin quejarme."
+          }
+        },
+        "b016": {
+          "type": "review",
+          "settings": {
+            "name": "Sandra, 49 años",
+            "rating": 5,
+            "text": "Escéptica al principio, convencida después. Desde la segunda semana noté un cambio real."
+          }
+        },
+        "b017": {
+          "type": "review",
+          "settings": {
+            "name": "Isabel, 56 años",
+            "rating": 4,
+            "text": "Mis noches han cambiado. Menos sudores, más energía durante el día."
+          }
+        },
+        "b018": {
+          "type": "review",
+          "settings": {
+            "name": "Cristina, 58 años",
+            "rating": 5,
+            "text": "Tres meses y otra mujer. Es lo primero que realmente ha funcionado para mí."
+          }
+        },
+        "b019": {
+          "type": "review",
+          "settings": {
+            "name": "Silvia, 52 años",
+            "rating": 5,
+            "text": "Mis mañanas han cambiado. Es una pequeña victoria diaria, pero para mí es enorme."
+          }
+        },
+        "b020": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cuánto tiempo antes de notar los primeros efectos?",
+            "answer": "La mayoría de usuarias notan los primeros cambios entre 2 y 4 semanas. Se recomienda una cura de 3 meses para resultados óptimos."
+          }
+        },
+        "b021": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Hay contraindicaciones?",
+            "answer": "EquilibraMeno no contiene hormonas. Si estás en tratamiento médico o embarazada, consulta a tu médico antes de tomarlo."
+          }
+        },
+        "b022": {
+          "type": "faq",
+          "settings": {
+            "question": "¿La fórmula es realmente natural y sin hormonas?",
+            "answer": "Sí, la fórmula se basa en magnesio liposomal, actea de racimo negro y vitamina B6, sin hormonas de síntesis."
+          }
+        },
+        "b023": {
+          "type": "faq",
+          "settings": {
+            "question": "¿A partir de qué edad se puede tomar?",
+            "answer": "Está pensado para mujeres en premenopausia y menopausia, generalmente a partir de los 40 años."
+          }
+        },
+        "b024": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Puedo tomarlo todo el año?",
+            "answer": "Sí, puede tomarse de forma continuada mientras persistan los síntomas."
+          }
+        },
+        "b025": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo se toma?",
+            "answer": "2 cápsulas al día con un vaso de agua, preferiblemente por la mañana."
+          }
+        },
+        "b026": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Es compatible con otros tratamientos?",
+            "answer": "En general sí, pero recomendamos consultar con tu médico si sigues otro tratamiento hormonal."
+          }
+        },
+        "b027": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Qué garantías ofrecéis?",
+            "answer": "30 días satisfecha o reembolsada: si no notas resultados, te devolvemos tu dinero."
+          }
+        }
+      },
+      "block_order": [
+        "b000",
+        "b001",
+        "b002",
+        "b003",
+        "b004",
+        "b005",
+        "b006",
+        "b007",
+        "b008",
+        "b009",
+        "b010",
+        "b011",
+        "b012",
+        "b013",
+        "b014",
+        "b015",
+        "b016",
+        "b017",
+        "b018",
+        "b019",
+        "b020",
+        "b021",
+        "b022",
+        "b023",
+        "b024",
+        "b025",
+        "b026",
+        "b027"
+      ],
+      "settings": {
+        "product": "equilibrameno",
+        "stock_warning": "2+1 EQUILIBRAMENO disponible por tiempo limitado",
+        "ribbon_text": "ELEGIDO PRODUCTO MENOPAUSIA 2026",
+        "eyebrow_text": "⭐⭐⭐⭐⭐ Opiniones verificadas",
+        "hero_title": "Vuelve a sentirte como antes de la menopausia",
+        "hero_subtitle": "Un complemento 100% natural pensado para acompañar los síntomas de la menopausia, sin hormonas.",
+        "bullet_1": "Ayuda a calmar los sofocos y sudores nocturnos",
+        "bullet_2": "Favorece un sueño más estable",
+        "bullet_3": "100% natural y sin hormonas",
+        "stock_alert": "Atención: stock limitado en la oferta 2+1, hasta agotar existencias.",
+        "benefits_title": "Beneficios interiores y exteriores",
+        "ingredients_intro": "Una composición pensada específicamente para acompañar el desequilibrio hormonal de la menopausia.",
+        "usage_text": "2 cápsulas al día, preferiblemente por la mañana con un vaso de agua. Cura recomendada: 3 meses mínimo.",
+        "compare_title": "¿Por qué elegir EquilibraMeno?",
+        "cta_title": "Vuelve a sentirte tú misma",
+        "cta_text": "Miles de mujeres ya acompañan su menopausia con EquilibraMeno."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
