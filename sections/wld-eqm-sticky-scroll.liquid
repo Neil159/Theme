@@ -1,0 +1,300 @@
+{%- comment -%}
+  Section: WLD — EquilibraMeno — Scroll sticky (texte qui defile, image fixe qui change par etape)
+  A ajouter via Admin Shopify > Boutique en ligne > Themes > Modifier le code > Sections > Ajouter une nouvelle section.
+  Chaque "Etape" est un bloc avec : titre, texte (gras possible), image, et une image ronde optionnelle
+  qui se superpose en bas de l'image principale (pour un gif ou une photo zoomee).
+  Sur desktop l'image reste fixe pendant que le texte defile, et change automatiquement d'etape en etape.
+  Sur mobile chaque etape s'affiche normalement, image au-dessus du texte (pas de sticky, illisible sur petit ecran).
+{%- endcomment -%}
+
+<div id="wld-eqm-sticky-{{ section.id }}" class="eqm-sticky">
+  {%- if section.settings.title != blank -%}
+    <h2 class="eqm-sticky__title">{{ section.settings.title }}</h2>
+  {%- endif -%}
+
+  <div class="eqm-sticky__wrap">
+    <div class="eqm-sticky__text-col">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'step' -%}
+          <div class="eqm-sticky__step" data-step="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            {%- if block.settings.title != blank -%}
+              <h3 class="eqm-sticky__step-title">{{ block.settings.title }}</h3>
+            {%- endif -%}
+            <div class="eqm-sticky__step-text">{{ block.settings.text }}</div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="eqm-sticky__media-col">
+      <div class="eqm-sticky__media-inner">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'step' -%}
+            <div class="eqm-sticky__image-wrap {% if forloop.first %}is-active{% endif %}" data-step-image="{{ forloop.index0 }}">
+              {%- if block.settings.image -%}
+                {{ block.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', class: 'eqm-sticky__image' }}
+              {%- else -%}
+                <div class="eqm-sticky__placeholder">Imagen etapa {{ forloop.index }}</div>
+              {%- endif -%}
+              {%- if block.settings.show_inset and block.settings.inset_image -%}
+                <div class="eqm-sticky__inset">
+                  {{ block.settings.inset_image | image_url: width: 300 | image_tag: loading: 'lazy', class: 'eqm-sticky__inset-image' }}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #wld-eqm-sticky-{{ section.id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  #wld-eqm-sticky-{{ section.id }} * { box-sizing: border-box; }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__title {
+    font-weight: 700;
+    font-style: italic;
+    color: #5c1730;
+    font-size: 24px;
+    margin: 0 0 40px 0;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__text-col {
+    display: flex;
+    flex-direction: column;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__step {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+    border-top: 2px solid #2b1620;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__step:first-child {
+    padding-top: 0;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__step-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2b1620;
+    margin: 0 0 20px 0;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__step-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #3a3038;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__step-text p {
+    margin: 0 0 16px 0;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__step-text strong {
+    color: #5c1730;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__media-col {
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__media-inner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fdf1f5;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__image-wrap {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity .4s ease;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__image-wrap.is-active {
+    opacity: 1;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b5302f;
+    font-size: 13px;
+    text-align: center;
+    border: 2px dashed #f0b7ae;
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__inset {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 34%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  }
+  #wld-eqm-sticky-{{ section.id }} .eqm-sticky__inset-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    #wld-eqm-sticky-{{ section.id }} .eqm-sticky__wrap {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    #wld-eqm-sticky-{{ section.id }} .eqm-sticky__media-col {
+      position: static;
+      order: -1;
+    }
+    #wld-eqm-sticky-{{ section.id }} .eqm-sticky__media-inner {
+      position: relative;
+      margin-bottom: 24px;
+    }
+    #wld-eqm-sticky-{{ section.id }} .eqm-sticky__image-wrap {
+      position: static;
+      opacity: 1;
+      display: none;
+    }
+    #wld-eqm-sticky-{{ section.id }} .eqm-sticky__image-wrap:first-child {
+      display: block;
+    }
+    #wld-eqm-sticky-{{ section.id }} .eqm-sticky__step {
+      min-height: 0;
+      border-top: 1px solid #eee1e6;
+      padding: 28px 0;
+    }
+    {%- comment -%} On mobile, show each step's own image inline above its text {%- endcomment -%}
+    #wld-eqm-sticky-{{ section.id }} .eqm-sticky__media-col { display: none; }
+    #wld-eqm-sticky-{{ section.id }} .eqm-sticky__step { position: relative; }
+  }
+</style>
+
+<script>
+(function() {
+  function wldInitSticky(root) {
+    if (!root || root.dataset.wldInit === '1') return;
+    root.dataset.wldInit = '1';
+
+    if (window.innerWidth <= 900) return; // mobile uses simple stacked layout, no JS needed
+
+    var steps = root.querySelectorAll('.eqm-sticky__step');
+    var images = root.querySelectorAll('.eqm-sticky__image-wrap');
+    if (!steps.length || !('IntersectionObserver' in window)) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var idx = entry.target.getAttribute('data-step');
+          images.forEach(function(img) {
+            img.classList.toggle('is-active', img.getAttribute('data-step-image') === idx);
+          });
+        }
+      });
+    }, { root: null, threshold: 0.5 });
+
+    steps.forEach(function(step) { observer.observe(step); });
+  }
+  function wldInitAllSticky() {
+    document.querySelectorAll('[id^="wld-eqm-sticky-"]').forEach(wldInitSticky);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wldInitAllSticky);
+  } else {
+    wldInitAllSticky();
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "WLD Scroll sticky",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre au-dessus (optionnel)",
+      "default": "+20.000 mujeres confían en nosotras"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Etape",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre de l'etape"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Texte (gras possible via l'editeur)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image principale"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_inset",
+          "label": "Afficher une image ronde en superposition (gif/photo)",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "inset_image",
+          "label": "Image ronde en superposition (gif ou photo)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "WLD Scroll sticky",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "🌿 Cómo actúa EquilibraMeno",
+            "text": "<p><strong>+3 activos naturales clave:</strong></p><p><strong>Actea de racimo negro</strong>: ayuda a <strong>acompañar los cambios hormonales</strong>, especialmente en esta etapa, para evitar los desequilibrios que afectan al bienestar íntimo.</p><p><strong>Magnesio liposomal y vitamina B6</strong>: contribuyen al <strong>sistema nervioso</strong> y a un <strong>metabolismo hormonal normal</strong>.</p><p>Gracias a esta sinergia, EquilibraMeno favorece un <strong>entorno íntimo equilibrado</strong>, propicio a un <strong>pH estable</strong>, una <strong>flora sana</strong> y una <strong>sensación de confort íntimo</strong> duradera.</p>"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "La biología 🔬",
+            "text": "<p>La vagina alberga un microbiota naturalmente rico, esencial para su equilibrio. Pero los <strong>desequilibrios hormonales</strong>, especialmente antes de la regla o durante un síndrome premenstrual marcado, pueden alterar este microbiota. Esto puede influir en el <strong>pH vaginal</strong> y favorecer la aparición de <strong>bacterias no deseadas</strong>, responsables de <strong>molestias</strong> y, en ocasiones, de <strong>olores desagradables</strong>.</p>"
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["product", "index", "page"]
+  }
+}
+{% endschema %}
