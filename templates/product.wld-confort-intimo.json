@@ -182,6 +182,88 @@
         "title": "+20.000 mujeres confían en nosotras"
       }
     },
+    "custom_liquid_qbE9HC": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": false,
+        "liquid": "<!-- A coller directement dans le champ d'un bloc \"Custom Liquid\" -->\n<div class=\"eqm-tbanner-cl\">\n  <p class=\"eqm-tbanner-cl__text\">+ <em class=\"eqm-tbanner-cl__accent\">20.000 mujeres</em> confían en nosotras</p>\n</div>\n\n<style>\n  .eqm-tbanner-cl {\n    width: 100vw;\n    position: relative;\n    left: 50%;\n    right: 50%;\n    margin-left: -50vw;\n    margin-right: -50vw;\n    background: #f6e9f0 !important;\n    padding: 28px 24px !important;\n    display: flex !important;\n    align-items: center !important;\n    justify-content: center !important;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif !important;\n  }\n  .eqm-tbanner-cl * { box-sizing: border-box !important; }\n  .eqm-tbanner-cl__text {\n    margin: 0 !important;\n    text-align: center !important;\n    font-size: 24px !important;\n    font-weight: 400 !important;\n    color: #2b1620 !important;\n    line-height: 1.3 !important;\n  }\n  .eqm-tbanner-cl__accent {\n    font-style: italic !important;\n    font-weight: 700 !important;\n    color: #5c1730 !important;\n  }\n  @media (max-width: 749px) {\n    .eqm-tbanner-cl {\n      padding: 22px 20px !important;\n    }\n    .eqm-tbanner-cl__text {\n      font-size: 18px !important;\n    }\n  }\n</style>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "wld_eqm_review_carousel_k6YYxG": {
+      "type": "wld-eqm-review-carousel",
+      "blocks": {
+        "review_NXPcJH": {
+          "type": "review",
+          "settings": {
+            "name": "Joëlle P.",
+            "result": "-10kg en 3 meses",
+            "rating": 5,
+            "text": "Había probado de todo. Había cogido 20kg desde la menopausia. A las 2 semanas noté que la ropa me quedaba diferente, empecé a perder peso poco a poco. A los 3 meses, mis primeros -10kg. Sigo, con confianza."
+          }
+        },
+        "review_3C4dJa": {
+          "type": "review",
+          "settings": {
+            "name": "Martina R.",
+            "result": "De la talla 42 a la 40",
+            "rating": 5,
+            "text": "Nunca pensé que volvería a ponerme mis vaqueros de antes. Sin cambiar nada drástico en mi alimentación. Ha sido gradual pero real, y por fin no tengo que forzar el botón para cerrarlos."
+          }
+        },
+        "review_4myytb": {
+          "type": "review",
+          "settings": {
+            "name": "Cristina A.",
+            "result": "-7kg en 3 meses",
+            "rating": 5,
+            "text": "Me sorprendió lo rápido que llegó el primer cambio. Comía igual, sin obsesionarme con la báscula, y el resultado ha llegado solo. Mi marido me pregunta qué he cambiado. Sigo tomándolo, evidentemente."
+          }
+        },
+        "review_AUCqaC": {
+          "type": "review",
+          "settings": {
+            "name": "Françoise M.",
+            "result": "-12kg en 4 meses",
+            "rating": 5,
+            "text": "Vuelvo a reconocerme en el espejo. Había cogido 15kg desde la menopausia y nada funcionaba. A las 6 semanas mis vaqueros volvían a cerrarse. A los 4 meses había perdido 12kg añadiendo un poco de paseo diario. Pensaba que ya no tenía solución."
+          }
+        },
+        "review_EhPjFT": {
+          "type": "review",
+          "settings": {
+            "name": "Patricia K.",
+            "result": "-3kg en 1 mes",
+            "rating": 5,
+            "text": "Lo uso desde hace un mes. Mi vientre se deshinchó desde las primeras semanas, he perdido 3kg y duermo mucho mejor. Acabo de pedir la cura de 3 meses. Muy satisfecha de verdad."
+          }
+        },
+        "review_khBWfw": {
+          "type": "review",
+          "settings": {
+            "name": "Aude B.",
+            "result": "-6kg en 2 meses",
+            "rating": 5,
+            "text": "Menos 6kg y esto no ha terminado. Llevo 2 meses tomándolo. He perdido 6kg, mi vientre está mucho menos hinchado y he recuperado energía. Hasta mi médico me preguntó qué había cambiado. Por supuesto que continúo."
+          }
+        }
+      },
+      "block_order": [
+        "review_NXPcJH",
+        "review_3C4dJa",
+        "review_4myytb",
+        "review_AUCqaC",
+        "review_EhPjFT",
+        "review_khBWfw"
+      ],
+      "name": "WLD Avis carrousel",
+      "settings": {}
+    },
     "178638403516a0fe6c": {
       "type": "apps",
       "settings": {
@@ -233,6 +315,8 @@
     "wld_eqm_review_strip_ecqLBN",
     "main",
     "wld_eqm_sticky_scroll_XREUTx",
+    "custom_liquid_qbE9HC",
+    "wld_eqm_review_carousel_k6YYxG",
     "178638403516a0fe6c",
     "related-products",
     "17864396444059b588"
