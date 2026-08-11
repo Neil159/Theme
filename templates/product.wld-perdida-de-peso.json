@@ -195,6 +195,42 @@
       "name": "WLD Avis carrousel",
       "settings": {}
     },
+    "media_with_text_ddAJzP": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_RBHaWe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG7.png",
+            "media_width": 50,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#FFFFFF",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_RBHaWe"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
+    },
     "custom_liquid_q7bnqH": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -236,6 +272,7 @@
     "custom_liquid_RVK6Nk",
     "custom_liquid_WnKddc",
     "wld_eqm_review_carousel_B7WDTg",
+    "media_with_text_ddAJzP",
     "custom_liquid_q7bnqH",
     "related-products"
   ]
