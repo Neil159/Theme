@@ -9,6 +9,69 @@
  */
 {
   "sections": {
+    "wld_eqm_vaginal_hero_x4tm9Q": {
+      "type": "wld-eqm-vaginal-hero",
+      "name": "WLD Hero Confort intimo",
+      "settings": {
+        "title_line1": "Probióticos vaginales",
+        "title_accent": "para un olor",
+        "title_line2": "y un pH saludables",
+        "button_label": "Lo pruebo",
+        "button_link": "",
+        "photo_desktop": "shopify://shop_images/038_blog_bloomy_3-min.png"
+      }
+    },
+    "wld_eqm_vaginal_intro_Abi46z": {
+      "type": "wld-eqm-vaginal-intro",
+      "name": "WLD Sublima tu vagina",
+      "settings": {
+        "photo": "shopify://shop_images/produit.png",
+        "title_line1": "Sublima",
+        "title_accent": "tu vagina",
+        "subtitle": "Una composición natural que actúa en el origen de los problemas",
+        "bullet_1": "Elimina los olores y las bacterias no deseadas",
+        "bullet_2": "Previene las infecciones urinarias",
+        "bullet_3": "Preserva el equilibrio de la flora vaginal",
+        "button_label": "Comprar",
+        "button_link": ""
+      }
+    },
+    "wld_eqm_review_strip_ecqLBN": {
+      "type": "wld-eqm-review-strip",
+      "blocks": {
+        "review_CjJMeK": {
+          "type": "review",
+          "settings": {
+            "name": "Sara G.",
+            "rating": 5,
+            "text": "Desde que lo tomo he notado un cambio real en mi día a día. Muy satisfecha con el resultado."
+          }
+        },
+        "review_eKEGVi": {
+          "type": "review",
+          "settings": {
+            "name": "Elena M.",
+            "rating": 5,
+            "text": "Un producto que realmente cumple lo que promete, lo recomiendo sin dudarlo."
+          }
+        },
+        "review_zeczWa": {
+          "type": "review",
+          "settings": {
+            "name": "Cristina B.",
+            "rating": 4,
+            "text": "Muy contenta con los resultados, se nota la diferencia desde las primeras semanas."
+          }
+        }
+      },
+      "block_order": [
+        "review_CjJMeK",
+        "review_eKEGVi",
+        "review_zeczWa"
+      ],
+      "name": "WLD Avis defilant",
+      "settings": {}
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -52,6 +115,12 @@
           "settings": {
             "liquid": "<!-- EquilibraMeno — Bloc garantie 30 jours (custom liquid) -->\n<div class=\"eqm-guarantee\">\n  <span class=\"eqm-guarantee__icon\" aria-hidden=\"true\">\n    <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"#4c7a4f\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z\"/>\n      <path d=\"M9 12l2 2 4-4\"/>\n    </svg>\n  </span>\n  <span class=\"eqm-guarantee__text\">\n    <strong class=\"eqm-guarantee__title\">Garantía de 30 días satisfecha o reembolsada</strong>\n    Confiamos en la eficacia de EquilibraMeno. Si no es tu caso, te devolvemos tu dinero.\n  </span>\n</div>\n\n<style>\n  .eqm-guarantee {\n    display: flex !important;\n    align-items: flex-start !important;\n    gap: 10px !important;\n    background: #f2f6ea !important;\n    border: 1px solid #d9e5c2 !important;\n    border-radius: 10px !important;\n    padding: 14px 16px !important;\n    margin: 12px 0 !important;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif !important;\n  }\n  .eqm-guarantee__icon {\n    flex-shrink: 0 !important;\n    width: 22px !important;\n    height: 22px !important;\n    min-width: 22px !important;\n    min-height: 22px !important;\n    margin-top: 1px !important;\n  }\n  .eqm-guarantee__icon svg {\n    width: 22px !important;\n    height: 22px !important;\n    display: block !important;\n  }\n  .eqm-guarantee__text {\n    display: block !important;\n    font-size: 13px !important;\n    line-height: 1.45 !important;\n    color: #3f5a3f !important;\n  }\n  .eqm-guarantee__title {\n    display: block !important;\n    font-size: 14px !important;\n    font-weight: 700 !important;\n    color: #345334 !important;\n    margin-bottom: 2px !important;\n  }\n</style>"
           }
+        },
+        "liquid_EHk8YD": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<!-- EquilibraMeno — Acordeon detalles page Confort intimo (custom liquid) -->\n<!-- Ingredients adaptes a la vraie formule EquilibraMeno (magnesio liposomal, actea de racimo negro, vitamina B6) -->\n<div class=\"eqm-details3\">\n\n  <div class=\"eqm-details3__item is-open\">\n    <button type=\"button\" class=\"eqm-details3__q\">\n      <span>¿Es tu caso?</span>\n      <span class=\"eqm-details3__toggle\" aria-hidden=\"true\">&#9650;</span>\n    </button>\n    <div class=\"eqm-details3__a\">\n      <p class=\"eqm-details3__intro\"><em>Si marcas alguna de estas casillas, este producto es para ti:</em></p>\n      <ul class=\"eqm-details3__checklist\">\n        <li><span class=\"eqm-details3__check\">&#10003;</span> Estás en la premenopausia o la menopausia</li>\n        <li><span class=\"eqm-details3__check\">&#10003;</span> Te preocupa el equilibrio y el confort de tu zona íntima</li>\n        <li><span class=\"eqm-details3__check\">&#10003;</span> Notas molestias íntimas con frecuencia</li>\n        <li><span class=\"eqm-details3__check\">&#10003;</span> Eres propensa a los desequilibrios hormonales</li>\n      </ul>\n    </div>\n  </div>\n\n  <div class=\"eqm-details3__item\">\n    <button type=\"button\" class=\"eqm-details3__q\">\n      <span>Ingredientes y beneficios</span>\n      <span class=\"eqm-details3__toggle\" aria-hidden=\"true\">&#9650;</span>\n    </button>\n    <div class=\"eqm-details3__a\">\n      <p class=\"eqm-details3__intro\"><em>Lista completa de los ingredientes activos:</em></p>\n      <p><span class=\"eqm-details3__emoji\">💊</span> <strong>Magnesio liposomal</strong> &rarr; Ayuda a mantener un metabolismo estable y contribuye a reducir el cansancio.</p>\n      <p><span class=\"eqm-details3__emoji\">🌿</span> <strong>Actea de racimo negro (cimicifuga)</strong> &rarr; Planta usada tradicionalmente para acompañar los cambios hormonales de la menopausia.</p>\n      <p><span class=\"eqm-details3__emoji\">🍋</span> <strong>Vitamina B6</strong> &rarr; Contribuye a la regulación de la actividad hormonal y del sistema nervioso.</p>\n      <p class=\"eqm-details3__bold\">Una fórmula natural, elaborada con cuidado para ofrecerte una solución segura, eficaz y conforme a la normativa europea.</p>\n    </div>\n  </div>\n\n  <div class=\"eqm-details3__item\">\n    <button type=\"button\" class=\"eqm-details3__q\">\n      <span>Consejo de uso y precauciones</span>\n      <span class=\"eqm-details3__toggle\" aria-hidden=\"true\">&#9650;</span>\n    </button>\n    <div class=\"eqm-details3__a\">\n      <p>Toma 2 cápsulas al día con un vaso de agua, preferiblemente durante una comida. Para resultados óptimos y duraderos, recomendamos un uso continuado de al menos 3 meses.</p>\n      <p class=\"eqm-details3__bold\">Precauciones:</p>\n      <ul class=\"eqm-details3__checklist eqm-details3__checklist--no\">\n        <li><span class=\"eqm-details3__cross\">&#10007;</span> No superar la dosis diaria recomendada.</li>\n        <li><span class=\"eqm-details3__cross\">&#10007;</span> Desaconsejado para mujeres embarazadas o en lactancia sin consejo médico.</li>\n        <li><span class=\"eqm-details3__cross\">&#10007;</span> Conservar en un lugar fresco y seco, fuera del alcance de los niños.</li>\n      </ul>\n      <p>Los complementos alimenticios deben usarse dentro de un estilo de vida saludable y no como sustituto de una dieta variada y equilibrada.</p>\n    </div>\n  </div>\n\n  <div class=\"eqm-details3__item\">\n    <button type=\"button\" class=\"eqm-details3__q\">\n      <span>Garantía satisfecha o reembolsada</span>\n      <span class=\"eqm-details3__toggle\" aria-hidden=\"true\">&#9650;</span>\n    </button>\n    <div class=\"eqm-details3__a\">\n      <p>Prueba EquilibraMeno sin ningún riesgo. Si no estás satisfecha, te devolvemos el importe íntegro en 30 días, sin condiciones. Confiamos en la eficacia de nuestros productos y queremos que compres con total confianza.</p>\n    </div>\n  </div>\n\n</div>\n\n<style>\n  .eqm-details3 {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif !important;\n    max-width: 720px !important;\n    margin: 8px auto !important;\n    padding: 0 20px !important;\n  }\n  .eqm-details3__item {\n    border-bottom: 1px solid #e2e2e2 !important;\n  }\n  .eqm-details3__item:first-child {\n    border-top: 1px solid #e2e2e2 !important;\n  }\n  .eqm-details3__q {\n    width: 100% !important;\n    display: flex !important;\n    align-items: center !important;\n    justify-content: space-between !important;\n    gap: 12px !important;\n    background: none !important;\n    border: none !important;\n    text-align: left !important;\n    padding: 16px 2px !important;\n    cursor: pointer !important;\n    font-family: inherit !important;\n    font-size: 16px !important;\n    font-weight: 700 !important;\n    color: #1a1a1a !important;\n  }\n  .eqm-details3__toggle {\n    flex-shrink: 0 !important;\n    width: 26px !important;\n    height: 26px !important;\n    min-width: 26px !important;\n    min-height: 26px !important;\n    border-radius: 50% !important;\n    background: #1a1a1a !important;\n    color: #ffffff !important;\n    display: flex !important;\n    align-items: center !important;\n    justify-content: center !important;\n    font-size: 10px !important;\n    transition: transform .2s ease !important;\n  }\n  .eqm-details3__item:not(.is-open) .eqm-details3__toggle {\n    transform: rotate(180deg) !important;\n  }\n  .eqm-details3__a {\n    max-height: 0 !important;\n    overflow: hidden !important;\n    transition: max-height .25s ease !important;\n  }\n  .eqm-details3__item.is-open .eqm-details3__a {\n    max-height: 900px !important;\n  }\n  .eqm-details3__a p {\n    margin: 0 0 14px 0 !important;\n    padding: 0 2px !important;\n    font-size: 14px !important;\n    line-height: 1.6 !important;\n    color: #2b2b2b !important;\n  }\n  .eqm-details3__a p:last-child {\n    margin-bottom: 18px !important;\n  }\n  .eqm-details3__intro {\n    font-weight: 700 !important;\n  }\n  .eqm-details3__bold {\n    font-weight: 700 !important;\n  }\n  .eqm-details3__emoji {\n    margin-right: 2px !important;\n  }\n  .eqm-details3__checklist {\n    list-style: none !important;\n    margin: 0 0 16px 0 !important;\n    padding: 0 2px !important;\n  }\n  .eqm-details3__checklist li {\n    display: flex !important;\n    align-items: flex-start !important;\n    gap: 10px !important;\n    font-size: 15px !important;\n    font-weight: 600 !important;\n    line-height: 1.5 !important;\n    color: #1a1a1a !important;\n    margin-bottom: 14px !important;\n  }\n  .eqm-details3__check {\n    color: #4c7a4f !important;\n    font-weight: 700 !important;\n    flex-shrink: 0 !important;\n  }\n  .eqm-details3__cross {\n    color: #d64550 !important;\n    font-weight: 700 !important;\n    flex-shrink: 0 !important;\n  }\n</style>\n\n<script>\n(function() {\n  document.querySelectorAll('.eqm-details3').forEach(function(box) {\n    if (box.dataset.eqmDetails3Init === '1') return;\n    box.dataset.eqmDetails3Init = '1';\n    var items = box.querySelectorAll('.eqm-details3__item');\n    items.forEach(function(item) {\n      var q = item.querySelector('.eqm-details3__q');\n      if (!q) return;\n      q.addEventListener('click', function() {\n        item.classList.toggle('is-open');\n      });\n    });\n  });\n})();\n</script>"
+          }
         }
       },
       "block_order": [
@@ -60,24 +129,57 @@
         "liquid_JbTUD4",
         "liquid_4QKCPj",
         "buy_buttons",
-        "liquid_yJHYqt"
+        "liquid_yJHYqt",
+        "liquid_EHk8YD"
       ],
       "settings": {
         "full_width": true,
         "show_fixed_add_to_cart": true,
         "desktop_media_width": 55,
-        "desktop_media_layout": "carousel_thumbnails_left",
+        "desktop_media_layout": "grid_highlight",
         "mobile_media_size": "expanded",
         "mobile_carousel_control": "floating_dots",
         "enable_video_autoplay": false,
         "enable_video_looping": true,
         "enable_image_zoom": true,
         "max_image_zoom_level": 3,
-        "background": "",
+        "background": "#FFFFFF",
         "background_gradient": "",
         "text_color": "",
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
+      }
+    },
+    "wld_eqm_sticky_scroll_XREUTx": {
+      "type": "wld-eqm-sticky-scroll",
+      "blocks": {
+        "step_BzKccp": {
+          "type": "step",
+          "settings": {
+            "title": "La biología 🔬",
+            "text": "<p>La vagina alberga un microbiota naturalmente rico, esencial para su equilibrio. Pero los <strong>desequilibrios hormonales</strong>, especialmente antes de la regla o durante un síndrome premenstrual marcado, pueden alterar este microbiota. Esto puede influir en el <strong>pH vaginal</strong> y favorecer la aparición de <strong>bacterias no deseadas</strong>, responsables de <strong>molestias</strong> y, en ocasiones, de <strong>olores desagradables</strong>.</p>",
+            "image": "shopify://shop_images/Mujer1_8b495e94-b95e-44ae-ad23-c210909d6ea8.png",
+            "show_inset": false
+          }
+        },
+        "step_WCWeyX": {
+          "type": "step",
+          "settings": {
+            "title": "🌿 Cómo actúa EquilibraMeno",
+            "text": "<p><strong>+3 activos naturales clave:</strong></p><p><strong>Actea de racimo negro</strong>: ayuda a <strong>acompañar los cambios hormonales</strong>, especialmente en esta etapa, para evitar los desequilibrios que afectan al bienestar íntimo.</p><p><strong>Magnesio liposomal y vitamina B6</strong>: contribuyen al <strong>sistema nervioso</strong> y a un <strong>metabolismo hormonal normal</strong>.</p><p>Gracias a esta sinergia, EquilibraMeno favorece un <strong>entorno íntimo equilibrado</strong>, propicio a un <strong>pH estable</strong>, una <strong>flora sana</strong> y una <strong>sensación de confort íntimo</strong> duradera.</p>",
+            "image": "shopify://shop_images/025_avant_apres_4_167b98a5-2b85-467d-9e56-010f2cd64da1.png",
+            "show_inset": false,
+            "inset_image": "shopify://shop_images/7xPK.gif"
+          }
+        }
+      },
+      "block_order": [
+        "step_BzKccp",
+        "step_WCWeyX"
+      ],
+      "name": "WLD Scroll sticky",
+      "settings": {
+        "title": "+20.000 mujeres confían en nosotras"
       }
     },
     "178638403516a0fe6c": {
@@ -112,11 +214,27 @@
         "product_card_background": "",
         "product_card_text_color": ""
       }
+    },
+    "17864396444059b588": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
+    "wld_eqm_vaginal_hero_x4tm9Q",
+    "wld_eqm_vaginal_intro_Abi46z",
+    "wld_eqm_review_strip_ecqLBN",
     "main",
+    "wld_eqm_sticky_scroll_XREUTx",
     "178638403516a0fe6c",
-    "related-products"
+    "related-products",
+    "17864396444059b588"
   ]
 }
