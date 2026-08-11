@@ -64,12 +64,6 @@
           "settings": {
             "liquid": "<!-- EquilibraMeno — Acordeon de detalles bajo el boton de compra (custom liquid) -->\n<div class=\"eqm-details\">\n\n  <div class=\"eqm-details__item\">\n    <button type=\"button\" class=\"eqm-details__q\">\n      <span>Descripción</span>\n      <span class=\"eqm-details__icon\" aria-hidden=\"true\">+</span>\n    </button>\n    <div class=\"eqm-details__a\">\n      <p>EquilibraMeno es un complemento alimenticio 100% natural, formulado para acompañar a las mujeres durante la menopausia y la premenopausia. Su composición combina magnesio liposomal, actea de racimo negro (cimicifuga) y vitamina B6, tres activos seleccionados por su papel en el bienestar hormonal, el sueño y la gestión del cansancio. Sin hormonas de síntesis, sin aditivos innecesarios.</p>\n    </div>\n  </div>\n\n  <div class=\"eqm-details__item\">\n    <button type=\"button\" class=\"eqm-details__q\">\n      <span>Cómo funciona exactamente</span>\n      <span class=\"eqm-details__icon\" aria-hidden=\"true\">+</span>\n    </button>\n    <div class=\"eqm-details__a\">\n      <p>Durante la menopausia, la caída de estrógenos afecta al sistema nervioso, al sueño y al metabolismo. El magnesio liposomal se absorbe mejor que el magnesio tradicional y ayuda a reducir el cansancio y la irritabilidad. La actea de racimo negro se usa tradicionalmente para acompañar los sofocos y los cambios hormonales. La vitamina B6 contribuye a la regulación de la actividad hormonal y del sistema nervioso. Juntos, estos tres activos actúan de forma complementaria desde las primeras semanas de cura.</p>\n    </div>\n  </div>\n\n  <div class=\"eqm-details__item\">\n    <button type=\"button\" class=\"eqm-details__q\">\n      <span>Nuestro compromiso de calidad</span>\n      <span class=\"eqm-details__icon\" aria-hidden=\"true\">+</span>\n    </button>\n    <div class=\"eqm-details__a\">\n      <p>EquilibraMeno se fabrica en la Unión Europea, en laboratorios certificados que cumplen con estrictos controles de calidad. Cada lote se somete a análisis para garantizar la pureza y la dosis exacta de cada ingrediente. Trabajamos con proveedores seleccionados por la trazabilidad y la calidad de sus materias primas.</p>\n    </div>\n  </div>\n\n  <div class=\"eqm-details__item\">\n    <button type=\"button\" class=\"eqm-details__q\">\n      <span>Consejo de uso e ingredientes</span>\n      <span class=\"eqm-details__icon\" aria-hidden=\"true\">+</span>\n    </button>\n    <div class=\"eqm-details__a\">\n      <p><strong>Modo de uso:</strong> 2 cápsulas al día, preferiblemente por la mañana, con un vaso de agua. Se recomienda una cura mínima de 3 meses para notar el efecto completo, y puede tomarse de forma continuada mientras persistan los síntomas.</p>\n      <p><strong>Ingredientes:</strong> Magnesio liposomal, extracto de actea de racimo negro (cimicifuga), vitamina B6, cápsula vegetal. Sin gluten, sin lactosa, sin OGM.</p>\n    </div>\n  </div>\n\n  <div class=\"eqm-details__item\">\n    <button type=\"button\" class=\"eqm-details__q\">\n      <span>Precauciones</span>\n      <span class=\"eqm-details__icon\" aria-hidden=\"true\">+</span>\n    </button>\n    <div class=\"eqm-details__a\">\n      <p>No recomendado durante el embarazo o la lactancia. Consulta a tu médico si sigues un tratamiento hormonal u otro tratamiento médico. Mantener fuera del alcance de los niños. No superar la dosis diaria recomendada. Un complemento alimenticio no debe sustituir una dieta variada y equilibrada ni un estilo de vida saludable.</p>\n    </div>\n  </div>\n\n  <div class=\"eqm-details__item\">\n    <button type=\"button\" class=\"eqm-details__q\">\n      <span>Estudios científicos</span>\n      <span class=\"eqm-details__icon\" aria-hidden=\"true\">+</span>\n    </button>\n    <div class=\"eqm-details__a\">\n      <p>Los ingredientes de EquilibraMeno han sido objeto de estudios científicos independientes: el magnesio es reconocido por su contribución a la reducción del cansancio y al funcionamiento normal del sistema nervioso; la actea de racimo negro cuenta con un uso tradicional documentado para acompañar los síntomas de la menopausia; la vitamina B6 está reconocida por su papel en la regulación de la actividad hormonal. Referencias disponibles bajo petición.</p>\n    </div>\n  </div>\n\n</div>\n\n<style>\n  .eqm-details {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif !important;\n    margin: 8px 0 !important;\n  }\n  .eqm-details__item {\n    border-bottom: 1px solid #eee1e6 !important;\n  }\n  .eqm-details__item:first-child {\n    border-top: 1px solid #eee1e6 !important;\n  }\n  .eqm-details__q {\n    width: 100% !important;\n    display: flex !important;\n    align-items: center !important;\n    justify-content: space-between !important;\n    gap: 12px !important;\n    background: none !important;\n    border: none !important;\n    text-align: left !important;\n    padding: 14px 2px !important;\n    cursor: pointer !important;\n    font-family: inherit !important;\n    font-size: 14px !important;\n    font-weight: 700 !important;\n    color: #2b1620 !important;\n  }\n  .eqm-details__icon {\n    flex-shrink: 0 !important;\n    font-size: 17px !important;\n    font-weight: 400 !important;\n    color: #7a1f3d !important;\n    transition: transform .2s ease !important;\n  }\n  .eqm-details__item.is-open .eqm-details__icon {\n    transform: rotate(45deg) !important;\n  }\n  .eqm-details__a {\n    max-height: 0 !important;\n    overflow: hidden !important;\n    transition: max-height .25s ease !important;\n  }\n  .eqm-details__a p {\n    margin: 0 0 10px 0 !important;\n    padding: 0 2px !important;\n    font-size: 13px !important;\n    line-height: 1.55 !important;\n    color: #5c5058 !important;\n  }\n  .eqm-details__a p:last-child {\n    margin-bottom: 14px !important;\n  }\n  .eqm-details__item.is-open .eqm-details__a {\n    max-height: 600px !important;\n  }\n</style>\n\n<script>\n(function() {\n  document.querySelectorAll('.eqm-details').forEach(function(box) {\n    if (box.dataset.eqmDetailsInit === '1') return;\n    box.dataset.eqmDetailsInit = '1';\n    var items = box.querySelectorAll('.eqm-details__item');\n    items.forEach(function(item) {\n      var q = item.querySelector('.eqm-details__q');\n      if (!q) return;\n      q.addEventListener('click', function() {\n        var wasOpen = item.classList.contains('is-open');\n        items.forEach(function(i) { i.classList.remove('is-open'); });\n        if (!wasOpen) { item.classList.add('is-open'); }\n      });\n    });\n  });\n})();\n</script>"
           }
-        },
-        "liquid_9PbQbk": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<!-- EquilibraMeno — Carrousel d'avis avec photos (custom liquid) -->\n<!-- Pour chaque avis, remplace REEMPLAZAR_FOTO par l'URL de la vraie photo cliente -->\n<div class=\"eqm-carousel\">\n  <div class=\"eqm-carousel__track\">\n\n    <div class=\"eqm-carousel__card\">\n      <img class=\"eqm-carousel__photo\" src=\"REEMPLAZAR_FOTO_1\" alt=\"Joëlle\">\n      <div class=\"eqm-carousel__stars\">★★★★★</div>\n      <div class=\"eqm-carousel__name\">Joëlle P. <span class=\"eqm-carousel__result\">-10kg en 3 meses</span> <span class=\"eqm-carousel__check\">✔</span></div>\n      <p class=\"eqm-carousel__text\">Había probado de todo. Había cogido 20kg desde la menopausia. A las 2 semanas noté que la ropa me quedaba diferente, empecé a perder peso poco a poco. A los 3 meses, mis primeros -10kg. Sigo, con confianza.</p>\n    </div>\n\n    <div class=\"eqm-carousel__card\">\n      <img class=\"eqm-carousel__photo\" src=\"REEMPLAZAR_FOTO_2\" alt=\"Martina\">\n      <div class=\"eqm-carousel__stars\">★★★★★</div>\n      <div class=\"eqm-carousel__name\">Martina R. <span class=\"eqm-carousel__result\">De la talla 42 a la 40</span> <span class=\"eqm-carousel__check\">✔</span></div>\n      <p class=\"eqm-carousel__text\">Nunca pensé que volvería a ponerme mis vaqueros de antes. Sin cambiar nada drástico en mi alimentación. Ha sido gradual pero real, y por fin no tengo que forzar el botón para cerrarlos.</p>\n    </div>\n\n    <div class=\"eqm-carousel__card\">\n      <img class=\"eqm-carousel__photo\" src=\"REEMPLAZAR_FOTO_3\" alt=\"Cristina\">\n      <div class=\"eqm-carousel__stars\">★★★★★</div>\n      <div class=\"eqm-carousel__name\">Cristina A. <span class=\"eqm-carousel__result\">-7kg en 3 meses</span> <span class=\"eqm-carousel__check\">✔</span></div>\n      <p class=\"eqm-carousel__text\">Me sorprendió lo rápido que llegó el primer cambio. Comía igual, sin obsesionarme con la báscula, y el resultado ha llegado solo. Mi marido me pregunta qué he cambiado. Sigo tomándolo, evidentemente.</p>\n    </div>\n\n    <div class=\"eqm-carousel__card\">\n      <img class=\"eqm-carousel__photo\" src=\"REEMPLAZAR_FOTO_4\" alt=\"Françoise\">\n      <div class=\"eqm-carousel__stars\">★★★★★</div>\n      <div class=\"eqm-carousel__name\">Françoise M. <span class=\"eqm-carousel__result\">-12kg en 4 meses</span> <span class=\"eqm-carousel__check\">✔</span></div>\n      <p class=\"eqm-carousel__text\">Vuelvo a reconocerme en el espejo. Había cogido 15kg desde la menopausia y nada funcionaba. A las 6 semanas mis vaqueros volvían a cerrarse. A los 4 meses había perdido 12kg añadiendo un poco de paseo diario. Pensaba que ya no tenía solución.</p>\n    </div>\n\n    <div class=\"eqm-carousel__card\">\n      <img class=\"eqm-carousel__photo\" src=\"REEMPLAZAR_FOTO_5\" alt=\"Patricia\">\n      <div class=\"eqm-carousel__stars\">★★★★★</div>\n      <div class=\"eqm-carousel__name\">Patricia K. <span class=\"eqm-carousel__result\">-3kg en 1 mes</span> <span class=\"eqm-carousel__check\">✔</span></div>\n      <p class=\"eqm-carousel__text\">Lo uso desde hace un mes. Mi vientre se deshinchó desde las primeras semanas, he perdido 3kg y duermo mucho mejor. Acabo de pedir la cura de 3 meses. Muy satisfecha de verdad.</p>\n    </div>\n\n    <div class=\"eqm-carousel__card\">\n      <img class=\"eqm-carousel__photo\" src=\"REEMPLAZAR_FOTO_6\" alt=\"Aude\">\n      <div class=\"eqm-carousel__stars\">★★★★★</div>\n      <div class=\"eqm-carousel__name\">Aude B. <span class=\"eqm-carousel__result\">-6kg en 2 meses</span> <span class=\"eqm-carousel__check\">✔</span></div>\n      <p class=\"eqm-carousel__text\">Menos 6kg y esto no ha terminado. Llevo 2 meses tomándolo. He perdido 6kg, mi vientre está mucho menos hinchado y he recuperado energía. Hasta mi médico me preguntó qué había cambiado. Por supuesto que continúo.</p>\n    </div>\n\n  </div>\n\n  <button type=\"button\" class=\"eqm-carousel__arrow eqm-carousel__arrow--prev\" aria-label=\"Anterior\">&#10094;</button>\n  <button type=\"button\" class=\"eqm-carousel__arrow eqm-carousel__arrow--next\" aria-label=\"Siguiente\">&#10095;</button>\n</div>\n\n<style>\n  .eqm-carousel {\n    position: relative !important;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif !important;\n    margin: 32px 0 !important;\n  }\n  .eqm-carousel__track {\n    display: flex !important;\n    gap: 16px !important;\n    overflow-x: auto !important;\n    scroll-snap-type: x mandatory !important;\n    padding: 4px 4px 12px !important;\n    scrollbar-width: none !important;\n    -ms-overflow-style: none !important;\n  }\n  .eqm-carousel__track::-webkit-scrollbar {\n    display: none !important;\n  }\n  .eqm-carousel__card {\n    flex: 0 0 260px !important;\n    scroll-snap-align: start !important;\n    border: 1px solid #eee1e6 !important;\n    border-radius: 14px !important;\n    padding: 18px !important;\n    background: #ffffff !important;\n    box-sizing: border-box !important;\n  }\n  .eqm-carousel__photo {\n    width: 100% !important;\n    height: 160px !important;\n    object-fit: cover !important;\n    border-radius: 10px !important;\n    display: block !important;\n    margin-bottom: 12px !important;\n    background: #f2eef2 !important;\n  }\n  .eqm-carousel__stars {\n    color: #e0a13c !important;\n    font-size: 14px !important;\n    letter-spacing: 1px !important;\n    margin-bottom: 6px !important;\n  }\n  .eqm-carousel__name {\n    font-weight: 700 !important;\n    font-size: 14px !important;\n    color: #2b1620 !important;\n    margin-bottom: 8px !important;\n    display: flex !important;\n    flex-wrap: wrap !important;\n    align-items: center !important;\n    gap: 6px !important;\n  }\n  .eqm-carousel__result {\n    font-weight: 400 !important;\n    color: #7a6a70 !important;\n  }\n  .eqm-carousel__check {\n    color: #4c7a4f !important;\n    font-size: 13px !important;\n  }\n  .eqm-carousel__text {\n    font-size: 13px !important;\n    line-height: 1.5 !important;\n    color: #5c5058 !important;\n    margin: 0 !important;\n  }\n  .eqm-carousel__arrow {\n    position: absolute !important;\n    top: 50% !important;\n    transform: translateY(-50%) !important;\n    width: 34px !important;\n    height: 34px !important;\n    border-radius: 50% !important;\n    border: 1px solid #eee1e6 !important;\n    background: #ffffff !important;\n    color: #7a1f3d !important;\n    font-size: 13px !important;\n    cursor: pointer !important;\n    display: flex !important;\n    align-items: center !important;\n    justify-content: center !important;\n    box-shadow: 0 2px 6px rgba(0,0,0,0.08) !important;\n  }\n  .eqm-carousel__arrow--prev { left: -6px !important; }\n  .eqm-carousel__arrow--next { right: -6px !important; }\n  @media (max-width: 600px) {\n    .eqm-carousel__arrow { display: none !important; }\n  }\n</style>\n\n<script>\n(function() {\n  document.querySelectorAll('.eqm-carousel').forEach(function(carousel) {\n    if (carousel.dataset.eqmCarouselInit === '1') return;\n    carousel.dataset.eqmCarouselInit = '1';\n    var track = carousel.querySelector('.eqm-carousel__track');\n    var prev = carousel.querySelector('.eqm-carousel__arrow--prev');\n    var next = carousel.querySelector('.eqm-carousel__arrow--next');\n    var card = carousel.querySelector('.eqm-carousel__card');\n    var step = card ? card.offsetWidth + 16 : 276;\n    if (prev) prev.addEventListener('click', function() { track.scrollBy({ left: -step, behavior: 'smooth' }); });\n    if (next) next.addEventListener('click', function() { track.scrollBy({ left: step, behavior: 'smooth' }); });\n  });\n})();\n</script>"
-          }
         }
       },
       "block_order": [
@@ -80,8 +74,7 @@
         "liquid_4QKCPj",
         "buy_buttons",
         "liquid_dpCdJX",
-        "liquid_MENLHC",
-        "liquid_9PbQbk"
+        "liquid_MENLHC"
       ],
       "settings": {
         "full_width": true,
@@ -100,6 +93,75 @@
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
       }
+    },
+    "wld_eqm_review_carousel_B7WDTg": {
+      "type": "wld-eqm-review-carousel",
+      "blocks": {
+        "review_qEcEBf": {
+          "type": "review",
+          "settings": {
+            "name": "Joëlle P.",
+            "result": "-10kg en 3 meses",
+            "rating": 5,
+            "text": "Había probado de todo. Había cogido 20kg desde la menopausia. A las 2 semanas noté que la ropa me quedaba diferente, empecé a perder peso poco a poco. A los 3 meses, mis primeros -10kg. Sigo, con confianza."
+          }
+        },
+        "review_U84QUD": {
+          "type": "review",
+          "settings": {
+            "name": "Martina R.",
+            "result": "De la talla 42 a la 40",
+            "rating": 5,
+            "text": "Nunca pensé que volvería a ponerme mis vaqueros de antes. Sin cambiar nada drástico en mi alimentación. Ha sido gradual pero real, y por fin no tengo que forzar el botón para cerrarlos."
+          }
+        },
+        "review_44QxQp": {
+          "type": "review",
+          "settings": {
+            "name": "Cristina A.",
+            "result": "-7kg en 3 meses",
+            "rating": 5,
+            "text": "Me sorprendió lo rápido que llegó el primer cambio. Comía igual, sin obsesionarme con la báscula, y el resultado ha llegado solo. Mi marido me pregunta qué he cambiado. Sigo tomándolo, evidentemente."
+          }
+        },
+        "review_qBbJHB": {
+          "type": "review",
+          "settings": {
+            "name": "Françoise M.",
+            "result": "-12kg en 4 meses",
+            "rating": 5,
+            "text": "Vuelvo a reconocerme en el espejo. Había cogido 15kg desde la menopausia y nada funcionaba. A las 6 semanas mis vaqueros volvían a cerrarse. A los 4 meses había perdido 12kg añadiendo un poco de paseo diario. Pensaba que ya no tenía solución."
+          }
+        },
+        "review_PCyhi3": {
+          "type": "review",
+          "settings": {
+            "name": "Patricia K.",
+            "result": "-3kg en 1 mes",
+            "rating": 5,
+            "text": "Lo uso desde hace un mes. Mi vientre se deshinchó desde las primeras semanas, he perdido 3kg y duermo mucho mejor. Acabo de pedir la cura de 3 meses. Muy satisfecha de verdad."
+          }
+        },
+        "review_LKpbbd": {
+          "type": "review",
+          "settings": {
+            "name": "Aude B.",
+            "result": "-6kg en 2 meses",
+            "rating": 5,
+            "text": "Menos 6kg y esto no ha terminado. Llevo 2 meses tomándolo. He perdido 6kg, mi vientre está mucho menos hinchado y he recuperado energía. Hasta mi médico me preguntó qué había cambiado. Por supuesto que continúo."
+          }
+        }
+      },
+      "block_order": [
+        "review_qEcEBf",
+        "review_U84QUD",
+        "review_44QxQp",
+        "review_qBbJHB",
+        "review_PCyhi3",
+        "review_LKpbbd"
+      ],
+      "name": "WLD Avis carrousel",
+      "settings": {}
     },
     "custom_liquid_RVK6Nk": {
       "type": "custom-liquid",
@@ -154,6 +216,7 @@
     "main",
     "custom_liquid_RVK6Nk",
     "custom_liquid_WnKddc",
+    "wld_eqm_review_carousel_B7WDTg",
     "related-products"
   ]
 }
