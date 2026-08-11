@@ -282,7 +282,7 @@
       ],
       "settings": {
         "full_width": true,
-        "block_size": "small",
+        "block_size": "medium",
         "subheading": "",
         "title": "Nuestras soluciones para todas tus necesidades",
         "content": "",
@@ -313,6 +313,7 @@
         "t2": {
           "type": "testimonial",
           "settings": {
+            "image": "shopify://shop_images/024_avs_1_prime.png",
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
@@ -324,6 +325,7 @@
         "t3": {
           "type": "testimonial",
           "settings": {
+            "image": "shopify://shop_images/028_avis_lp_6.png",
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
@@ -335,6 +337,7 @@
         "t4": {
           "type": "testimonial",
           "settings": {
+            "image": "shopify://shop_images/029_hf_20260407_120422_b9687fa6-3d00-4631-b418-8295f8892331.png",
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
@@ -346,6 +349,7 @@
         "t5": {
           "type": "testimonial",
           "settings": {
+            "image": "shopify://shop_images/027_avis_lp_4.png",
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
@@ -357,6 +361,7 @@
         "t6": {
           "type": "testimonial",
           "settings": {
+            "image": "shopify://shop_images/031_d19bb040-ad89-449b-a1f7-222419f6c20e_1.png",
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
