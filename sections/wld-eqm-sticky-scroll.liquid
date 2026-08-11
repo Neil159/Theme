@@ -16,12 +16,14 @@
     <div class="eqm-sticky__text-col">
       {%- for block in section.blocks -%}
         {%- if block.type == 'step' -%}
-          <div class="eqm-sticky__step" data-step="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
-            {%- if block.settings.title != blank -%}
-              <h3 class="eqm-sticky__step-title">{{ block.settings.title }}</h3>
-            {%- endif -%}
-            <div class="eqm-sticky__step-text">{{ block.settings.text }}</div>
-          </div>
+          {%- unless block.settings.title == blank and block.settings.text == blank -%}
+            <div class="eqm-sticky__step" data-step="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+              {%- if block.settings.title != blank -%}
+                <h3 class="eqm-sticky__step-title">{{ block.settings.title }}</h3>
+              {%- endif -%}
+              <div class="eqm-sticky__step-text">{{ block.settings.text }}</div>
+            </div>
+          {%- endunless -%}
         {%- endif -%}
       {%- endfor -%}
     </div>
@@ -107,12 +109,12 @@
     position: sticky;
     top: 120px;
     height: fit-content;
-    max-height: calc(100vh - 220px);
+    max-height: calc(100vh - 260px);
   }
   #wld-eqm-sticky-{{ section.id }} .eqm-sticky__media-inner {
     position: relative;
-    width: min(100%, calc(100vh - 220px));
-    max-height: calc(100vh - 220px);
+    width: min(100%, calc(100vh - 260px));
+    max-height: calc(100vh - 260px);
     aspect-ratio: 1 / 1;
     border-radius: 18px;
     overflow: hidden;
