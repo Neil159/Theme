@@ -1,0 +1,267 @@
+{%- comment -%}
+  Section: WLD — EquilibraMeno — Carrousel d'avis avec photos (avec boutons d'import d'image)
+  A ajouter via Admin Shopify > Boutique en ligne > Themes > Modifier le code > Sections > Ajouter une nouvelle section.
+  Puis dans l'editeur visuel : ajoute la section "WLD Avis carrousel" sur ta page produit,
+  et pour chaque avis clique sur "Seleccionar imagen" dans le panneau de droite pour importer la photo.
+{%- endcomment -%}
+
+<div id="wld-eqm-review-carousel-{{ section.id }}" class="eqm-carousel">
+  <div class="eqm-carousel__track">
+    {%- for block in section.blocks -%}
+      <div class="eqm-carousel__card" {{ block.shopify_attributes }}>
+        {%- if block.settings.photo -%}
+          {{ block.settings.photo | image_url: width: 400 | image_tag: class: 'eqm-carousel__photo', loading: 'lazy' }}
+        {%- else -%}
+          <div class="eqm-carousel__photo eqm-carousel__photo--placeholder"></div>
+        {%- endif -%}
+        <div class="eqm-carousel__stars">
+          {%- for i in (1..5) -%}{%- if i <= block.settings.rating -%}★{%- else -%}☆{%- endif -%}{%- endfor -%}
+        </div>
+        <div class="eqm-carousel__name">
+          {{ block.settings.name }}
+          {%- if block.settings.result != blank -%}
+            <span class="eqm-carousel__result">{{ block.settings.result }}</span>
+          {%- endif -%}
+          <span class="eqm-carousel__check">✔</span>
+        </div>
+        <p class="eqm-carousel__text">{{ block.settings.text }}</p>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <button type="button" class="eqm-carousel__arrow eqm-carousel__arrow--prev" aria-label="Anterior">&#10094;</button>
+  <button type="button" class="eqm-carousel__arrow eqm-carousel__arrow--next" aria-label="Siguiente">&#10095;</button>
+</div>
+
+<style>
+  #wld-eqm-review-carousel-{{ section.id }} {
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} * { box-sizing: border-box; }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 4px 4px 12px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__track::-webkit-scrollbar {
+    display: none;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__card {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+    border: 1px solid #eee1e6;
+    border-radius: 14px;
+    padding: 18px;
+    background: #ffffff;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__photo {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 12px;
+    background: #f2eef2;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__photo--placeholder {
+    display: flex;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__stars {
+    color: #e0a13c;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__name {
+    font-weight: 700;
+    font-size: 14px;
+    color: #2b1620;
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__result {
+    font-weight: 400;
+    color: #7a6a70;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__check {
+    color: #4c7a4f;
+    font-size: 13px;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #5c5058;
+    margin: 0;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid #eee1e6;
+    background: #ffffff;
+    color: #7a1f3d;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__arrow--prev { left: -6px; }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__arrow--next { right: -6px; }
+  @media (max-width: 600px) {
+    #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__arrow { display: none; }
+  }
+</style>
+
+<script>
+(function() {
+  function wldInitCarousel(root) {
+    if (!root || root.dataset.wldInit === '1') return;
+    root.dataset.wldInit = '1';
+    var track = root.querySelector('.eqm-carousel__track');
+    var prev = root.querySelector('.eqm-carousel__arrow--prev');
+    var next = root.querySelector('.eqm-carousel__arrow--next');
+    var card = root.querySelector('.eqm-carousel__card');
+    var step = card ? card.offsetWidth + 16 : 276;
+    if (prev) prev.addEventListener('click', function() { track.scrollBy({ left: -step, behavior: 'smooth' }); });
+    if (next) next.addEventListener('click', function() { track.scrollBy({ left: step, behavior: 'smooth' }); });
+  }
+  function wldInitAll() {
+    document.querySelectorAll('[id^="wld-eqm-review-carousel-"]').forEach(wldInitCarousel);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wldInitAll);
+  } else {
+    wldInitAll();
+  }
+  document.addEventListener('shopify:section:load', function(evt) {
+    var root = evt.target.querySelector('[id^="wld-eqm-review-carousel-"]');
+    if (root) { root.dataset.wldInit = '0'; wldInitCarousel(root); }
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "WLD Avis carrousel",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Avis",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "photo",
+          "label": "Foto de la clienta"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nombre",
+          "default": "Nombre C."
+        },
+        {
+          "type": "text",
+          "id": "result",
+          "label": "Resultado (ej. -6kg en 2 meses)"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Estrellas",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Texto del avis"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "WLD Avis carrousel",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "name": "Joëlle P.",
+            "result": "-10kg en 3 meses",
+            "rating": 5,
+            "text": "Había probado de todo. Había cogido 20kg desde la menopausia. A las 2 semanas noté que la ropa me quedaba diferente, empecé a perder peso poco a poco. A los 3 meses, mis primeros -10kg. Sigo, con confianza."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Martina R.",
+            "result": "De la talla 42 a la 40",
+            "rating": 5,
+            "text": "Nunca pensé que volvería a ponerme mis vaqueros de antes. Sin cambiar nada drástico en mi alimentación. Ha sido gradual pero real, y por fin no tengo que forzar el botón para cerrarlos."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Cristina A.",
+            "result": "-7kg en 3 meses",
+            "rating": 5,
+            "text": "Me sorprendió lo rápido que llegó el primer cambio. Comía igual, sin obsesionarme con la báscula, y el resultado ha llegado solo. Mi marido me pregunta qué he cambiado. Sigo tomándolo, evidentemente."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Françoise M.",
+            "result": "-12kg en 4 meses",
+            "rating": 5,
+            "text": "Vuelvo a reconocerme en el espejo. Había cogido 15kg desde la menopausia y nada funcionaba. A las 6 semanas mis vaqueros volvían a cerrarse. A los 4 meses había perdido 12kg añadiendo un poco de paseo diario. Pensaba que ya no tenía solución."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Patricia K.",
+            "result": "-3kg en 1 mes",
+            "rating": 5,
+            "text": "Lo uso desde hace un mes. Mi vientre se deshinchó desde las primeras semanas, he perdido 3kg y duermo mucho mejor. Acabo de pedir la cura de 3 meses. Muy satisfecha de verdad."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Aude B.",
+            "result": "-6kg en 2 meses",
+            "rating": 5,
+            "text": "Menos 6kg y esto no ha terminado. Llevo 2 meses tomándolo. He perdido 6kg, mi vientre está mucho menos hinchado y he recuperado energía. Hasta mi médico me preguntó qué había cambiado. Por supuesto que continúo."
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["product", "index", "page"]
+  }
+}
+{% endschema %}
