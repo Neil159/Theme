@@ -87,7 +87,7 @@
         "enable_video_looping": true,
         "enable_image_zoom": true,
         "max_image_zoom_level": 3,
-        "background": "#FFFFFF",
+        "background": "#ffffff",
         "background_gradient": "",
         "text_color": "",
         "input_background": "rgba(0,0,0,0)",
@@ -193,10 +193,24 @@
       "type": "wld-eqm-social-proof-banner",
       "name": "WLD Preuve sociale",
       "settings": {
-        "stat_text": "¡1 EquilibraMeno vendido cada 30 segundos!",
+        "stat_text_line1": "¡1 EquilibraMeno vendido",
+        "stat_text_line2": "cada 30 segundos!",
         "photo": "shopify://shop_images/Mujer1_8b495e94-b95e-44ae-ad23-c210909d6ea8.png",
         "offer_title": "EquilibraMeno te ofrece:",
         "offer_text": "Una composición natural sin hormonas ni aditivos, fabricada en la Unión Europea."
+      }
+    },
+    "custom_liquid_q7bnqH": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<!-- EquilibraMeno — FAQ avec icones et fond clair (custom liquid) -->\n<div class=\"eqm-faq2\">\n  <h2 class=\"eqm-faq2__title\">¿Alguna pregunta?</h2>\n  <div class=\"eqm-faq2__list\">\n\n    <div class=\"eqm-faq2__item is-open\">\n      <button type=\"button\" class=\"eqm-faq2__q\">\n        <span class=\"eqm-faq2__q-text\"><span class=\"eqm-faq2__emoji\">⏳</span> ¿Al cabo de cuánto tiempo veré resultados?</span>\n        <span class=\"eqm-faq2__toggle\" aria-hidden=\"true\">&#9650;</span>\n      </button>\n      <div class=\"eqm-faq2__a\">\n        <p>Los primeros efectos suelen notarse en la digestión y el vientre. Los resultados varían de una persona a otra, por eso recomendamos una cura de al menos 3 meses para dar tiempo a tu cuerpo a reequilibrarse. La mayoría de nuestras clientas notaron una mejora visible en la digestión y la hinchazón en menos de 3 semanas.</p>\n      </div>\n    </div>\n\n    <div class=\"eqm-faq2__item\">\n      <button type=\"button\" class=\"eqm-faq2__q\">\n        <span class=\"eqm-faq2__q-text\"><span class=\"eqm-faq2__emoji\">🌿</span> ¿La fórmula es realmente natural y sin hormonas?</span>\n        <span class=\"eqm-faq2__toggle\" aria-hidden=\"true\">&#9650;</span>\n      </button>\n      <div class=\"eqm-faq2__a\">\n        <p>Sí. EquilibraMeno está formulado a base de plantas y nutrientes naturales. Sin hormonas de síntesis, sin disruptores endocrinos, sin aditivos controvertidos. Ayuda a sostener tu equilibrio hormonal natural sin modificarlo artificialmente.</p>\n      </div>\n    </div>\n\n    <div class=\"eqm-faq2__item\">\n      <button type=\"button\" class=\"eqm-faq2__q\">\n        <span class=\"eqm-faq2__q-text\"><span class=\"eqm-faq2__emoji\">🤰</span> ¿Es adecuado si he ganado peso solo en la zona del vientre?</span>\n        <span class=\"eqm-faq2__toggle\" aria-hidden=\"true\">&#9650;</span>\n      </button>\n      <div class=\"eqm-faq2__a\">\n        <p>Sí. El vientre hormonal es una de las primeras zonas en reaccionar. EquilibraMeno actúa precisamente sobre el desequilibrio hormonal que favorece esta acumulación abdominal. Suele ser la primera mejora que notan nuestras clientas.</p>\n      </div>\n    </div>\n\n    <div class=\"eqm-faq2__item\">\n      <button type=\"button\" class=\"eqm-faq2__q\">\n        <span class=\"eqm-faq2__q-text\"><span class=\"eqm-faq2__emoji\">❌</span> ¿Hay contraindicaciones?</span>\n        <span class=\"eqm-faq2__toggle\" aria-hidden=\"true\">&#9650;</span>\n      </button>\n      <div class=\"eqm-faq2__a\">\n        <p>EquilibraMeno no está recomendado para mujeres embarazadas o en lactancia, ni para personas con antecedentes de cánceres hormono-dependientes o afecciones biliares o hepáticas. Si sigues un tratamiento médico, consulta a tu médico antes de empezar.</p>\n      </div>\n    </div>\n\n    <div class=\"eqm-faq2__item\">\n      <button type=\"button\" class=\"eqm-faq2__q\">\n        <span class=\"eqm-faq2__q-text\"><span class=\"eqm-faq2__emoji\">📅</span> ¿Puedo tomarlo todo el año?</span>\n        <span class=\"eqm-faq2__toggle\" aria-hidden=\"true\">&#9650;</span>\n      </button>\n      <div class=\"eqm-faq2__a\">\n        <p>Sí, EquilibraMeno puede tomarse de forma continuada sin problema. Cuanto más regular sea la toma, más duraderos son los efectos sobre el equilibrio hormonal. Recomendamos un mínimo de 3 meses de cura para resultados óptimos.</p>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"eqm-faq2__contact\">contacto@equilibrameno.com</div>\n</div>\n\n<style>\n  .eqm-faq2 {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif !important;\n    max-width: 720px !important;\n    margin: 32px auto !important;\n    padding: 0 20px !important;\n  }\n  .eqm-faq2__title {\n    font-weight: 700 !important;\n    color: #2b1620 !important;\n    font-size: 28px !important;\n    text-align: center !important;\n    margin: 0 0 24px 0 !important;\n  }\n  .eqm-faq2__list {\n    background: #f4f4f4 !important;\n    border-radius: 18px !important;\n    padding: 8px 24px !important;\n  }\n  .eqm-faq2__item {\n    border-bottom: 1px solid #e2e2e2 !important;\n    padding: 4px 0 !important;\n  }\n  .eqm-faq2__item:last-child {\n    border-bottom: none !important;\n  }\n  .eqm-faq2__q {\n    width: 100% !important;\n    display: flex !important;\n    align-items: center !important;\n    justify-content: space-between !important;\n    gap: 16px !important;\n    background: none !important;\n    border: none !important;\n    text-align: left !important;\n    padding: 20px 0 !important;\n    cursor: pointer !important;\n    font-family: inherit !important;\n  }\n  .eqm-faq2__q-text {\n    font-size: 17px !important;\n    font-weight: 700 !important;\n    color: #1a1a1a !important;\n  }\n  .eqm-faq2__emoji {\n    margin-right: 4px !important;\n  }\n  .eqm-faq2__toggle {\n    flex-shrink: 0 !important;\n    width: 30px !important;\n    height: 30px !important;\n    min-width: 30px !important;\n    min-height: 30px !important;\n    border-radius: 50% !important;\n    background: #1a1a1a !important;\n    color: #ffffff !important;\n    display: flex !important;\n    align-items: center !important;\n    justify-content: center !important;\n    font-size: 11px !important;\n    transition: transform .2s ease !important;\n  }\n  .eqm-faq2__item:not(.is-open) .eqm-faq2__toggle {\n    transform: rotate(180deg) !important;\n  }\n  .eqm-faq2__a {\n    max-height: 0 !important;\n    overflow: hidden !important;\n    transition: max-height .25s ease !important;\n  }\n  .eqm-faq2__a p {\n    margin: 0 !important;\n    padding: 0 0 22px !important;\n    font-size: 15px !important;\n    font-style: italic !important;\n    line-height: 1.6 !important;\n    color: #3a3a3a !important;\n  }\n  .eqm-faq2__item.is-open .eqm-faq2__a {\n    max-height: 400px !important;\n  }\n  .eqm-faq2__contact {\n    text-align: center !important;\n    font-size: 14px !important;\n    color: #5c5058 !important;\n    margin-top: 22px !important;\n  }\n</style>\n\n<script>\n(function() {\n  document.querySelectorAll('.eqm-faq2').forEach(function(faq) {\n    if (faq.dataset.eqmFaq2Init === '1') return;\n    faq.dataset.eqmFaq2Init = '1';\n    var items = faq.querySelectorAll('.eqm-faq2__item');\n    items.forEach(function(item) {\n      var q = item.querySelector('.eqm-faq2__q');\n      if (!q) return;\n      q.addEventListener('click', function() {\n        var wasOpen = item.classList.contains('is-open');\n        items.forEach(function(i) { i.classList.remove('is-open'); });\n        if (!wasOpen) { item.classList.add('is-open'); }\n      });\n    });\n  });\n})();\n</script>",
+        "background": "#FFFFFF",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "related-products": {
@@ -228,6 +242,7 @@
     "custom_liquid_WnKddc",
     "wld_eqm_review_carousel_B7WDTg",
     "wld_eqm_social_proof_banner_DJnW4N",
+    "custom_liquid_q7bnqH",
     "related-products"
   ]
 }

@@ -37,10 +37,18 @@
   #wld-eqm-review-carousel-{{ section.id }} {
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    max-width: 1200px;
-    margin: 32px auto;
-    padding: 0 20px;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 32px 20px;
     box-sizing: border-box;
+    background: #ffffff;
+  }
+  #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__track {
+    max-width: 1160px;
+    margin: 0 auto;
   }
   #wld-eqm-review-carousel-{{ section.id }} * { box-sizing: border-box; }
   #wld-eqm-review-carousel-{{ section.id }} .eqm-carousel__track {
