@@ -1,0 +1,194 @@
+{%- comment -%}
+  Section: WLD — EquilibraMeno — Bloc "Sublima tu vagina" page Confort intimo
+  A ajouter via Admin Shopify > Boutique en ligne > Themes > Modifier le code > Sections > Ajouter une nouvelle section.
+{%- endcomment -%}
+
+<div id="wld-eqm-vintro-{{ section.id }}" class="eqm-vintro">
+  <div class="eqm-vintro__media">
+    {%- if section.settings.photo -%}
+      {{ section.settings.photo | image_url: width: 900 | image_tag: loading: 'lazy', class: 'eqm-vintro__image' }}
+    {%- else -%}
+      <div class="eqm-vintro__placeholder">Foto<br>~900x900px</div>
+    {%- endif -%}
+  </div>
+
+  <div class="eqm-vintro__text">
+    <h2 class="eqm-vintro__title">{{ section.settings.title_line1 | default: 'Sublima' }} <em class="eqm-vintro__accent">{{ section.settings.title_accent | default: 'tu vagina' }}</em></h2>
+    <p class="eqm-vintro__subtitle">{{ section.settings.subtitle | default: 'Una composición natural que actúa en el origen de los problemas' }}</p>
+
+    <ul class="eqm-vintro__list">
+      {%- if section.settings.bullet_1 != blank -%}
+        <li><span class="eqm-vintro__check">&#10003;</span> {{ section.settings.bullet_1 }}</li>
+      {%- endif -%}
+      {%- if section.settings.bullet_2 != blank -%}
+        <li><span class="eqm-vintro__check">&#10003;</span> {{ section.settings.bullet_2 }}</li>
+      {%- endif -%}
+      {%- if section.settings.bullet_3 != blank -%}
+        <li><span class="eqm-vintro__check">&#10003;</span> {{ section.settings.bullet_3 }}</li>
+      {%- endif -%}
+    </ul>
+
+    <a href="{{ section.settings.button_link | default: '#eqm-buy' }}" class="eqm-vintro__button">{{ section.settings.button_label | default: 'Comprar' }}</a>
+  </div>
+</div>
+
+<style>
+  #wld-eqm-vintro-{{ section.id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  #wld-eqm-vintro-{{ section.id }} * { box-sizing: border-box; }
+  #wld-eqm-vintro-{{ section.id }} .eqm-vintro__media {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fdf1f5;
+  }
+  #wld-eqm-vintro-{{ section.id }} .eqm-vintro__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #wld-eqm-vintro-{{ section.id }} .eqm-vintro__placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #b5302f;
+    font-size: 13px;
+    border: 2px dashed #f0b7ae;
+  }
+  #wld-eqm-vintro-{{ section.id }} .eqm-vintro__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #5c1730;
+    margin: 0 0 14px 0;
+  }
+  #wld-eqm-vintro-{{ section.id }} .eqm-vintro__accent {
+    font-style: italic;
+    font-weight: 400;
+  }
+  #wld-eqm-vintro-{{ section.id }} .eqm-vintro__subtitle {
+    font-size: 15px;
+    color: #7a6a70;
+    margin: 0 0 22px 0;
+  }
+  #wld-eqm-vintro-{{ section.id }} .eqm-vintro__list {
+    list-style: none;
+    margin: 0 0 28px 0;
+    padding: 0;
+  }
+  #wld-eqm-vintro-{{ section.id }} .eqm-vintro__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2b1620;
+    margin-bottom: 12px;
+  }
+  #wld-eqm-vintro-{{ section.id }} .eqm-vintro__check {
+    color: #b5302f;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  #wld-eqm-vintro-{{ section.id }} .eqm-vintro__button {
+    display: inline-block;
+    background: #b5302f;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding: 14px 32px;
+    border-radius: 30px;
+  }
+  @media (max-width: 749px) {
+    #wld-eqm-vintro-{{ section.id }} {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #wld-eqm-vintro-{{ section.id }} .eqm-vintro__list li {
+      justify-content: center;
+    }
+    #wld-eqm-vintro-{{ section.id }} .eqm-vintro__button {
+      margin: 0 auto;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "WLD Sublima tu vagina",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "photo",
+      "label": "Foto (~900x900px)"
+    },
+    {
+      "type": "text",
+      "id": "title_line1",
+      "label": "Titre - debut",
+      "default": "Sublima"
+    },
+    {
+      "type": "text",
+      "id": "title_accent",
+      "label": "Titre - mot en italique",
+      "default": "tu vagina"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous-titre",
+      "default": "Una composición natural que actúa en el origen de los problemas"
+    },
+    {
+      "type": "text",
+      "id": "bullet_1",
+      "label": "Puce 1",
+      "default": "Elimina los olores y las bacterias no deseadas"
+    },
+    {
+      "type": "text",
+      "id": "bullet_2",
+      "label": "Puce 2",
+      "default": "Previene las infecciones urinarias"
+    },
+    {
+      "type": "text",
+      "id": "bullet_3",
+      "label": "Puce 3",
+      "default": "Preserva el equilibrio de la flora vaginal"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texte du bouton",
+      "default": "Comprar"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Lien du bouton"
+    }
+  ],
+  "presets": [
+    { "name": "WLD Sublima tu vagina" }
+  ],
+  "enabled_on": {
+    "templates": ["product", "index", "page"]
+  }
+}
+{% endschema %}
