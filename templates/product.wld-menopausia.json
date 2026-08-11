@@ -80,7 +80,7 @@
         "full_width": true,
         "show_fixed_add_to_cart": true,
         "desktop_media_width": 55,
-        "desktop_media_layout": "carousel_thumbnails_left",
+        "desktop_media_layout": "grid_highlight",
         "mobile_media_size": "expanded",
         "mobile_carousel_control": "floating_dots",
         "enable_video_autoplay": false,
@@ -105,6 +105,39 @@
         "background": "",
         "background_gradient": "",
         "text_color": ""
+      }
+    },
+    "wld_eqm_compare_table_iWRdxE": {
+      "type": "wld-eqm-compare-table",
+      "blocks": {
+        "row_iRbfL6": {
+          "type": "row",
+          "settings": {
+            "criteria": "Ingredientes naturales"
+          }
+        },
+        "row_dDMhmT": {
+          "type": "row",
+          "settings": {
+            "criteria": "Fabricado en laboratorio"
+          }
+        },
+        "row_WBQJxN": {
+          "type": "row",
+          "settings": {
+            "criteria": "Garantía satisfecha o reembolsada"
+          }
+        }
+      },
+      "block_order": [
+        "row_iRbfL6",
+        "row_dDMhmT",
+        "row_WBQJxN"
+      ],
+      "name": "WLD Tableau comparatif",
+      "settings": {
+        "title": "¿Por qué elegir EquilibraMeno?",
+        "photo": "shopify://shop_images/produit.png"
       }
     },
     "related-products": {
@@ -133,6 +166,7 @@
   "order": [
     "main",
     "custom_liquid_tJgPhp",
+    "wld_eqm_compare_table_iWRdxE",
     "related-products"
   ]
 }
