@@ -444,6 +444,9 @@
     "checkout": {
       "delivery_options": {
         "ship": "Envío "
+      },
+      "order_summary": {
+        "shipping_label": "Envío gratis"
       }
     }
   }
