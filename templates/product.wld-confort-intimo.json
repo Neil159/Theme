@@ -46,6 +46,12 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
+        },
+        "liquid_yJHYqt": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<!-- EquilibraMeno — Bloc garantie 30 jours (custom liquid) -->\n<div class=\"eqm-guarantee\">\n  <span class=\"eqm-guarantee__icon\" aria-hidden=\"true\">\n    <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"#4c7a4f\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z\"/>\n      <path d=\"M9 12l2 2 4-4\"/>\n    </svg>\n  </span>\n  <span class=\"eqm-guarantee__text\">\n    <strong class=\"eqm-guarantee__title\">Garantía de 30 días satisfecha o reembolsada</strong>\n    Confiamos en la eficacia de EquilibraMeno. Si no es tu caso, te devolvemos tu dinero.\n  </span>\n</div>\n\n<style>\n  .eqm-guarantee {\n    display: flex !important;\n    align-items: flex-start !important;\n    gap: 10px !important;\n    background: #f2f6ea !important;\n    border: 1px solid #d9e5c2 !important;\n    border-radius: 10px !important;\n    padding: 14px 16px !important;\n    margin: 12px 0 !important;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif !important;\n  }\n  .eqm-guarantee__icon {\n    flex-shrink: 0 !important;\n    width: 22px !important;\n    height: 22px !important;\n    min-width: 22px !important;\n    min-height: 22px !important;\n    margin-top: 1px !important;\n  }\n  .eqm-guarantee__icon svg {\n    width: 22px !important;\n    height: 22px !important;\n    display: block !important;\n  }\n  .eqm-guarantee__text {\n    display: block !important;\n    font-size: 13px !important;\n    line-height: 1.45 !important;\n    color: #3f5a3f !important;\n  }\n  .eqm-guarantee__title {\n    display: block !important;\n    font-size: 14px !important;\n    font-weight: 700 !important;\n    color: #345334 !important;\n    margin-bottom: 2px !important;\n  }\n</style>"
+          }
         }
       },
       "block_order": [
@@ -53,7 +59,8 @@
         "liquid_J4x9wp",
         "liquid_JbTUD4",
         "liquid_4QKCPj",
-        "buy_buttons"
+        "buy_buttons",
+        "liquid_yJHYqt"
       ],
       "settings": {
         "full_width": true,
