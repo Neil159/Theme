@@ -195,17 +195,6 @@
       "name": "WLD Avis carrousel",
       "settings": {}
     },
-    "wld_eqm_social_proof_banner_DJnW4N": {
-      "type": "wld-eqm-social-proof-banner",
-      "name": "WLD Preuve sociale",
-      "settings": {
-        "stat_text_line1": "¡1 EquilibraMeno vendido",
-        "stat_text_line2": "cada 30 segundos!",
-        "photo": "shopify://shop_images/IMG7.png",
-        "offer_title": "EquilibraMeno te ofrece:",
-        "offer_text": "Una composición natural sin hormonas ni aditivos, fabricada en la Unión Europea."
-      }
-    },
     "custom_liquid_q7bnqH": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -247,7 +236,6 @@
     "custom_liquid_RVK6Nk",
     "custom_liquid_WnKddc",
     "wld_eqm_review_carousel_B7WDTg",
-    "wld_eqm_social_proof_banner_DJnW4N",
     "custom_liquid_q7bnqH",
     "related-products"
   ]
