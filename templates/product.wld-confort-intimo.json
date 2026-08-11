@@ -9,18 +9,6 @@
  */
 {
   "sections": {
-    "wld_eqm_vaginal_hero_x4tm9Q": {
-      "type": "wld-eqm-vaginal-hero",
-      "name": "WLD Hero Confort intimo",
-      "settings": {
-        "title_line1": "Probióticos vaginales",
-        "title_accent": "para un olor",
-        "title_line2": "y un pH saludables",
-        "button_label": "Lo pruebo",
-        "button_link": "",
-        "photo_desktop": "shopify://shop_images/038_blog_bloomy_3-min.png"
-      }
-    },
     "wld_eqm_vaginal_intro_Abi46z": {
       "type": "wld-eqm-vaginal-intro",
       "name": "WLD Sublima tu vagina",
@@ -143,7 +131,7 @@
         "enable_video_looping": true,
         "enable_image_zoom": true,
         "max_image_zoom_level": 3,
-        "background": "#FFFFFF",
+        "background": "#ffffff",
         "background_gradient": "",
         "text_color": "",
         "input_background": "rgba(0,0,0,0)",
@@ -323,7 +311,6 @@
     }
   },
   "order": [
-    "wld_eqm_vaginal_hero_x4tm9Q",
     "wld_eqm_vaginal_intro_Abi46z",
     "wld_eqm_review_strip_ecqLBN",
     "main",
