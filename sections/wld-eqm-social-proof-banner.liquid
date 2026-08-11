@@ -1,0 +1,110 @@
+{%- comment -%}
+  Section: WLD — EquilibraMeno — Banniere preuve sociale ("1 vendu toutes les 30 secondes")
+  A ajouter via Admin Shopify > Boutique en ligne > Themes > Modifier le code > Sections > Ajouter une nouvelle section.
+  Puis dans l'editeur visuel : "Ajouter une section" > "WLD Preuve sociale", et clique sur
+  "Seleccionar imagen" dans le panneau de droite pour importer ta vraie photo.
+{%- endcomment -%}
+
+<div id="wld-eqm-social-{{ section.id }}" class="eqm-social">
+  <div class="eqm-social__inner">
+    <h2 class="eqm-social__title">{{ section.settings.stat_text | default: '¡1 EquilibraMeno vendido cada 30 segundos!' }}</h2>
+
+    {%- if section.settings.photo -%}
+      <div class="eqm-social__media">
+        {{ section.settings.photo | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'eqm-social__image' }}
+      </div>
+    {%- endif -%}
+
+    <div class="eqm-social__offer">
+      <p class="eqm-social__offer-title">{{ section.settings.offer_title | default: 'EquilibraMeno te ofrece:' }}</p>
+      <p class="eqm-social__offer-text">{{ section.settings.offer_text | default: 'Una composición natural sin hormonas ni aditivos, fabricada en la Unión Europea.' }}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  #wld-eqm-social-{{ section.id }} {
+    background: #fdf1f5;
+    padding: 56px 20px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  #wld-eqm-social-{{ section.id }} * { box-sizing: border-box; }
+  #wld-eqm-social-{{ section.id }} .eqm-social__inner {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #wld-eqm-social-{{ section.id }} .eqm-social__title {
+    font-weight: 700;
+    color: #5c1730;
+    font-size: 26px;
+    line-height: 1.3;
+    margin: 0 0 28px 0;
+  }
+  #wld-eqm-social-{{ section.id }} .eqm-social__media {
+    margin: 0 0 28px 0;
+  }
+  #wld-eqm-social-{{ section.id }} .eqm-social__image {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto;
+  }
+  #wld-eqm-social-{{ section.id }} .eqm-social__offer-title {
+    font-weight: 700;
+    color: #2b1620;
+    font-size: 16px;
+    margin: 0 0 6px 0;
+  }
+  #wld-eqm-social-{{ section.id }} .eqm-social__offer-text {
+    color: #5c5058;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  @media (max-width: 600px) {
+    #wld-eqm-social-{{ section.id }} .eqm-social__title { font-size: 22px; }
+    #wld-eqm-social-{{ section.id }} { padding: 40px 20px; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "WLD Preuve sociale",
+  "settings": [
+    {
+      "type": "text",
+      "id": "stat_text",
+      "label": "Titre (statistique de ventes)",
+      "default": "¡1 EquilibraMeno vendido cada 30 segundos!"
+    },
+    {
+      "type": "image_picker",
+      "id": "photo",
+      "label": "Foto (equipo, atelier, etc.)"
+    },
+    {
+      "type": "text",
+      "id": "offer_title",
+      "label": "Titre offre",
+      "default": "EquilibraMeno te ofrece:"
+    },
+    {
+      "type": "textarea",
+      "id": "offer_text",
+      "label": "Texte offre",
+      "default": "Una composición natural sin hormonas ni aditivos, fabricada en la Unión Europea."
+    }
+  ],
+  "presets": [
+    {
+      "name": "WLD Preuve sociale"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["product", "index", "page"]
+  }
+}
+{% endschema %}
