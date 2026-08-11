@@ -52,6 +52,18 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
+        },
+        "liquid_iRRXWt": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<!-- EquilibraMeno — Bloc garantie 30 jours (custom liquid) -->\n<div class=\"eqm-guarantee\">\n  <span class=\"eqm-guarantee__icon\" aria-hidden=\"true\">\n    <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"#4c7a4f\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z\"/>\n      <path d=\"M9 12l2 2 4-4\"/>\n    </svg>\n  </span>\n  <span class=\"eqm-guarantee__text\">\n    <strong class=\"eqm-guarantee__title\">Garantía de 30 días satisfecha o reembolsada</strong>\n    Confiamos en la eficacia de EquilibraMeno. Si no es tu caso, te devolvemos tu dinero.\n  </span>\n</div>\n\n<style>\n  .eqm-guarantee {\n    display: flex !important;\n    align-items: flex-start !important;\n    gap: 10px !important;\n    background: #f2f6ea !important;\n    border: 1px solid #d9e5c2 !important;\n    border-radius: 10px !important;\n    padding: 14px 16px !important;\n    margin: 12px 0 !important;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif !important;\n  }\n  .eqm-guarantee__icon {\n    flex-shrink: 0 !important;\n    width: 22px !important;\n    height: 22px !important;\n    min-width: 22px !important;\n    min-height: 22px !important;\n    margin-top: 1px !important;\n  }\n  .eqm-guarantee__icon svg {\n    width: 22px !important;\n    height: 22px !important;\n    display: block !important;\n  }\n  .eqm-guarantee__text {\n    display: block !important;\n    font-size: 13px !important;\n    line-height: 1.45 !important;\n    color: #3f5a3f !important;\n  }\n  .eqm-guarantee__title {\n    display: block !important;\n    font-size: 14px !important;\n    font-weight: 700 !important;\n    color: #345334 !important;\n    margin-bottom: 2px !important;\n  }\n</style>"
+          }
+        },
+        "liquid_iMeppt": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<!-- EquilibraMeno — Bloc FAQ / Une question (custom liquid) -->\n<div class=\"eqm-faq\">\n  <h2 class=\"eqm-faq__title\">¿Alguna pregunta?</h2>\n\n  <div class=\"eqm-faq__list\">\n    <div class=\"eqm-faq__item\">\n      <button type=\"button\" class=\"eqm-faq__q\">\n        <span>¿Al cabo de cuánto tiempo veré resultados?</span>\n        <span class=\"eqm-faq__icon\" aria-hidden=\"true\">+</span>\n      </button>\n      <div class=\"eqm-faq__a\">\n        <p>Los primeros cambios suelen notarse a partir de las 2-3 semanas. Se recomienda una cura de 3 meses para resultados óptimos.</p>\n      </div>\n    </div>\n\n    <div class=\"eqm-faq__item\">\n      <button type=\"button\" class=\"eqm-faq__q\">\n        <span>¿La fórmula es realmente natural y sin hormonas?</span>\n        <span class=\"eqm-faq__icon\" aria-hidden=\"true\">+</span>\n      </button>\n      <div class=\"eqm-faq__a\">\n        <p>Sí, la fórmula se basa en magnesio liposomal, actea de racimo negro y vitamina B6, sin hormonas de síntesis.</p>\n      </div>\n    </div>\n\n    <div class=\"eqm-faq__item\">\n      <button type=\"button\" class=\"eqm-faq__q\">\n        <span>¿Es adecuado si he ganado peso solo en la zona del vientre?</span>\n        <span class=\"eqm-faq__icon\" aria-hidden=\"true\">+</span>\n      </button>\n      <div class=\"eqm-faq__a\">\n        <p>Sí. Durante la menopausia, la caída de estrógenos favorece la acumulación de grasa abdominal. La fórmula ayuda a sostener el metabolismo en esta zona.</p>\n      </div>\n    </div>\n\n    <div class=\"eqm-faq__item\">\n      <button type=\"button\" class=\"eqm-faq__q\">\n        <span>¿Hay contraindicaciones?</span>\n        <span class=\"eqm-faq__icon\" aria-hidden=\"true\">+</span>\n      </button>\n      <div class=\"eqm-faq__a\">\n        <p>EquilibraMeno no contiene hormonas. Si estás en tratamiento médico, embarazada o en lactancia, consulta a tu médico antes de tomarlo.</p>\n      </div>\n    </div>\n\n    <div class=\"eqm-faq__item\">\n      <button type=\"button\" class=\"eqm-faq__q\">\n        <span>¿Puedo tomarlo todo el año?</span>\n        <span class=\"eqm-faq__icon\" aria-hidden=\"true\">+</span>\n      </button>\n      <div class=\"eqm-faq__a\">\n        <p>Sí, puede tomarse de forma continuada mientras persistan los síntomas relacionados con la menopausia.</p>\n      </div>\n    </div>\n  </div>\n</div>\n\n<style>\n  .eqm-faq {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif !important;\n    max-width: 720px !important;\n    margin: 48px auto !important;\n    padding: 0 20px !important;\n  }\n  .eqm-faq__title {\n    font-weight: 700 !important;\n    color: #5c1730 !important;\n    font-size: 28px !important;\n    text-align: center !important;\n    margin: 0 0 28px 0 !important;\n  }\n  .eqm-faq__list {\n    display: block !important;\n  }\n  .eqm-faq__item {\n    border-bottom: 1px solid #eee1e6 !important;\n  }\n  .eqm-faq__q {\n    width: 100% !important;\n    display: flex !important;\n    align-items: center !important;\n    justify-content: space-between !important;\n    gap: 12px !important;\n    background: none !important;\n    border: none !important;\n    text-align: left !important;\n    padding: 16px 4px !important;\n    cursor: pointer !important;\n    font-family: inherit !important;\n    font-size: 15px !important;\n    font-weight: 600 !important;\n    color: #2b1620 !important;\n  }\n  .eqm-faq__icon {\n    flex-shrink: 0 !important;\n    font-size: 18px !important;\n    font-weight: 400 !important;\n    color: #7a1f3d !important;\n    transition: transform .2s ease !important;\n  }\n  .eqm-faq__item.is-open .eqm-faq__icon {\n    transform: rotate(45deg) !important;\n  }\n  .eqm-faq__a {\n    max-height: 0 !important;\n    overflow: hidden !important;\n    transition: max-height .2s ease !important;\n  }\n  .eqm-faq__a p {\n    margin: 0 !important;\n    padding: 0 4px 16px !important;\n    font-size: 14px !important;\n    line-height: 1.5 !important;\n    color: #7a6a70 !important;\n  }\n  .eqm-faq__item.is-open .eqm-faq__a {\n    max-height: 400px !important;\n  }\n</style>\n\n<script>\n(function() {\n  document.querySelectorAll('.eqm-faq').forEach(function(faq) {\n    if (faq.dataset.eqmFaqInit === '1') return;\n    faq.dataset.eqmFaqInit = '1';\n    var items = faq.querySelectorAll('.eqm-faq__item');\n    items.forEach(function(item) {\n      var q = item.querySelector('.eqm-faq__q');\n      if (!q) return;\n      q.addEventListener('click', function() {\n        var wasOpen = item.classList.contains('is-open');\n        items.forEach(function(i) { i.classList.remove('is-open'); });\n        if (!wasOpen) { item.classList.add('is-open'); }\n      });\n    });\n  });\n})();\n</script>"
+          }
         }
       },
       "block_order": [
@@ -60,7 +72,9 @@
         "liquid_JbTUD4",
         "liquid_UaRCdz",
         "liquid_4QKCPj",
-        "buy_buttons"
+        "buy_buttons",
+        "liquid_iRRXWt",
+        "liquid_iMeppt"
       ],
       "settings": {
         "full_width": true,
@@ -78,6 +92,19 @@
         "text_color": "",
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
+      }
+    },
+    "custom_liquid_tJgPhp": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": false,
+        "liquid": "<!-- EquilibraMeno — Barre de confiance defilante (custom liquid) -->\n<div class=\"eqm-trust-marquee\">\n  <div class=\"eqm-trust-marquee__track\">\n    <div class=\"eqm-trust-marquee__group\">\n      <span class=\"eqm-trust-marquee__item\">Fabricado en laboratorio certificado</span>\n      <span class=\"eqm-trust-marquee__check\">&#10003;</span>\n      <span class=\"eqm-trust-marquee__item\">94% no sienten hinchazón a diario</span>\n      <span class=\"eqm-trust-marquee__check\">&#10003;</span>\n      <span class=\"eqm-trust-marquee__item\">90% afirman haber perdido al menos 2kg en 1 mes de cura</span>\n      <span class=\"eqm-trust-marquee__check\">&#10003;</span>\n      <span class=\"eqm-trust-marquee__item\">100% natural y sin hormonas</span>\n      <span class=\"eqm-trust-marquee__check\">&#10003;</span>\n    </div>\n    <div class=\"eqm-trust-marquee__group\" aria-hidden=\"true\">\n      <span class=\"eqm-trust-marquee__item\">Fabricado en laboratorio certificado</span>\n      <span class=\"eqm-trust-marquee__check\">&#10003;</span>\n      <span class=\"eqm-trust-marquee__item\">94% no sienten hinchazón a diario</span>\n      <span class=\"eqm-trust-marquee__check\">&#10003;</span>\n      <span class=\"eqm-trust-marquee__item\">90% afirman haber perdido al menos 2kg en 1 mes de cura</span>\n      <span class=\"eqm-trust-marquee__check\">&#10003;</span>\n      <span class=\"eqm-trust-marquee__item\">100% natural y sin hormonas</span>\n      <span class=\"eqm-trust-marquee__check\">&#10003;</span>\n    </div>\n  </div>\n</div>\n\n<style>\n  .eqm-trust-marquee {\n    width: 100vw !important;\n    position: relative !important;\n    left: 50% !important;\n    right: 50% !important;\n    margin-left: -50vw !important;\n    margin-right: -50vw !important;\n    overflow: hidden !important;\n    background: #ece6ea !important;\n    padding: 18px 0 !important;\n    box-sizing: border-box !important;\n  }\n  .eqm-trust-marquee__track {\n    display: flex !important;\n    width: max-content !important;\n    animation: eqm-trust-marquee-scroll 26s linear infinite !important;\n  }\n  .eqm-trust-marquee__group {\n    display: flex !important;\n    align-items: center !important;\n    flex-shrink: 0 !important;\n  }\n  .eqm-trust-marquee__item {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif !important;\n    font-weight: 700 !important;\n    font-size: 15px !important;\n    color: #5c1730 !important;\n    white-space: nowrap !important;\n    padding: 0 20px !important;\n  }\n  .eqm-trust-marquee__check {\n    font-weight: 700 !important;\n    font-size: 15px !important;\n    color: #5c1730 !important;\n    flex-shrink: 0 !important;\n  }\n  @keyframes eqm-trust-marquee-scroll {\n    from { transform: translateX(0); }\n    to   { transform: translateX(-50%); }\n  }\n  @media (prefers-reduced-motion: reduce) {\n    .eqm-trust-marquee__track { animation: none !important; }\n  }\n</style>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "related-products": {
@@ -105,6 +132,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_tJgPhp",
     "related-products"
   ]
 }
