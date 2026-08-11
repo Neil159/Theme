@@ -136,6 +136,7 @@
         "review_U84QUD": {
           "type": "review",
           "settings": {
+            "photo": "shopify://shop_images/014_avant_apres_2_maj.png",
             "name": "Martina R.",
             "result": "De la talla 42 a la 40",
             "rating": 5,
@@ -145,6 +146,7 @@
         "review_44QxQp": {
           "type": "review",
           "settings": {
+            "photo": "shopify://shop_images/013_avant_apres_3.png",
             "name": "Cristina A.",
             "result": "-7kg en 3 meses",
             "rating": 5,
@@ -164,6 +166,7 @@
         "review_PCyhi3": {
           "type": "review",
           "settings": {
+            "photo": "shopify://shop_images/019_avant_apres_7_d697cc79-4776-4301-8ee2-8c16a23f044d.png",
             "name": "Patricia K.",
             "result": "-3kg en 1 mes",
             "rating": 5,
@@ -173,6 +176,7 @@
         "review_LKpbbd": {
           "type": "review",
           "settings": {
+            "photo": "shopify://shop_images/020_hf_20260413_193456_258b5f5c-b013-46d1-bad4-0708207fed86.png",
             "name": "Aude B.",
             "result": "-6kg en 2 meses",
             "rating": 5,
