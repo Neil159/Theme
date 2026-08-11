@@ -126,6 +126,7 @@
         "review_qEcEBf": {
           "type": "review",
           "settings": {
+            "photo": "shopify://shop_images/025_avant_apres_4_167b98a5-2b85-467d-9e56-010f2cd64da1.png",
             "name": "Joëlle P.",
             "result": "-10kg en 3 meses",
             "rating": 5,
@@ -153,6 +154,7 @@
         "review_qBbJHB": {
           "type": "review",
           "settings": {
+            "photo": "shopify://shop_images/030_avant_apres_1.png",
             "name": "Françoise M.",
             "result": "-12kg en 4 meses",
             "rating": 5,
