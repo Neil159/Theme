@@ -3,7 +3,7 @@
   A ajouter via Admin Shopify > Boutique en ligne > Themes > Modifier le code > Sections > Ajouter une nouvelle section.
   Puis dans l'editeur visuel : "Ajouter une section" > "WLD Tableau comparatif".
   Clique sur "Seleccionar imagen" pour importer ta vraie photo du bote (format conseille : image verticale/portrait,
-  fond transparent si possible, ~800x1000px), elle se place a droite du tableau en la faisant deborder legerement.
+  fond transparent de preference, ~500x700px), elle se place au-dessus de la colonne coche, en depassant vers le haut.
 {%- endcomment -%}
 
 <div id="wld-eqm-compare-{{ section.id }}" class="eqm-compare">
@@ -11,29 +11,35 @@
     <h2 class="eqm-compare__title">{{ section.settings.title | default: '¿Por qué elegir EquilibraMeno?' }}</h2>
 
     <div class="eqm-compare__wrap">
-      <div class="eqm-compare__table">
+      <div class="eqm-compare__card">
+        <div class="eqm-compare__podium">
+          {%- if section.settings.photo -%}
+            {{ section.settings.photo | image_url: width: 300 | image_tag: loading: 'lazy', class: 'eqm-compare__image' }}
+          {%- else -%}
+            <div class="eqm-compare__placeholder">Foto del<br>bote</div>
+          {%- endif -%}
+        </div>
+
         {%- for block in section.blocks -%}
           {%- if block.type == 'row' -%}
             <div class="eqm-compare__row" {{ block.shopify_attributes }}>
               <span class="eqm-compare__label">{{ block.settings.criteria }}</span>
-              <span class="eqm-compare__cell eqm-compare__cell--yes">
+              <span class="eqm-compare__yes">
                 <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5l3.5 3.5L16 5.5" fill="none" stroke="#8a6d1d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              <span class="eqm-compare__cell eqm-compare__cell--no">✕</span>
             </div>
           {%- endif -%}
         {%- endfor -%}
       </div>
 
-      {%- if section.settings.photo -%}
-        <div class="eqm-compare__media">
-          {{ section.settings.photo | image_url: width: 500 | image_tag: loading: 'lazy', class: 'eqm-compare__image' }}
-        </div>
-      {%- else -%}
-        <div class="eqm-compare__media eqm-compare__media--placeholder">
-          <span>Foto del bote<br>~800x1000px</span>
-        </div>
-      {%- endif -%}
+      <div class="eqm-compare__others">
+        <div class="eqm-compare__others-label">{{ section.settings.competitor_label | default: 'OTRAS MARCAS' }}</div>
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'row' -%}
+            <div class="eqm-compare__no-row"><span class="eqm-compare__no">✕</span></div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
     </div>
   </div>
 </div>
@@ -41,7 +47,7 @@
 <style>
   #wld-eqm-compare-{{ section.id }} {
     background: #fdf1f5;
-    padding: 56px 20px;
+    padding: 64px 20px 56px;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   }
@@ -55,25 +61,52 @@
     color: #5c1730;
     font-size: 26px;
     text-align: center;
-    margin: 0 0 32px 0;
+    margin: 0 0 40px 0;
   }
   #wld-eqm-compare-{{ section.id }} .eqm-compare__wrap {
-    position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    gap: 8px;
   }
-  #wld-eqm-compare-{{ section.id }} .eqm-compare__table {
+  #wld-eqm-compare-{{ section.id }} .eqm-compare__card {
+    position: relative;
     flex: 1 1 auto;
     background: #ffffff;
     border-radius: 14px;
-    overflow: hidden;
     border: 1px solid #eee1e6;
-    padding-right: 90px;
+    overflow: visible;
+  }
+  #wld-eqm-compare-{{ section.id }} .eqm-compare__podium {
+    position: absolute;
+    right: 0;
+    top: -74px;
+    width: 96px;
+    height: 74px;
+    background: #7a1f3d;
+    border-radius: 14px 14px 0 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: visible;
+  }
+  #wld-eqm-compare-{{ section.id }} .eqm-compare__image {
+    width: 76px;
+    height: auto;
+    display: block;
+    margin-bottom: -18px;
+    filter: drop-shadow(0 8px 10px rgba(0,0,0,0.25));
+  }
+  #wld-eqm-compare-{{ section.id }} .eqm-compare__placeholder {
+    color: #f6dfe8;
+    font-size: 10px;
+    text-align: center;
+    line-height: 1.3;
+    padding-bottom: 8px;
   }
   #wld-eqm-compare-{{ section.id }} .eqm-compare__row {
     display: flex;
     align-items: center;
-    gap: 0;
+    min-height: 64px;
     border-bottom: 1px solid #eee1e6;
   }
   #wld-eqm-compare-{{ section.id }} .eqm-compare__row:last-child {
@@ -81,71 +114,54 @@
   }
   #wld-eqm-compare-{{ section.id }} .eqm-compare__label {
     flex: 1 1 auto;
-    padding: 18px 20px;
+    padding: 14px 18px;
     font-size: 15px;
     font-weight: 600;
     color: #2b1620;
   }
-  #wld-eqm-compare-{{ section.id }} .eqm-compare__cell {
+  #wld-eqm-compare-{{ section.id }} .eqm-compare__yes {
     flex-shrink: 0;
+    width: 96px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  #wld-eqm-compare-{{ section.id }} .eqm-compare__cell--yes {
-    width: 64px;
-    height: 100%;
-    background: #f4f0d6;
-  }
-  #wld-eqm-compare-{{ section.id }} .eqm-compare__cell--yes svg {
+  #wld-eqm-compare-{{ section.id }} .eqm-compare__yes svg {
     width: 20px;
     height: 20px;
   }
-  #wld-eqm-compare-{{ section.id }} .eqm-compare__cell--no {
-    width: 44px;
-    color: #d64550;
-    font-size: 16px;
+  #wld-eqm-compare-{{ section.id }} .eqm-compare__others {
+    flex: 0 0 68px;
+    display: flex;
+    flex-direction: column;
+  }
+  #wld-eqm-compare-{{ section.id }} .eqm-compare__others-label {
+    font-size: 11px;
     font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #2b1620;
+    text-align: center;
+    margin-bottom: 12px;
   }
-  #wld-eqm-compare-{{ section.id }} .eqm-compare__media {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 140px;
-  }
-  #wld-eqm-compare-{{ section.id }} .eqm-compare__image {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: drop-shadow(0 10px 16px rgba(0,0,0,0.15));
-  }
-  #wld-eqm-compare-{{ section.id }} .eqm-compare__media--placeholder {
-    height: 220px;
-    border: 2px dashed #c9b8c0;
-    border-radius: 12px;
+  #wld-eqm-compare-{{ section.id }} .eqm-compare__no-row {
+    min-height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    font-size: 12px;
-    color: #7a6a70;
-    background: #fff;
+    border-bottom: 1px solid transparent;
+  }
+  #wld-eqm-compare-{{ section.id }} .eqm-compare__no {
+    color: #e0303c;
+    font-size: 18px;
+    font-weight: 700;
   }
   @media (max-width: 640px) {
-    #wld-eqm-compare-{{ section.id }} .eqm-compare__wrap {
-      flex-direction: column;
-    }
-    #wld-eqm-compare-{{ section.id }} .eqm-compare__table {
-      padding-right: 0;
-      width: 100%;
-    }
-    #wld-eqm-compare-{{ section.id }} .eqm-compare__media {
-      position: static;
-      transform: none;
-      width: 120px;
-      margin: 16px auto 0;
-    }
+    #wld-eqm-compare-{{ section.id }} .eqm-compare__podium { width: 76px; height: 60px; top: -58px; }
+    #wld-eqm-compare-{{ section.id }} .eqm-compare__image { width: 58px; }
+    #wld-eqm-compare-{{ section.id }} .eqm-compare__yes { width: 76px; }
+    #wld-eqm-compare-{{ section.id }} .eqm-compare__label { font-size: 13px; padding: 12px; }
+    #wld-eqm-compare-{{ section.id }} .eqm-compare__others { flex-basis: 48px; }
   }
 </style>
 
@@ -163,6 +179,12 @@
       "type": "image_picker",
       "id": "photo",
       "label": "Foto del bote (formato vertical recomendado)"
+    },
+    {
+      "type": "text",
+      "id": "competitor_label",
+      "label": "Etiquette colonne concurrence",
+      "default": "OTRAS MARCAS"
     }
   ],
   "blocks": [
@@ -182,6 +204,7 @@
     {
       "name": "WLD Tableau comparatif",
       "blocks": [
+        { "type": "row", "settings": { "criteria": "Sin hormonas de síntesis ni aditivos" } },
         { "type": "row", "settings": { "criteria": "Ingredientes naturales" } },
         { "type": "row", "settings": { "criteria": "Fabricado en laboratorio" } },
         { "type": "row", "settings": { "criteria": "Garantía satisfecha o reembolsada" } }
