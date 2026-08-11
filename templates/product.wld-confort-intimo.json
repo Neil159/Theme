@@ -138,36 +138,46 @@
         "input_text_color": ""
       }
     },
-    "wld_eqm_sticky_scroll_XREUTx": {
-      "type": "wld-eqm-sticky-scroll",
+    "images_with_text_scrolling_efdqFp": {
+      "type": "images-with-text-scrolling",
       "blocks": {
-        "step_BzKccp": {
-          "type": "step",
+        "item_hPExEi": {
+          "type": "item",
           "settings": {
-            "title": "La biología 🔬",
-            "text": "<p>La vagina alberga un microbiota naturalmente rico, esencial para su equilibrio. Pero los <strong>desequilibrios hormonales</strong>, especialmente antes de la regla o durante un síndrome premenstrual marcado, pueden alterar este microbiota. Esto puede influir en el <strong>pH vaginal</strong> y favorecer la aparición de <strong>bacterias no deseadas</strong>, responsables de <strong>molestias</strong> y, en ocasiones, de <strong>olores desagradables</strong>.</p>",
             "image": "shopify://shop_images/Mujer1_8b495e94-b95e-44ae-ad23-c210909d6ea8.png",
-            "show_inset": false
+            "icon": "none",
+            "icon_width": 48,
+            "title": "La biología 🔬",
+            "content": "<p>La vagina alberga un microbiota naturalmente rico, esencial para su equilibrio. Pero los <strong>desequilibrios hormonales</strong>, especialmente antes de la regla o durante un síndrome premenstrual marcado, pueden alterar este microbiota. Esto puede influir en el <strong>pH vaginal</strong> y favorecer la aparición de <strong>bacterias no deseadas</strong>, responsables de <strong>molestias</strong> y, en ocasiones, de <strong>olores desagradables</strong>.</p>"
           }
         },
-        "step_WCWeyX": {
-          "type": "step",
+        "item_rxzaTG": {
+          "type": "item",
           "settings": {
-            "title": "🌿 Cómo actúa EquilibraMeno",
-            "text": "<p><strong>+3 activos naturales clave:</strong></p><p><strong>Actea de racimo negro</strong>: ayuda a <strong>acompañar los cambios hormonales</strong>, especialmente en esta etapa, para evitar los desequilibrios que afectan al bienestar íntimo.</p><p><strong>Magnesio liposomal y vitamina B6</strong>: contribuyen al <strong>sistema nervioso</strong> y a un <strong>metabolismo hormonal normal</strong>.</p><p>Gracias a esta sinergia, EquilibraMeno favorece un <strong>entorno íntimo equilibrado</strong>, propicio a un <strong>pH estable</strong>, una <strong>flora sana</strong> y una <strong>sensación de confort íntimo</strong> duradera.</p>",
             "image": "shopify://shop_images/025_avant_apres_4_167b98a5-2b85-467d-9e56-010f2cd64da1.png",
-            "show_inset": false,
-            "inset_image": "shopify://shop_images/7xPK.gif"
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Cómo actúa EquilibraMeno 🌿",
+            "content": "<p><strong>+3 activos naturales clave:</strong></p><p><strong>Actea de racimo negro</strong>: ayuda a <strong>acompañar los cambios hormonales</strong>, especialmente en esta etapa, para evitar los desequilibrios que afectan al bienestar íntimo.</p><p><strong>Magnesio liposomal y vitamina B6</strong>: contribuyen al <strong>sistema nervioso</strong> y a un <strong>metabolismo hormonal normal</strong>.</p><p>Gracias a esta sinergia, EquilibraMeno favorece un <strong>entorno íntimo equilibrado</strong>, propicio a un <strong>pH estable</strong>, una <strong>flora sana</strong> y una <strong>sensación de confort íntimo</strong> duradera.</p>"
           }
         }
       },
       "block_order": [
-        "step_BzKccp",
-        "step_WCWeyX"
+        "item_hPExEi",
+        "item_rxzaTG"
       ],
-      "name": "WLD Scroll sticky",
+      "name": "Images and text scrolling",
       "settings": {
-        "title": "+20.000 mujeres confían en nosotras"
+        "full_width": true,
+        "stack_on_mobile": false,
+        "show_counter": true,
+        "desktop_image_effect": "reveal",
+        "image_position": "end",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
       }
     },
     "custom_liquid_qbE9HC": {
@@ -314,8 +324,8 @@
     "wld_eqm_vaginal_intro_Abi46z",
     "wld_eqm_review_strip_ecqLBN",
     "main",
-    "wld_eqm_sticky_scroll_XREUTx",
     "custom_liquid_qbE9HC",
+    "images_with_text_scrolling_efdqFp",
     "wld_eqm_review_carousel_k6YYxG",
     "custom_liquid_yVJbhz",
     "178638403516a0fe6c",

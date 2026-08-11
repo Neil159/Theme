@@ -231,6 +231,46 @@
         "spacing": "small"
       }
     },
+    "images_with_text_scrolling_Vthx3Y": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_MBGYzh": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading 1",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "item_YEJDrB": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading 2",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_MBGYzh",
+        "item_YEJDrB"
+      ],
+      "name": "Images and text scrolling",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "show_counter": true,
+        "desktop_image_effect": "reveal",
+        "image_position": "end",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "custom_liquid_q7bnqH": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -273,6 +313,7 @@
     "custom_liquid_WnKddc",
     "wld_eqm_review_carousel_B7WDTg",
     "media_with_text_ddAJzP",
+    "images_with_text_scrolling_Vthx3Y",
     "custom_liquid_q7bnqH",
     "related-products"
   ]
