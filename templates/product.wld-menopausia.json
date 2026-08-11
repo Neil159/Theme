@@ -47,9 +47,9 @@
           "settings": {
             "show_payment_button": false,
             "show_gift_card_recipient": true,
-            "atc_button_background": "#81163D",
+            "atc_button_background": "#81163d",
             "atc_button_text_color": "",
-            "payment_button_background": "#81163D",
+            "payment_button_background": "#81163d",
             "payment_button_text_color": ""
           }
         },
@@ -137,7 +137,7 @@
       "name": "WLD Tableau comparatif",
       "settings": {
         "title": "¿Por qué elegir EquilibraMeno?",
-        "photo": "shopify://shop_images/produit.png",
+        "photo": "shopify://shop_images/flacon.png",
         "competitor_label": "OTRAS MARCAS"
       }
     },
