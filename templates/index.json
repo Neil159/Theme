@@ -470,19 +470,6 @@
         "text_color": ""
       }
     },
-    "multiple-images-with-text": {
-      "type": "multiple-images-with-text",
-      "settings": {
-        "full_width": true,
-        "images_layout": "scattered",
-        "collage_images_alignment": "middle",
-        "background": "#ffffff",
-        "background_gradient": "",
-        "text_color": "#2b1620",
-        "button_background": "#7a1f3d",
-        "button_text_color": "#ffffff"
-      }
-    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -568,7 +555,6 @@
     "image-link-blocks",
     "testimonials",
     "text-with-icons",
-    "multiple-images-with-text",
     "faq"
   ]
 }
